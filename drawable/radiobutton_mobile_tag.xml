@@ -1,0 +1,20 @@
+<!-- res/drawable/radio_button_custom.xml -->
+<!-- res/drawable/radiobutton_mobile_tag.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- När RadioButton är vald -->
+    <item android:state_checked="true">
+        <shape android:shape="oval">
+            <size android:width="24dp" android:height="24dp" /> <!-- Storlek på cirkeln -->
+            <solid android:color="#FFD700" /> <!-- Gul fyllnad -->
+            <stroke android:width="2dp" android:color="#FFFFFF" /> <!-- Vit kant -->
+        </shape>
+    </item>
+    <!-- När RadioButton inte är vald -->
+    <item android:state_checked="false">
+        <shape android:shape="oval">
+            <size android:width="24dp" android:height="24dp" /> <!-- Storlek på cirkeln -->
+            <solid android:color="#FFFFFF" /> <!-- Vit fyllnad -->
+            <stroke android:width="2dp" android:color="#FFD700" /> <!-- Gul kant -->
+        </shape>
+    </item>
+</selector>
