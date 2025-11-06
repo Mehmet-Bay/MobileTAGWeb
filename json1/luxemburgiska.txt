@@ -1,0 +1,5 @@
+"QuestionYes": "Jo",
+"QuestionNo": "Nee",
+"PropertyDamageYes": "Jo",
+"PropertyDamageNo": "Nee",
+"VBownertax": "Kann de Versécherte d\'Steierwäerter op d\'Gefier zréckkréien",

@@ -1,0 +1,5 @@
+"QuestionYes": "Tak",
+"QuestionNo": "Nie",
+"PropertyDamageYes": "Tak",
+"PropertyDamageNo": "Nie",
+"VBownertax": "Czy ubezpieczony może odzyskać podatek VAT od pojazdu?",

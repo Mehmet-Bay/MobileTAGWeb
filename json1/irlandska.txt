@@ -1,0 +1,5 @@
+"QuestionYes": "Tá",
+"QuestionNo": "Nei",
+"PropertyDamageYes": "Tá",
+"PropertyDamageNo": "Nei",
+"VBownertax": "An féidir leis an árachaí an CBL ar an bhfeithicil a fháil ar ais?",

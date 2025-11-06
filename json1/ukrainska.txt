@@ -1,0 +1,5 @@
+"QuestionYes": "Так",
+"QuestionNo": "НІ",
+"PropertyDamageYes": "Так",
+"PropertyDamageNo": "НІ",
+"VBownertax": "Чи може страхувальник повернути ПДВ на транспортний засіб?",

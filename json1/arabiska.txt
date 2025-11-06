@@ -1,0 +1,5 @@
+"QuestionYes": "نعم",
+"QuestionNo": "لا",
+"PropertyDamageYes": "نعم",
+"PropertyDamageNo": "لا",
+"VBownertax": "هل يستطيع المؤمن له استرداد ضريبة القيمة المضافة على المركبة؟",

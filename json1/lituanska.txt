@@ -1,0 +1,5 @@
+"QuestionYes": "Taip",
+"QuestionNo": "Nr",
+"PropertyDamageYes": "Taip",
+"PropertyDamageNo": "Nr",
+"VBownertax": "Ar apdraustasis gali susigrąžinti pridėtinės vertės mokestį už transporto priemonę",

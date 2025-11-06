@@ -1,0 +1,5 @@
+"QuestionYes": "დიახ",
+"QuestionNo": "არა",
+"PropertyDamageYes": "დიახ",
+"PropertyDamageNo": "არა",
+"VBownertax": "შეუძლია თუ არა დაზღვეულს ავტომობილზე დამატებული ღირებულების გადასახადის დაბრუნება",

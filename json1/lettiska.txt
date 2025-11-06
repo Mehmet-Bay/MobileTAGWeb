@@ -1,0 +1,5 @@
+"QuestionYes": "Jā",
+"QuestionNo": "Nē",
+"PropertyDamageYes": "Jā",
+"PropertyDamageNo": "Nē",
+"VBownertax": "Vai apdrošinātais var atgūt pievienotās vērtības nodokli par transportlīdzekli",

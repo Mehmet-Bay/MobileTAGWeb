@@ -1,0 +1,5 @@
+"QuestionYes": "Evet",
+"QuestionNo": "Hayır",
+"PropertyDamageYes": "Evet",
+"PropertyDamageNo": "Hayır",
+"VBownertax": "Sigortalı araç üzerindeki katma değer vergisini geri alabilir mi?",

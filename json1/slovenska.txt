@@ -1,0 +1,5 @@
+"QuestionYes": "ja",
+"QuestionNo": "št",
+"PropertyDamageYes": "ja",
+"PropertyDamageNo": "št",
+"VBownertax": "Ali lahko zavarovanec dobi povrnjen DDV na vozilo?",

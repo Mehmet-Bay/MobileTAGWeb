@@ -1,0 +1,5 @@
+"QuestionYes": "Ja",
+"QuestionNo": "Nei",
+"PropertyDamageYes": "Ja",
+"PropertyDamageNo": "Nei",
+"VBownertax": "Kan forsikrede få tilbake momsen på kjøretøyet?",

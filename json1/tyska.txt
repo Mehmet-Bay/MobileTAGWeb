@@ -1,0 +1,5 @@
+"QuestionYes": "Ja",
+"QuestionNo": "Nein",
+"PropertyDamageYes": "Ja",
+"PropertyDamageNo": "Nein",
+"VBownertax": "Kann der Versicherte die Mehrwertsteuer auf das Fahrzeug zurückerhalten?",

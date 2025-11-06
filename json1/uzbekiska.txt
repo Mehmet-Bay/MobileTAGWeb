@@ -1,0 +1,5 @@
+"QuestionYes": "Ha",
+"QuestionNo": "Yo\'q",
+"PropertyDamageYes": "Ha",
+"PropertyDamageNo": "Yo\'q",
+"VBownertax": "Sug\'urtalangan shaxs transport vositasi uchun QQSni qaytarib olishi mumkinmi?",

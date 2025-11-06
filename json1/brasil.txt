@@ -1,0 +1,5 @@
+"QuestionYes": "Sim",
+"QuestionNo": "Não",
+"PropertyDamageYes": "Sim",
+"PropertyDamageNo": "Não",
+"VBownertax": "O segurado pode receber de volta o imposto sobre valor agregado do veículo",

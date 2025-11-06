@@ -1,0 +1,5 @@
+"QuestionYes": "da",
+"QuestionNo": "Nu",
+"PropertyDamageYes": "da",
+"PropertyDamageNo": "Nu",
+"VBownertax": "Poate asiguratul să recupereze TVA-ul pe vehicul?",

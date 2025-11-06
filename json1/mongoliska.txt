@@ -1,0 +1,5 @@
+"QuestionYes": "Тиймээ",
+"QuestionNo": "Үгүй",
+"PropertyDamageYes": "Тиймээ",
+"PropertyDamageNo": "Үгүй",
+"VBownertax": "Даатгуулагч тээврийн хэрэгслийн НӨАТ-ыг буцааж авах боломжтой юу?",

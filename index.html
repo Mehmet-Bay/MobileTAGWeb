@@ -1,11 +1,1332 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Min första webbsida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="drawable/mobile_tag_logo.png">
+  <title>Mobile-TAG</title>
+  <style>   
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      color: #FFBF00;
+    }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+    }
+    header {
+      text-align: center;
+      padding: 4vw 0 2vw 0;
+    }
+    h1 {
+      margin: 0;
+      font-size: 9vw;
+      -webkit-text-fill-color: antiquewhite;
+      text-shadow: 0 0 1vw #FFBF00;
+    }
+    h2 {
+      margin: 0;
+      font-size: 3vw;
+      -webkit-text-fill-color: #FFBF00;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #FFBF00;
+      padding-left: 1%;
+      padding-right: 1%;
+      /*padding: 10px 0;*/
+    }
+    nav a {
+      color: #000000;
+      text-decoration: none;
+      margin: 0 1vw;
+      font-size: 2vw;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffffff;
+      flex-wrap: wrap;
+    }
+    .dropdown {
+      position: relative;
+      display: flex;
+      
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #FFBF00;
+      box-shadow: 0vw 0.8vw 1.6vw rgba(0,0,0,0.3);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #000000;
+      padding: 1vw 1.6vw;
+      text-decoration: none;
+      display: flex;
+      font-size: 2vw;
+    }
+    .dropdown-content a:hover {
+      background-color: transparent;
+      color: #fff;
+    }
+    /* Visa dropdown när man hovrar */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .scroll-container {
+      display: flex;                 /* horisontell layout */
+      overflow-x: auto;              /* scroll åt sidan */
+      scroll-snap-type: x mandatory; /* snap-effekt vid scroll */
+      gap: 2vw;
+      padding: 2vw;
+      background-color: transparent;
+      /*background-color: #111;*/
+    }
+      
+    .scroll-container::-webkit-scrollbar {
+      height: 2px;
+      scroll-behavior: smooth;
+    }
+    .scroll-container::-webkit-scrollbar-thumb {
+      background: #FFBF00;
+      border-radius: 4px;
+    }
+    
+    .scroll-container section {
+      flex: 0 0 80%;                 /* varje slide tar ~80% av viewport */
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      /*background-color: #222;*/
+      background-color: transparent;
+      border-radius: 10px;
+      /*padding: 20px;*/
+      scroll-snap-align: center;     /* snappar varje slide */
+      color: #FFBF00;
+    }
+    .scroll-container img {
+      width: 250px;
+      height: 300px;                  /* mindre bild */
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    .scroll-container p {
+      text-align: left;
+      width: 500px;
+      line-height: 1.5;
+      font-size: 20px;
+    }
+    .picker {
+      margin: 20px auto;
+      height: 120px;
+      width: 250px;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      background-color: #111;
+      border: 2px solid #FFBF00;
+      border-radius: 10px;
+      color: #FFBF00;
+      text-align: center;
+    }
+    .picker div {
+      height: 40px;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      scroll-snap-align: start;
+      padding-left: 5%;
+      font-size: 18px;
+    }
+    .logoMain {
+      max-width: 500px;
+    }
+    .contactor {
+      max-width: 40%;
+      min-width: 40%;
+      overflow-y: auto;
+      display: inline-block;
+      background-color: #cbc8c8;
+      border-color: #FFBF00;
+      max-height: auto;
+      -webkit-text-fill-color: #000000;
+      font-weight: normal;
+      font-size: 2vw;
+      border-width: 3%;
+      border-radius: 15px;
+      margin-left: 5%;
+      text-align: start;
+      padding-left: 1%;
+      padding-right: 1%;
+    }
+    .contactorInput {
+      width: 50%;
+      height: 30px;
+    }
+    .textArea {
+      width: 90%;
+      text-align: start;
+      font-size: 1.6vw;
+      font-weight: normal;
+      resize: none;
+    }
+    .marquee-container {
+      justify-content: center;
+      display: flex;
+    }
+    .marquee {
+      width: 60%;
+      overflow: hidden;          
+      white-space: nowrap;       
+      font-size: 2vw;
+      -webkit-text-fill-color: antiquewhite;
+    }
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;       
+      animation: scroll 60s linear infinite;
+    }
+
+    @keyframes scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .aboutPic {
+      max-width: 100%;
+      height: auto;
+    }
+    @media (max-aspect-ratio: 1/1) {
+      body {
+        width: fit-content;
+        max-width: 640px;
+        height: auto;
+      }
+      .aboutPic {
+        max-width: 150px;
+        max-height: 100px;
+      }
+      .scroll-container {
+        max-width: 400px;
+      }
+      .scroll-container p {
+        max-width: 200px;
+      }
+      .contactorInput{
+        height: 10px;
+        font-size: 1.6vw;
+      }
+    }
+  .adsbygoogle {
+    /*background: #eee;*/
+    background-color: rgba(20,55,55,0.0);
+    border: 1px dashed #999;
+  }
+  .lang-notice {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 1.6vw;
+    font-weight: bold;
+    font-family: serif;
+    border-bottom: 1px solid #FFBF00;
+  }
+  .disabled-link {
+  pointer-events: none;          
+  opacity: 0.4;                  
+  cursor: not-allowed;
+  text-decoration: none !important;
+  }
+  section {
+    border: 3px outset #ffaa00;
+    box-shadow: 0 0 15px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .ad-section {
+    border: 3px outset #ffaa00;
+    width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 15px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MWDYKZ1W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1MWDYKZ1W7', { 'anonymize_ip': true });
+    gtag('config', 'G-1MWDYKZ1W7');
+  </script>
+
 </head>
-<body>
-  <h1>Hej världen!</h1>
-  <p>Detta är min första sida byggd med VS Code och GitHub.</p>
+
+<script 
+  async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5663370246187799"
+  crossorigin="anonymous">
+</script>
+  <script>
+  async function loadNavTexts() {    
+    try {
+      const response = await fetch("en.json");
+      const data = await response.json();
+      document.getElementById("important-Info").textContent = data.importantInfo;
+      document.getElementById("nav-contactInfo").textContent = data.contact;
+      document.getElementById("nav-mainPage").textContent = data.mainPage;
+      document.getElementById("nav-termsCondition").textContent = data.termsPrivacy;
+      document.getElementById("nav-about").textContent = data.about;
+      document.getElementById("nav-information").textContent = data.information;
+      document.getElementById("nav-terms").textContent = data.terms;
+      document.getElementById("nav-privacy").textContent = data.privacy;
+      document.getElementById("nav-companies").textContent = data.companiesTitle;
+      document.getElementById("nav-qrGen").textContent = data.qrGenerator;
+      
+    } catch (error) {
+      console.error("Fel vid laddning av navtexts.json:", error);
+    }
+  }
+  
+  loadNavTexts();
+</script>
+<body oncontextmenu="return false;">
+  <header>
+    <img src="drawable/nylogo.png">
+    
+    <svg width="500px" height="5"><line x1="0" x2="500" stroke="#FFBF00"/></svg>
+    <h2 class="centered-title">Mobile Traffic Accident Guider</h2>
+    <div class="marquee-container">
+      <div class="marquee">
+        <span id="important-Info"></span>
+      </div>
+    </div>
+    <div class="lang-notice">
+  🌍 The site is currently available only in English.
+  </header>
+  
+  <!--<img src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" alt="centered image" class="center-image">-->
+
+  <nav>
+    <a id="nav-mainPage" href="#" onclick="showPage('main')"></a>
+    <a id="nav-information" href="#" onclick="showPage('information')"></a>
+    <a id="nav-about" href="#" onclick="showPage('about')"></a>
+    <a id="nav-companies" href="#" onclick="showPage('companies')"></a>
+    <div class="dropdown">
+      <a id="nav-termsCondition" href="#"></a>
+      <div class="dropdown-content">
+        <a id="nav-terms" href="terms.html"></a>
+        <a id="nav-privacy" href="privacy.html"></a>
+      </div>
+    </div>
+    <a id="nav-qrGen" href="qrcodegen.html"></a>
+    <a id="nav-contactInfo" href="#" onclick="showPage('contactInfo')"></a>
+  </nav>
+  <div id="content" style="padding:10px; max-width:100%; margin:0 auto; text-align:center;">
+    
+    <!--<img src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" style="max-width: 400px;">-->
+    <img id="logoMain" src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" style="max-width: 400px;">
+<style>
+  #slideshow { transition: opacity .3s ease-in-out }  
+</style>
+    <h2>Welcome to Mobile-TAG</h2>
+  <div style="text-align: center; padding-top: 5px;">
+    <img src="drawable/App_Store.svg.png" style="width:20%; display: inline-block;" alt="">
+    <img src="drawable/Google_Play_Store.svg.png" style="width:20%; display: inline-block;" alt="">
+  </div>
+    <p>Quick digital reporting of traffic accidents – directly on your mobile phone.</p>
+    <footer style="text-align:center; color:#FFBF00; font-size:0.9em; padding:10px;">
+  © 2025 Mobile-TAG | 
+  <a href="privacy.html" style="color:#FFBF00; text-decoration:underline;">Privacy Policy</a> | 
+  This site uses Google AdSense for ads. See 
+  <a href="https://policies.google.com/technologies/ads" style="color:#ffaa00;">Google’s policy</a>.
+</footer>
+    </div>
+    <p style="text-align:center;font-size:14px;color:#bfbfbf;">
+  <a href="#" onclick="openCookieSettings()" style="color:#FFBF00;">
+    Manage cookie preferences
+  </a>
+</p>
+    <ins class="adsbygoogle"
+     style="display:block; height: 5vw; border-radius: 0px;"
+     data-ad-client="ca-pub-3940256099942544"
+     data-ad-slot="1234567890"
+     data-ad-format="auto"
+     data-full-width-responsive="true">
+    </ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  </div>
+<!-- 🍪 Advanced Cookie Consent Dialog -->
+<div id="cookieOverlay" style="
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.75);display:flex;
+  justify-content:center;align-items:center;z-index:9999;">
+
+  <!-- Huvuddialog -->
+  <div id="cookieMain" style="
+    background:#111;border:2px solid #FFBF00;border-radius:15px;
+    padding:25px;max-width:420px;width:90%;color:#FFBF00;
+    text-align:center;font-family:serif;box-shadow:0 0 25px rgba(255,191,0,0.4);">
+    <h2 style="margin-top:0;">We value your privacy</h2>
+    <p style="font-size:15px;line-height:1.5;color:#FFD84D;">
+      We use cookies for Google Analytics and Google AdSense to keep this service free.  
+      You can allow personalized or non-personalized ads.  
+      Without cookies, some features (like QR generation) may not work properly.  
+    <br><br>
+      <span style="color:#FFBF00;">
+        Support Mobile-TAG’s mission to provide a free and secure accident-reporting service by allowing cookies.
+      </span>
+    </p>
+
+    <div style="margin-top:15px;">
+      <button id="acceptAll" style="
+        background:#FFBF00;color:#000;font-weight:bold;
+        border:none;border-radius:8px;padding:6px 12px;cursor:pointer;margin:4px;">
+        Accept all
+      </button>
+      <button id="customizeBtn" style="
+        background:transparent;color:#FFBF00;border:1px solid #FFBF00;
+        border-radius:8px;padding:6px 12px;cursor:pointer;margin:4px;">
+        Customize
+      </button>
+    </div>
+    <p style="margin-top:10px;font-size:13px;color:#bfbfbf;">
+      See our <a href="privacy.html" style="color:#ffaa00;">Privacy Policy</a>.
+    </p>
+  </div>
+
+  <!-- Anpassningsfönster -->
+  <div id="cookieCustomize" style="
+    display:none;
+    background:#111;border:2px solid #FFBF00;border-radius:15px;
+    padding:25px;max-width:420px;width:90%;color:#FFBF00;
+    text-align:center;font-family:serif;box-shadow:0 0 25px rgba(255,191,0,0.4);">
+    <h2 style="margin-top:0;">Customize preferences</h2>
+    <p style="font-size:15px;color:#FFD84D;">
+      Choose how cookies are used:
+    </p>
+    <div style="text-align:left;margin-left:15%;">
+      <label><input type="radio" name="cookieChoice" value="personalized" checked>
+        Allow personalized ads</label><br><br>
+      <label><input type="radio" name="cookieChoice" value="nonPersonalized">
+        Allow non-personalized ads</label><br><br>
+      <label><input type="radio" name="cookieChoice" value="decline">
+        Decline all cookies (service limited)</label>
+    </div>
+    <div style="margin-top:20px;">
+      <button id="saveCookieChoice" style="
+        background:#FFBF00;color:#000;font-weight:bold;
+        border:none;border-radius:8px;padding:6px 12px;cursor:pointer;margin:4px;" onclick="location.reload()">
+        Save and continue
+      </button>
+      <button id="backToMain" style="
+        background:transparent;color:#FFBF00;border:1px solid #FFBF00;
+        border-radius:8px;padding:6px 12px;cursor:pointer;margin:4px;">
+        Back
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>  
+  const overlay = document.getElementById('cookieOverlay');
+  const mainBox = document.getElementById('cookieMain');
+  const customBox = document.getElementById('cookieCustomize');
+  const consent = localStorage.getItem('cookieConsent');
+
+  if (consent) {
+    overlay.remove();
+    startAnalytics(consent === 'personalized');
+    enableQrGen();
+  }
+
+  document.getElementById('acceptAll').onclick = () => {
+    localStorage.setItem('cookieConsent', 'personalized');
+    overlay.remove();
+    enableQrGen();
+    startAnalytics(true);
+    location.reload();
+    console.log("borde ladda om sidan");
+  };
+
+  document.getElementById('customizeBtn').onclick = () => {
+    mainBox.style.display = 'none';
+    customBox.style.display = 'block';
+  };
+
+  document.getElementById('backToMain').onclick = () => {
+    customBox.style.display = 'none';
+    mainBox.style.display = 'block';
+  };
+
+  document.getElementById('saveCookieChoice').onclick = () => {
+    const selected = document.querySelector('input[name="cookieChoice"]:checked').value;
+    localStorage.setItem('cookieConsent', selected);
+    overlay.remove();
+
+    if (selected === 'decline') {
+      alert("Cookies declined. Some features, such as QR generation, may be unavailable.");
+      disableQrGen();
+      location.reload(true);
+    } else {
+      startAnalytics(selected === 'personalized');
+      enableQrGen();
+      location.reload(true);
+    }
+  };
+  function disableQrGen() {
+    const qrLink = document.getElementById('nav-qrGen');
+    qrLink.classList.add('disabled-link');
+    qrLink.title = "Please accept cookies to use this feature.";
+  }
+
+  function enableQrGen() {
+    const qrLink = document.getElementById('nav-qrGen');
+    qrLink.classList.remove('disabled-link');
+    qrLink.title = "";
+  }
+  window.addEventListener("DOMContentLoaded", () => {
+    const consent = localStorage.getItem("cookieConsent");
+    if (consent === "decline" || !consent) {
+      disableQrGen();
+    } else {
+      enableQrGen();
+    }
+  });
+  function startAnalytics(personalized) {
+    // Google Consent Mode
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'update', {
+      ad_storage: personalized ? 'granted' : 'denied',
+      analytics_storage: 'granted'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-1MWDYKZ1W7', { 'anonymize_ip': true });
+
+    loadAds(!personalized);
+  }
+  function loadAds(nonPersonalized) {
+    window.adsbygoogle = window.adsbygoogle || [];
+    window.adsbygoogle.requestNonPersonalizedAds = nonPersonalized ? 1 : 0;
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+    script.setAttribute("data-ad-client", "ca-pub-5663370246187799"); // din ID
+    document.head.appendChild(script);
+  }
+  function openCookieSettings() {
+  // Rensa tidigare val och visa dialogen igen
+  localStorage.removeItem('cookieConsent');
+  location.reload();
+}
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div id="adblockOverlay" style="
+  display:none;
+  position:fixed;
+  top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(6px);
+  z-index:99999;
+  align-items:center;justify-content:center;
+  text-align:center;color:#FFBF00;
+  font-family:serif;
+  animation:fadeIn 0.6s ease forwards;
+">
+  <div id="adblockBox" style="
+    background:rgba(17,17,17,0.9);
+    border:2px solid #FFBF00;
+    border-radius:15px;
+    padding:25px;
+    max-width:420px;
+    width:90%;
+    box-shadow:0 0 25px rgba(255,191,0,0.4);
+    margin:auto;
+    opacity:0;
+    transform:scale(0.95);
+    animation:zoomIn 0.5s ease forwards;
+  ">
+    <h2 id="adblockTitle" style="margin-top:0;"></h2>
+    <p id="adblockDescription" style="font-size:15px;color:#FFD84D;line-height:1.5;"></p>
+    <p id="adblockNote" style="font-size:13px;color:#EEDC82;"></p>
+
+    <div style="margin-top:10px;">
+      <button id="adblockButton1" onclick="location.reload()" style="
+        background:#FFBF00;
+        color:#000;
+        font-weight:bold;
+        border:none;
+        border-radius:8px;
+        padding:6px 14px;
+        cursor:pointer;
+        box-shadow:0 0 10px rgba(255,191,0,0.3);
+        margin:4px;
+      "></button>
+
+      <button id="adblockButton2" onclick="location.reload()" style="
+        background:#FFBF00;
+        color:#000;
+        font-weight:bold;
+        border:none;
+        border-radius:8px;
+        padding:6px 14px;
+        cursor:pointer;
+        box-shadow:0 0 10px rgba(255,191,0,0.3);
+        margin:4px;
+      "></button>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
+  @keyframes zoomIn {from{opacity:0;transform:scale(0.95);}to{opacity:1;transform:scale(1);}}
+</style>
+
+<script>
+  const currentLang = 'en'; // byt till 'sv', 'de' osv. senare
+
+  // --- Ladda språktext ---
+  fetch(`${currentLang}.json`)
+    .then(res => res.json())
+    .then(data => {
+      //const t = data.adblock;
+      document.getElementById('adblockTitle').innerHTML = data.title;
+      document.getElementById('adblockDescription').innerHTML = data.description;
+      document.getElementById('adblockNote').innerHTML = data.note;
+      // två knappar, samma text kan användas eller olika om du vill
+      document.getElementById('adblockButton1').innerHTML = data.button;
+      document.getElementById('adblockButton2').innerHTML = 'I’ve disabled it';
+    })
+    .catch(err => console.error('Failed to load language file:', err));
+
+  // --- Visa overlay ---
+  function showAdblockOverlay() {
+    const overlay = document.getElementById('adblockOverlay');
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  // --- Detektera adblock ---
+  function detectAdblock() {
+    return new Promise(resolve => {
+      const bait = document.createElement('div');
+      bait.className = 'ad ads ad-banner ad-container sponsor';
+      bait.style.cssText = 'height:1px;position:absolute;left:-9999px;';
+      document.body.appendChild(bait);
+
+      const testScript = document.createElement('script');
+      testScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?v=' + Date.now();
+      testScript.async = true;
+      testScript.onerror = () => resolve(true);
+      testScript.onload  = () => resolve(false);
+
+      setTimeout(() => {
+        const hidden = window.getComputedStyle(bait).display === 'none' || bait.offsetParent === null;
+        bait.remove();
+        resolve(hidden);
+      }, 800);
+
+      document.body.appendChild(testScript);
+    });
+  }
+
+  window.addEventListener('load', async () => {
+    const blocked = await detectAdblock();
+    if (blocked) {
+      sessionStorage.setItem('adblockDetected', '1');
+      showAdblockOverlay();
+    } else {
+      sessionStorage.removeItem('adblockDetected');
+    }
+  });
+</script>
+
+<div id="customAlert" class="alert-overlay" style="display:none;">
+  <div class="alert-box">
+    <h3 id="alertTitle">Notice</h3>
+    <p id="alertMessage"></p>
+    <button id="alertOk">OK</button>
+  </div>
+</div>
+
+<style>
+  .alert-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .alert-box {
+    background: #000;
+    border: 2px solid #FFBF00;
+    border-radius: 15px;
+    padding: 2em;
+    max-width: 400px;
+    color: #FFBF00;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255,191,0,0.6);
+    font-family: serif;
+    animation: glowIn 0.4s ease;
+  }
+
+  .alert-box h3 {
+    color: #FFBF00;
+    font-size: 1.6em;
+    text-shadow: 0 0 10px #FFBF00;
+    margin-bottom: 10px;
+  }
+
+  .alert-box p {
+    color: antiquewhite;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+
+  .alert-box button {
+    background-color: #FFBF00;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .alert-box button:hover {
+    background-color: #ffcc33;
+    box-shadow: 0 0 10px #FFBF00;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+  }
+
+  @keyframes glowIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+</style>
+
+<script>
+  function showAlert(title, message) {
+    document.getElementById('alertTitle').innerText = title;
+    //document.getElementById('alertMessage').innerText = message;
+    document.getElementById('customAlert').style.display = 'flex';
+  }
+
+  document.getElementById('alertOk').addEventListener('click', () => {
+    document.getElementById('customAlert').style.display = 'none';
+  });
+</script>
+  <script>
+function detectSupportedBrowser() {
+  const ua = navigator.userAgent.toLowerCase();
+  let supported = false;
+
+  // Kolla efter de webbläsare du vill tillåta
+  if (ua.includes("chrome") && !ua.includes("edg") && !ua.includes("opr")) supported = true; // Chrome (inte Edge/Opera)
+  if (ua.includes("edg")) supported = true;     // Edge
+  if (ua.includes("firefox")) supported = true; // Firefox
+  if (ua.includes("safari") && !ua.includes("chrome")) supported = true; // Safari (inte Chrome-baserad)
+
+  if (!supported) {
+    // Skapa overlay
+    const overlay = document.createElement("div");
+    overlay.style = `
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: black;
+      color: #FFBF00;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      z-index: 999999;
+      font-family: system-ui, sans-serif;
+    `;
+
+    overlay.innerHTML = `
+      <div style="max-width: 420px;">
+        <h2 style="font-size: 1.8em; margin-bottom: 0.5em; text-shadow: 0 0 10px #FFBF00;">Browser not supported</h2>
+        <p style="font-size: 1.1em; line-height: 1.5;">
+          This website is only supported on the following browsers:<br><br>
+          <strong>Microsoft Edge</strong><br>
+          <strong>Google Chrome</strong><br>
+          <strong>Mozilla Firefox</strong><br>
+          <strong>Safari</strong>
+        </p>
+      </div>
+    `;
+
+    document.body.innerHTML = "";
+    document.body.appendChild(overlay);
+  }
+}
+detectSupportedBrowser();
+</script>
 </body>
+<script>
+  setTimeout(() => startLogoLoopMain(1));
+</script>
+<script>
+function showPage(page) {
+  const content = document.getElementById("content");
+  if (page === "main") {
+    content.innerHTML = `
+      <!--<img id="logo" src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" style="max-width: 400px;">-->
+      <img id="logoMain" src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" style="max-width: 400px;">
+      <h2>Welcome to Mobile-TAG</h2>
+      <div style="text-align: center; padding-top: 5px;">
+        <img src="drawable/App_Store.svg.png" style="width:20%; display: inline-block;" alt="">
+        <img src="drawable/Google_Play_Store.svg.png" style="width:20%; display: inline-block;" alt="">
+      </div>
+      <p>Quick digital reporting of traffic accidents – directly on your mobile phone.</p>
+
+    `;
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    setTimeout(() => startLogoLoopMain(100));
+    const consent = localStorage.getItem("cookieConsent");
+    if (consent === "accept" || consent === "personalized" || consent === "nonPersonalized") {
+      gtag('event', 'page_view', { page_title: 'Main page', page_path: '/main' });
+    }
+  }
+if (page === "contactInfo") {
+  fetch("en.json")
+    .then(resp => resp.json())
+    .then(data => {
+      content.innerHTML = `
+        <div style="display:flex; align-items:flex-start; gap:10%;">
+          <div class="contactor">
+            <h3>${data.contactText}</h3>
+
+            <label style="color: black; font-size: 1.8vw; font-weight: bold">${data.contactYourName}</label><br>
+            <input class="contactorInput" id="contactorsNameId" type="text"><br>
+
+            <label style="color: black; font-size: 1.7vw; font-weight: bold">${data.contactYourMail}</label><br>
+            <input class="contactorInput" id="contactorsMailId" type="email"><br>
+
+            <label style="color: black; font-size: 1.7vw; font-weight: bold">${data.contactInfoDescribe}</label><br>
+            <textarea class="textArea" id="contactDescribeId" rows="6" placeholder="${data.contactInfoDescribe}"></textarea>
+            <br>
+
+            <!-- 🔹 Viktigt: id på knappen -->
+            <button id="sendContactBtn" style="width: 20%; height: 30%; justify-content: center; border-radius: 10px;">${data.buttonSend}</button>
+          </div>
+
+          <div style="display:inline-block; min-width: 40%; height:auto; max-width: 40%;">
+            <ins class="adsbygoogle"
+              style="display:block; height: 50vw;"
+              data-ad-client="ca-pub-3940256099942544"
+              data-ad-slot="1234567890"
+              data-ad-format="auto"
+              data-full-width-responsive="true">
+            </ins>
+          </div>
+        </div>
+
+        <div style="padding-top: 5px;">
+          <ins class="adsbygoogle"
+            style="display:block; height: 5vw; border-radius:0px;"
+            data-ad-client="ca-pub-3940256099942544"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+          </ins>
+        </div>
+      `;
+
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      const consent = localStorage.getItem("cookieConsent");
+      if (consent === "accept" || consent === "personalized" || consent === "nonPersonalized") {
+        gtag('event', 'page_view', { page_title: 'Contact us', page_path: '/contactInfo' });
+      }
+      // 🔹 Event listener fungerar nu
+      document.getElementById("sendContactBtn").addEventListener("click", async () => {
+        const name = document.getElementById("contactorsNameId").value.trim();
+        const email = document.getElementById("contactorsMailId").value.trim();
+        const message = document.getElementById("contactDescribeId").value.trim();
+
+        if (!name || !email || !message) {
+          alert("Please fill in all fields before sending.");
+          return;
+        }
+
+        try {
+            const response = await fetch("https://apiemco.mobiletag-auto.com/api/clientmessage", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, message })
+          });
+
+          if (response.ok) {
+            showAlert("Your message has been sent successfully!");
+          } else {
+            showAlert("Error while sending message. Please try again later.");
+          }
+        } catch (err) {
+          console.error("Send error:", err);
+          showAlert("Could not send message.");
+        }
+      });
+    });
+}
+if (page === "companies") {
+  fetch("en.json")
+    .then(resp => resp.json())
+    .then(data => {
+      content.innerHTML = `
+        <section style="text-align:left; max-width:800px; margin:0 auto; font-size:2vw; line-height:1.6;">
+          <h3 style="color:antiquewhite;">${data.MobileTAGTest}</h3>
+          <h3>${data.companiesTitle}</h3>
+          <p>${data.companiesIntro}</p>
+          <ins class="adsbygoogle"
+            style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+            data-ad-client="ca-pub-3940256099942544"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.rentalTitle}</h3>
+          <p>${data.rentalText}</p> 
+          <a href="#" id="qrLink" style="color: antiquewhite"></a>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.howWorkstitle}</h3>
+          <p>${data.howWorksInfo}</p> 
+          <ins class="adsbygoogle"
+            style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+            data-ad-client="ca-pub-3940256099942544"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.autoTranslateTitle}</h3>
+          <p>${data.autoTranslateDescription}</p>
+          <ins class="adsbygoogle"
+            style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+            data-ad-client="ca-pub-3940256099942544"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.secureTitle}</h3>
+          <p>${data.secureDescription}</p>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.smartSyncTitle}</h3>
+          <p>${data.smartSuncDescription}</p>
+          <ins class="adsbygoogle"
+            style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+            data-ad-client="ca-pub-3940256099942544"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.performanceTitle}</h3>
+          <p>${data.performanceDescription}</p>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <p>${data.closing}</p>
+          <h3>${data.benefitsTitle}</h3>
+          <ul>
+            ${data.benefitsList.map(item => `<li>${item}</li>`).join("")}
+          </ul>
+          <ins class="adsbygoogle"
+            style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+            data-ad-client="ca-pub-3940256099942544"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>          
+        </section>
+      `;
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      const consent = localStorage.getItem("cookieConsent");
+      if (consent === "accept" || consent === "personalized" || consent === "nonPersonalized") {
+        gtag('event', 'page_view', { page_title: 'Companies', page_path: '/companies' });
+      }
+      const qrLinker = document.getElementById("qrLink");
+      qrLinker.textContent = data.goToQR;
+      qrLinker.href = "qrcodegen.html";
+      const picker = document.getElementById("countryPicker");
+      picker.innerHTML = "";
+      
+      data.countries.forEach(country => {
+        const div = document.createElement("div");
+        div.textContent = country;
+        div.tabIndex = 0;
+        div.addEventListener("click", () => {
+          document.getElementById("regCountry").value = country;
+        });
+        picker.appendChild(div);
+      });
+  })
+  .catch(err => console.error("Something went wrong to load en.json:", err));
+
+}
+
+
+  if (page === "information") {
+    content.innerHTMLs = 
+      fetch("en.json")
+    .then(resp => resp.json())
+    .then(data => {
+      content.innerHTML = `
+        <h2>${data.informationTitle}</h2>
+        <section style="text-align:left; max-width:800px; margin:0 auto; line-height:1.6; font-size: 2vw">
+          <p style="-webkit-text-fill-color: antiquewhite;">${data.restrictionText}</p>
+          <h3>${data.priceTitle}</h3>
+          <p>${data.priceText}</p>
+          <ins class="adsbygoogle"
+            style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+            data-ad-client="ca-pub-3940256099942544"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+          </ins>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.priceInfoTitle}</h3>
+          <p>${data.priceInfo}</p>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.insuranceTitle}</h3>
+          <p>${data.insuranceText}</p>
+          <p>${data.insuranceTextClaim}</p>
+          <p>${data.insuranceTextInfo}</p>
+
+          <ins class="adsbygoogle"
+            style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+            data-ad-client="ca-pub-3940256099942544"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+          </ins>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.usersTitle}</h3>
+          <p>${data.usersText}</p>
+          <p>${data.usersTextInfo}</p>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.securityTitle}</h3>
+          <p>${data.securityText}</p>
+          <ins class="adsbygoogle"
+            style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+            data-ad-client="ca-pub-3940256099942544"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+          </ins>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.docProtectionTitle}</h3>
+          <p>${data.docProtectionText}</p>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.truthTitle}</h3>
+          <p>${data.truthText}</p>
+          <ins class="adsbygoogle"
+            style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+            data-ad-client="ca-pub-3940256099942544"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+          </ins>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.whyTitle}</h3>
+          <ul>
+            ${data.whyList.map(item => `<li>${item}</li>`).join("")}
+          </ul>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+          <h3>${data.mobiAutoTitle}</h3>
+          <p>${data.mobiAuto}</h3>
+          <br>
+          <p>${data.mobiAutoVersionUpdates}</h3>
+          <ins class="adsbygoogle"
+            style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+            data-ad-client="ca-pub-3940256099942544"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+          </ins>
+          <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
+        </section>
+      `;
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    })
+    .catch(err => console.error("Something went wrong to load information site:", err));
+        const consent = localStorage.getItem("cookieConsent");
+    if (consent === "accept" || consent === "personalized" || consent === "nonPersonalized") {
+      gtag('event', 'page_view', { page_title: 'Information', page_path: '/information'});
+    }
+  }
+  if (page === "about") {
+    content.innerHTML = `
+    <div class="scroll-container">
+      <section class="sectionFrame">
+        <img class="aboutPic" src="drawable/multilang.png" alt="">
+        <div>
+          <p id="shortInfo" style="font-size: 1.8vw;"></p>
+        </div>
+      </section>
+
+      <section>
+        <img class="aboutPic" src="drawable/drivernotunderstand.png" alt="">
+        <div>
+          <p id="incidentScenario" style="font-size: 1.8vw;"></p>
+        </div>
+      </section>
+      <section class="ad-section">
+        <ins class="adsbygoogle"
+           style="display:block; height: 100%; width: 100%; border-radius: 0px;"
+           data-ad-client="ca-pub-3940256099942544"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+          data-full-width-responsive="true">
+        </ins>
+      </section>
+      <section>
+        <img class="aboutPic" src="drawable/notconfesion.png" alt="">
+        <div>
+          <p id="notConfesion" style="font-size: 1.8vw;"></p>
+        </div>
+      </section>
+      <section>
+        <img class="aboutPic" src="drawable/documentguillt.png" alt="">
+        <div>
+          <p id="documentConfesion" style="font-size: 1.8vw;"></p>
+        </div>
+      </section>
+      <section class="ad-section">
+        <ins class="adsbygoogle"
+           style="display:block; height: 100%; width: 100%; border-radius: 0px;"
+           data-ad-client="ca-pub-3940256099942544"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+          data-full-width-responsive="true">
+        </ins>
+      </section>
+      <section>
+        <img class="aboutPic" src="drawable/reporting.png" alt="">
+        <div>
+          <p id="fastSolution" style="font-size: 1.8vw;"></p>
+        </div>
+      </section>
+      <section>
+        <img class="aboutPic" src="drawable/frustated.png" alt="">
+        <div>
+          <p id="appDev" style="font-size: 1.8vw;"></p>
+        </div>
+      </section>
+      <section class="ad-section">
+        <ins class="adsbygoogle"
+           style="display:block; height: 100%; width: 100%; border-radius: 0px;"
+           data-ad-client="ca-pub-3940256099942544"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+          data-full-width-responsive="true">
+        </ins>
+      </section>
+      <section>
+        <img class="aboutPic" src="drawable/standardservice.png" alt="">
+        <div>
+          <p id="standardService" style="font-size: 1.8vw;"></p>
+        </div>
+      </section>
+      <section>
+        <img class="aboutPic" src="drawable/solvestraffic.png" alt="">
+        <div>
+          <p id="benefit" style="font-size: 1.8vw;"></p>
+        </div>
+      </section>
+      <section class="ad-section">
+        <ins class="adsbygoogle"
+           style="display:block; height: 100%; width: 100%; border-radius: 0px;"
+           data-ad-client="ca-pub-3940256099942544"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+          data-full-width-responsive="true">
+        </ins>
+      </section>
+      <section>
+        <img class="aboutPic" src="drawable/documentenglish.png" alt="">
+        <div>
+          <p id="defaultLang" style="font-size: 1.8vw;"></p>
+        </div>
+      </section>
+      <section>
+        <img class="aboutPic" src="drawable/safedocument.png" alt="">
+        <div>
+          <p id="safeDocumentId" style="font-size: 1.8vw;"></p>
+        </div>
+      </section>
+      <section class="ad-section">
+        <ins class="adsbygoogle"
+           style="display:block; height: 100%; width: 100%; border-radius: 0px;"
+           data-ad-client="ca-pub-3940256099942544"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+          data-full-width-responsive="true">
+        </ins>
+      </section>
+      <section>
+        <img class="aboutPic" src="drawable/testpic.png" alt="">
+        <div>
+          <p id="testAppId" style="font-size: 1.8vw;"></p>
+        </div>
+      </section>
+    </div>
+    <h3 id="aboutInfoId" style="text-align: start; font-size: 3vw; padding-left: 2%"></h3>
+    <h3 id="aboutInfoTextId" style="text-align: start; font-size: 1.8vw; font-family: serif; width: 60%; padding-left: 2%"></h3>
+    <ins class="adsbygoogle"
+      style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+      data-ad-client="ca-pub-3940256099942544"
+      data-ad-slot="1234567890"
+      data-ad-format="auto"
+      data-full-width-responsive="true">
+    </ins>
+    `;
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    const consent = localStorage.getItem("cookieConsent");
+    if (consent === "accept" || consent === "personalized" || consent === "nonPersonalized") {
+      gtag('event', 'page_view', { page_title: 'About', page_path: '/about' });
+    }
+    fetch("en.json")
+      .then(resp => resp.json())
+      .then(data => {
+        const str = document.getElementById("aboutInfoTextId").textContent = data.aboutInfoText;
+        const str2 = str.replace(/\n/g, "<br>");
+        document.getElementById("shortInfo").textContent = data.shortInfo;
+        document.getElementById("incidentScenario").textContent = data.incidentScenario;
+        document.getElementById("notConfesion").textContent = data.notConfesionInfo;
+        document.getElementById("documentConfesion").textContent = data.documentConfesion;
+        document.getElementById("fastSolution").textContent = data.helpsFast;
+        document.getElementById("appDev").textContent = data.appDevInfo;
+        document.getElementById("standardService").textContent = data.standardServiceInfo;
+        document.getElementById("benefit").textContent = data.benefitApp;
+        document.getElementById("defaultLang").textContent = data.defaultLanguage;
+        document.getElementById("safeDocumentId").textContent = data.safeDocument;
+        document.getElementById("testAppId").textContent = data.testAppInfo;
+        document.getElementById("aboutInfoId").textContent = data.aboutInfo;
+        //document.getElementById("aboutInfoTextId").textContent = data.aboutInfoText;
+        document.getElementById("aboutInfoTextId").innerHTML = str2;
+    })
+    .catch(err => console.error("Fel vid laddning av en.json:", err));
+    setTimeout(() => startAutoScroll(), 100);
+  }
+}
+function startAutoScroll() {
+  const container = document.querySelector(".scroll-container");
+  if (!container) return;
+
+  const slides = container.querySelectorAll("section");
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    const slideWidth = slides[0].offsetWidth + 20; // +gap
+    container.scrollTo({
+      left: index * slideWidth,
+      behavior: "smooth"
+    });
+  }, 10000);
+
+}
+function startLogoLoopMain() {
+  /*const container = document.querySelector(".logoMain");
+  if (!container) return;*/
+
+  /*const slides = container.querySelectorAll("section");*/
+  const imageLogo = ["drawable/mobile_traffic_accident_logo_scaled_transparent.png", "drawable/logo_glowing.png"]
+  let index = 0, timer;
+  const logoChanged = document.getElementById("logoMain");
+
+  clearInterval(timer);
+  timer = setInterval(() => {    
+    index = (index + 1) % imageLogo.length;
+    logoChanged.src = imageLogo[index];
+    logoChanged.style.opacity = 0;
+    logoChanged.classList.add("fade-out");
+    setTimeout(() => {
+      logoChanged.src = imageLogo[index];
+      logoChanged.style.opacity = 1;
+      logoChanged.classList.remove("fade-out");
+    }, 100);
+  }, 10000);
+}
+</script>
+<!-- 🧩 Cookie reminder popup -->
+<div id="cookieReminder" style="
+  display:none;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#111;
+  color:#FFBF00;
+  border:2px solid #FFBF00;
+  border-radius:15px;
+  box-shadow:0 0 25px rgba(255,191,0,0.4);
+  padding:25px;
+  text-align:center;
+  font-family:serif;
+  z-index:10000;">
+  <h3 style="margin-top:0;">Cookies Required</h3>
+  <p style="font-size:15px;line-height:1.5;color:#FFD84D;">
+    You must accept cookies to use the QR generator service.
+  </p>
+  <button id="openSettings" style="
+    background:#FFBF00;color:#000;font-weight:bold;
+    border:none;border-radius:8px;padding:6px 12px;cursor:pointer;margin-top:8px;">
+    Open cookie settings
+  </button>
+</div>
+
+<script>
+  // Elementreferenser
+  const qrLink = document.getElementById('nav-qrGen');
+  const cookieReminder = document.getElementById('cookieReminder');
+  const openSettingsBtn = document.getElementById('openSettings');
+
+  // Hantera hover/click på QR-länk när cookies inte är tillåtna
+  function attachQrGenEvents() {
+    qrLink.addEventListener('click', showReminder);
+    qrLink.addEventListener('mouseenter', showReminder);
+  }
+
+  function showReminder(event) {
+    if (localStorage.getItem('cookieConsent') === 'decline' || !localStorage.getItem('cookieConsent')) {
+      event.preventDefault();
+      cookieReminder.style.display = 'block';
+      setTimeout(() => cookieReminder.style.display = 'none', 5000); // auto-göm efter 4 sek
+    }
+  }
+
+  openSettingsBtn.addEventListener('click', () => {
+    cookieReminder.style.display = 'none';
+    openCookieSettings(); // öppna huvuddialogen igen
+  });
+
+  // Koppla logiken direkt
+  attachQrGenEvents();
+
+  // Gör openCookieSettings global om den inte finns
+  function openCookieSettings() {
+    localStorage.removeItem('cookieConsent');
+    location.reload(); // visar cookie-dialogen igen
+  }
+</script>
+
 </html>

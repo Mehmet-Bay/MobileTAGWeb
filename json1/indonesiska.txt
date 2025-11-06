@@ -1,0 +1,5 @@
+"QuestionYes": "Ya",
+"QuestionNo": "Tidak",
+"PropertyDamageYes": "Ya",
+"PropertyDamageNo": "Tidak",
+"VBownertax": "Apakah tertanggung dapat memperoleh kembali PPN atas kendaraannya?",

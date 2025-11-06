@@ -1,0 +1,5 @@
+"QuestionYes": "SÌ",
+"QuestionNo": "No",
+"PropertyDamageYes": "SÌ",
+"PropertyDamageNo": "No",
+"VBownertax": "L\'assicurato può recuperare l\'IVA sul veicolo?",

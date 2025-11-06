@@ -1,0 +1,5 @@
+"QuestionYes": "Иә",
+"QuestionNo": "Жоқ",
+"PropertyDamageYes": "Иә",
+"PropertyDamageNo": "Жоқ",
+"VBownertax": "Сақтанушы көлік құралына ҚҚС қайтара ала ма?",

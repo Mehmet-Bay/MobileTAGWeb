@@ -1,0 +1,5 @@
+"QuestionYes": "Đúng",
+"QuestionNo": "không",
+"PropertyDamageYes": "Đúng",
+"PropertyDamageNo": "không",
+"VBownertax": "Người được bảo hiểm có thể lấy lại thuế GTGT của xe không?",

@@ -1,0 +1,5 @@
+"QuestionYes": "جی ہاں",
+"QuestionNo": "نہیں",
+"PropertyDamageYes": "جی ہاں",
+"PropertyDamageNo": "نہیں",
+"VBownertax": "کیا بیمہ شدہ گاڑی پر VAT واپس حاصل کر سکتا ہے؟",

@@ -1,0 +1,5 @@
+"QuestionYes": "Sim",
+"QuestionNo": "Não",
+"PropertyDamageYes": "Sim",
+"PropertyDamageNo": "Não",
+"VBownertax": "O segurado pode recuperar o imposto sobre o valor acrescentado do veículo",

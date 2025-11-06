@@ -1,0 +1,5 @@
+"QuestionYes": "Да",
+"QuestionNo": "Нет",
+"PropertyDamageYes": "Да",
+"PropertyDamageNo": "Нет",
+"VBownertax": "Может ли застрахованный вернуть НДС за транспортное средство?",

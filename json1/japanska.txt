@@ -1,0 +1,5 @@
+"QuestionYes": "はい",
+"QuestionNo": "いいえ",
+"PropertyDamageYes": "はい",
+"PropertyDamageNo": "いいえ",
+"VBownertax": "被保険者は車両にかかった VAT を取り戻すことができますか?",

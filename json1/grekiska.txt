@@ -1,0 +1,5 @@
+"QuestionYes": "Ναί",
+"QuestionNo": "Οχι",
+"PropertyDamageYes": "Ναί",
+"PropertyDamageNo": "Οχι",
+"VBownertax": "Μπορεί ο ασφαλισμένος να πάρει πίσω τον ΦΠΑ στο όχημα;",

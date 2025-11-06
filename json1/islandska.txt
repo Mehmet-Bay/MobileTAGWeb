@@ -1,0 +1,5 @@
+"QuestionYes": "Já",
+"QuestionNo": "NEI",
+"PropertyDamageYes": "Já",
+"PropertyDamageNo": "NEI",
+"VBownertax": "Getur vátryggður fengið virðisaukaskatt af ökutækinu til baka?",

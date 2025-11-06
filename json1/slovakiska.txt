@@ -1,0 +1,5 @@
+"QuestionYes": "Áno",
+"QuestionNo": "Nie",
+"PropertyDamageYes": "Áno",
+"PropertyDamageNo": "Nie",
+"VBownertax": "Môže poistený dostať späť DPH z vozidla?",

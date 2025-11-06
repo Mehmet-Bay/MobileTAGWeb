@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="drawable/mobile_tag_logo.png">
+        <title>termscondition</title>
+        <style>
+                body {
+                    margin: 0;
+                    padding: 0;
+                    background-color: #000000;
+                    color: #FFBF00;
+                }
+                header {
+                    text-align: center;                    
+                }
+                h1 {
+                    margin: 0;
+                    font-size: 8vw;
+                    -webkit-text-fill-color: antiquewhite;
+                    text-shadow: 0 0 10px #FFBF00;
+                }
+                nav a {
+                    color: #000000;
+                    text-decoration: none;
+                    margin: 0 20px;
+                    font-size: 2.5vw;
+                    font-weight: bold;
+                    transition: color 0.3s ease;
+                }
+                nav p {
+                    color: #000000;
+                    text-decoration: none;
+                    margin: 0 20px;
+                    font-size: 2vw;
+                    
+                    transition: color 0.3s ease;
+                }
+                .adsbygoogle {
+                    background: #eee;
+                    border: 1px dashed #999;
+                }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MWDYKZ1W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1MWDYKZ1W7');
+  </script>
+    </head>
+        <script>
+            async function loadTermsTexts() {
+                try {
+                    const response = await fetch("en.json");
+                    const data = await response.json();
+                    const textBreaker = data.termsInfo.replace(/\n/g, "<br>");
+                    document.getElementById("nav-termsInfo").innerHTML = textBreaker;
+                    document.getElementById("nav-terms").textContent = data.terms;
+                } catch (error) {
+                    console.error("Fel vid laddning av navtexts.json:", error);
+                }
+            }
+            loadTermsTexts();
+        </script>
+    <body>
+        <header>
+            <!--<h1 class="centered-title">Mobile-TAG</h1>-->
+            <img src="drawable/nylogo.png" style="max-width: 100%;">
+            <ins class="adsbygoogle"
+                style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+                data-ad-client="ca-pub-3940256099942544"
+                data-ad-slot="1234567890"
+                data-ad-format="auto"
+                data-full-width-responsive="true">
+            </ins>
+        </header>
+        <section id="terms" style="padding:40px; display:flex; justify-content:center;">
+            <div style="background-color:#cbc8c8; color:#000; max-width:800px; padding:30px; border-radius:10px;">
+                <nav>
+                    <header class="center">
+                        <a id="nav-terms" href="#"></a>
+                    </header>
+                    <br>
+                <p id="nav-termsInfo" href="#"></p>
+                </nav>
+            </div>
+        </section>
+    </body>   
+</html>

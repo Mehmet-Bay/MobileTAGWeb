@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="drawable/mobile_tag_logo.png">
+  <title>PrivacyCondition</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #FFBF00;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 60px;
+      -webkit-text-fill-color: antiquewhite;
+      text-shadow: 0 0 10px #FFBF00;
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .content-box {
+      background-color: #cbc8c8;
+      color: #000;
+      max-width: 800px;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .nav-link {
+      font-size: 2.5vw;
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .info-text {
+      font-size: 1.8vw;
+      line-height: 1.6;
+    }
+    .adsbygoogle {
+      background: #eee;
+      border: 1px dashed #999;
+    }    
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MWDYKZ1W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1MWDYKZ1W7');
+  </script>
+</head>
+<body>
+  <header>
+    <img src="drawable/nylogo.png" style="max-width: 100%;">
+      <ins class="adsbygoogle"
+        style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+        data-ad-client="ca-pub-3940256099942544"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+      </ins>
+  </header>
+
+  <section>
+    <div class="content-box">
+      <a id="nav-privacy" class="nav-link" href="#" target="_blank"></a>
+      <div id="nav-privacyInfo" class="info-text"></div>
+    </div>
+  </section>
+
+  <script>
+    async function loadTermsTexts() {
+      try {
+        const response = await fetch("en.json");
+        const data = await response.json();
+
+        let formattedText = data.privacyInfo.replace(/\n/g, "<br>");
+
+        formattedText = formattedText.replace(
+          "https://policies.google.com/technologies/ads",
+          '<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Learn more about Google ads</a>'
+        );
+
+        document.getElementById("nav-privacy").textContent = data.privacy;
+        document.getElementById("nav-privacyInfo").innerHTML = formattedText;
+      } catch (error) {
+        console.error("Fel vid laddning av en.json:", error);
+        document.getElementById("nav-privacyInfo").textContent = "Kunde inte ladda sekretessinformationen.";
+      }
+    }
+
+    loadTermsTexts();
+  </script>
+</body>
+</html>

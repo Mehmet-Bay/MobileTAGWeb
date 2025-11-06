@@ -1,0 +1,5 @@
+"QuestionYes": "Da",
+"QuestionNo": "No",
+"PropertyDamageYes": "Da",
+"PropertyDamageNo": "No",
+"VBownertax": "Da li osiguranik može povratiti PDV na vozilo?",

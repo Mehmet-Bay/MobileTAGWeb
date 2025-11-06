@@ -1,0 +1,5 @@
+"QuestionYes": "是的",
+"QuestionNo": "不",
+"PropertyDamageYes": "是的",
+"PropertyDamageNo": "不",
+"VBownertax": "被保險人可以拿回車輛的增值稅嗎？",

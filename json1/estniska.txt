@@ -1,0 +1,5 @@
+"QuestionYes": "Jah",
+"QuestionNo": "Ei",
+"PropertyDamageYes": "Jah",
+"PropertyDamageNo": "Ei",
+"VBownertax": "Kas kindlustatu saab tagasi sõiduki käibemaksu",

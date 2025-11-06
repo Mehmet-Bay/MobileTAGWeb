@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="drawable/mobile_tag_logo.png">
+  <title>QRGen</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      background-color: #000000;
+      color: #FFBF00;
+      font-family: serif;
+    }
+    .parent {
+      display: flex;
+      justify-content: center; 
+      align-items: center;     
+    
+    }
+    h1 {
+      margin: 0;
+      font-size: 90px;
+      text-align: center;
+      -webkit-text-fill-color: antiquewhite;
+      text-shadow: 0 0 10px #FFBF00;
+    }
+    h2 {
+      margin: 0;
+      text-align: center;
+      font-size: 50px;
+      -webkit-text-fill-color: antiquewhite;
+    }
+    h3 {
+      margin: 0;
+      margin-top: 2%;
+      -webkit-text-fill-color: #FFBF00;
+      
+      padding-bottom: 2%;
+      font-size: 2vw;
+      /*text-align: start;*/
+      text-align: center;
+    }
+    .headContent {
+      width: auto;
+      justify-content: center;
+    }
+    input {
+      margin-bottom: 10px;
+      width: 250px;
+    }
+    .picker {
+      /*margin: 20px auto;*/
+      margin-top: 1%;
+      margin-bottom: 1%;
+      height: 160px;
+      /*width: 300px;*/
+      width: 90%;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      background-color: #111;
+      border: 2px solid #FFBF00;
+      border-radius: 10px;
+      color: #FFBF00;
+      text-align: center;
+    }
+    .picker div {
+      height: 30px;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      scroll-snap-align: start;
+      padding-left: 5%;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #FFBF00;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #ffaa00;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      padding-top: 1%;
+      border-radius: 15px;
+      box-shadow: 0 0 15px  #ffaa00;
+      margin-top: 10%;
+      width: 650px;
+      padding-left: 1%;
+      padding-right: 1%;
+      margin: auto;
+      background-color: #cbc8c8;
+      gap: 5%;
+    }
+    /*@media (max-width: 768px) {
+      .container {
+        max-width: 90%; 
+      }*/
+      /*.labelBlack {
+        font-size: 15px;
+      }
+    }*/
+    .container-horizonatalLeft {
+      justify-items: auto;
+      padding-left: 1%;
+      text-align: start;
+      width: 100%;
+    }
+    .container-horizonatalRight {
+      justify-items: auto;
+      text-align: end;
+      padding-right: 1%;
+      width: 100%;
+      justify-items: end;
+    }
+  .qr-card {
+    width: 100%;
+    padding: 1%;
+    border: 2px solid #FFBF00;
+    border-radius: 1.5vw;
+    background-color: #111;
+    color: #FFBF00;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255,191,0,0.5);
+  }
+  .qr-card .logo {
+    /*max-width: 270px;*/
+    max-width: 50%;
+    /*margin-bottom: 10px;*/
+  }
+  .qr-card .regqr {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 1% 0;
+    margin-bottom: auto;
+  }
+  #qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color: white;
+    padding: 2%;
+    min-height: auto;         
+  }
+  .labelRed {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .labelBlack {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  @media (max-aspect-ratio: 1/1) {
+    body {
+      width: fit-content;
+      max-width: 640px;
+      height: auto;
+    }
+    .userInput {
+      width: 80%;
+    }
+    .headContent {
+      width: 600px;
+    }
+    .labelRed {
+      font-size: 15px;
+    }
+    .labelBlack {
+      font-size: 15px;
+    }
+    h3 {
+      margin: 0;
+      margin-top: 2%;
+      -webkit-text-fill-color: #FFBF00;
+      padding-left: 1%;
+      padding-bottom: 2%;
+      font-size: 15px;
+      /*text-align: start;*/
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+    }
+  }
+  .checkbox-group {
+  display: flex;
+  justify-self: end;
+  width: 80%;
+  border-radius: 15px;
+  background-color: antiquewhite;
+  margin: 0;
+  gap: 0em;       
+  }
+  .checkbox-group label {
+    font-size: 1.vw;
+  }
+  .adsbygoogle {
+    /*background: #eee;*/
+    background-color: rgba(20,55,55,0.0);
+    border: 1px dashed #999;
+  }
+  input[type="checkbox"],
+  label {
+  display: inline-block;  /* bredvid varandra */
+  vertical-align: middle; /* linjeras snyggt */
+  }
+#langDropdown {
+  display: inline-block;
+  background: black;
+  border: 1px solid #FFBF00;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: 16vw;
+  z-index: 9999;
+  max-height: 100px;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+
+#langDropdown li {
+  padding: 8px;
+  cursor: pointer;
+  font-size: 1.7vw;
+  color: #FFBF00;          /* gul text */
+}
+
+#langDropdown li:hover {
+  color: white;            /* text blir vit vid hover */
+  background: black;       /* bakgrunden ändras inte */
+}
+.ads-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1%;
+  width: 100%;
+  padding: 0 1%;
+}
+
+.side-ad {
+  display: block;
+  width: 25%;
+  max-width: 300px;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .side-ad {
+    display: none;
+  }
+  .ads-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+  </style>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MWDYKZ1W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1MWDYKZ1W7');
+  </script>
+<body oncontextmenu="return false;">
+  <header class="headContent" style="justify-content: center;">
+    <!--<h1 class="centered-title">Mobile-TAG</h1>-->
+    <div style="width: 100%; text-align: center;">
+      <img src="drawable/nylogo.png" alt="" width="50%">
+    </div>
+    <h2 class="centered-title">QR Code Generator</h2>
+    <h3 id="qrTextInfo" href="#"></h3>
+      <ins class="adsbygoogle"
+        style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+        data-ad-client="ca-pub-3940256099942544"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+      </ins>    
+    <h3 id="qrMessageInfo" href="#"></h3>
+    <h3 id="qrPassTip" href="#"></h3>
+    <div style="display: flex; justify-content: center; position: relative;">
+      <h3 id="formLang" style="text-align: left; padding-right: 1;">Select form language</h3>  
+      <h3 id="langSelect" style="text-align: left; cursor: pointer; padding-right: 1%;"></h3>
+      <ul id="langDropdown"></ul>
+    </div>
+  </header>
+<script>
+    function loadLanguage(langName) {
+      const fileName = "json/" + langName.toLowerCase() + ".json"; 
+      console.log("språk: ") + fileName;
+      fetch(fileName)
+        .then(resp => resp.json())
+        .then(data => {
+          document.getElementById("labelOwnerName").innerText = data.vehicleOwnerName;
+          document.getElementById("labelOwnerAddress").innerText = data.vehicleOwnerAddress;
+          document.getElementById("labelOwnerId").innerText = data.vehicleOwnerId;
+          document.getElementById("labelOwnerTelNo").innerText = data.vehicleOwnerTel;
+          document.getElementById("labelOwnerMail").innerText = data.vehicleOwnerMail;
+          document.getElementById("labelVehicleBrand").innerText = data.vehicleMake;
+          document.getElementById("labelVehicleModel").innerText = data.vehicleModel;
+          document.getElementById("labelVehicleType").innerText = data.vehicleType;
+          document.getElementById("labelRegNo").innerText = data.vehicleRegistrationNo;
+          document.getElementById("labelCityReg").innerText = data.vehicleRegistrationCity;
+          document.getElementById("labelRegCountry").innerText = data.vehicleRegistrationCountry;
+          document.getElementById("labelInsuranceName").innerText = data.vehicleInsuranceName;
+          document.getElementById("labelInsuranceTel").innerText = data.vehicleInsuranceTel;
+          document.getElementById("labelInsuranceMail").innerText = data.vehicleInsuranceMail;
+          document.getElementById("labelInsuranceNo").innerText = data.vehicleInsurancePolicyNo;
+          document.getElementById("labelInsuranceAgent").innerText = data.vehicleInsuranceAgent;
+          document.getElementById("labelQRService").textContent = data.thisQrService;
+          document.getElementById("labelComprehensive").innerText = data.vehicleInsuranceCarrierDamage;
+          document.getElementById("labelComprehensiveYes").innerText = data.QuestionYes;
+          document.getElementById("labelComprehensiveNo").innerText = data.QuestionNo;
+          document.getElementById("labelValueAddedTax").innerText = data.VBownertax;
+          document.getElementById("labelValueAddedTaxYes").innerText = data.PropertyDamageYes;
+          document.getElementById("labelValueAddedTaxNo").innerText = data.PropertyDamageNo;
+          document.getElementById("langSelect").innerText = ": " + langName;
+        })
+        .catch(err => console.error("Could not load languages: ", err));
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      loadLanguage("en");
+    });
+
+    loadLanguage("English");
+
+    fetch("en.json")
+      .then(resp => resp.json())
+      .then(data => {
+        const dropdown = document.getElementById("langDropdown");
+        const langSelect = document.getElementById("langSelect");
+
+        data.languages.forEach(lang => {
+          const li = document.createElement("li");
+          li.textContent = lang;
+          li.style.padding = "8px";
+          li.style.cursor = "pointer";
+
+          li.addEventListener("click", () => {
+            loadLanguage(lang);
+          });
+
+          dropdown.appendChild(li);
+        });
+
+        langSelect.addEventListener("click", () => {
+          dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+          const rect = langSelect.getBoundingClientRect();
+          dropdown.style.left = rect.left + "px";
+          dropdown.style.top = rect.bottom + "px";
+        });
+      });
+  </script>
+  <div style="display: flex; padding-left: 1%; padding-right: 1%; justify-content: center;">
+      <ins class="adsbygoogle side-ad"
+        
+        data-ad-client="ca-pub-3940256099942544"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+      </ins>
+  <div class="container"> 
+    <div class="container-horizonatalLeft" >
+      <label class="labelRed" id="labelOwnerName" for="ownersName"></label><br>
+      <input class="userInput" id="ownersName" type="text" oninput="checkForm()"><br>
+      <label class="labelBlack" id="labelOwnerAddress" for="ownersAddress"></label><br>
+      <input class="userInput" id="ownersAddress" type="text"><br>
+      <label class="labelBlack" id="labelOwnerId" for="ownersIdNo"></label><br>
+      <input class="userInput" id="ownersIdNo" type="text"><br>
+      <label class="labelRed" id="labelOwnerTelNo" for="ownersTel"></label><br>
+      <input class="userInput" id="ownersTel" type="tel" oninput="checkForm()"><br>
+      <label class="labelRed" id="labelOwnerMail" for="ownersMail"></label><br>
+      <input class="userInput" id="ownersMail" type="text"><br>
+      <label class="labelRed" id="labelVehicleBrand" for="vehicleMake"></label><br>
+      <input class="userInput" id="vehicleMake" type="text" oninput="checkForm()"><br>
+      <label class="labelBlack" id="labelVehicleModel" for="vehicleModel"></label><br>
+      <input class="userInput" id="vehicleModel" type="text"><br>
+      <label class="labelBlack" id="labelVehicleType" for="vehicleType"></label><br>
+      <input class="userInput" id="vehicleType" type=""><br>
+      <label class="labelRed" id="labelRegNo" for="regnr"></label><br>
+      <input class="userInput" id="regnr" type="text" oninput="checkForm()"><br>
+      <label class="labelBlack" id="labelCityReg" for="cityReg"></label><br>
+      <input class="userInput" id="cityReg" type="text"><br>
+      <label class="labelRed" id="labelRegCountry" for="regCountry"></label><br>
+      <div id="countryPicker" class="picker"></div>
+      <input class="userInput" id="regCountry" type="text" placeholder="" readonly><br>
+    </div>
+    <div class="container-horizonatalRight">
+      <label class="labelRed" id="labelInsuranceName" for="insuranceCompanyName"></label><br>
+      <input class="userInput" id="insuranceCompanyName" type="text" oninput="checkForm()"><br>
+      <label class="labelBlack" id="labelInsuranceTel" for="insuranceTel"></label><br>
+      <input class="userInput" id="insuranceTel" type="tel"><br>
+      <label class="labelBlack" id="labelInsuranceMail" for="insuranceMail"></label><br>
+      <input class="userInput" id="insuranceMail" type="text"><br>
+      <label class="labelBlack" id="labelInsuranceNo" for="policyNo"></label><br>
+      <input class="userInput" id="policyNo" type="text"><br>
+      <label class="labelBlack" id="labelInsuranceAgent" for="agentInfo"></label><br>
+      <input class="userInput" id="agentInfo" type="text"><br>
+    <div style="background-color: antiquewhite; padding: 1%; text-align: start; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+      <label class="labelBlack" id="labelComprehensive"></label>
+      <div style="display: flex; gap: 1em; margin-top: 0.5em;">
+        <label class="labelBlack" for="comprehensiveYes" id="labelComprehensiveYes" style="width: auto;"></label>
+        <input type="radio" id="comprehensiveYes" name="comprehensiveInsurance" value="Yes" style="width: auto;">
+        <label class="labelBlack" for="comprehensiveNo" id="labelComprehensiveNo" style="width: auto;"></label>        
+        <input type="radio" id="comprehensiveNo" name="comprehensiveInsurance" value="No" checked style="width: auto;">
+      </div>
+    </div>
+    <div style="background-color: antiquewhite; padding: 1%; text-align: start; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+      <label class="labelBlack" id="labelValueAddedTax"></label>
+      <div style="display: flex; gap: 1em; margin-top: 0.5em;">
+        <label class="labelBlack" for="vatYes" id="labelValueAddedTaxYes" style="width: auto;"></label>        
+        <input type="radio" id="vatYes" name="valueAddedTax" value="Yes" style="width: auto;">
+        <label class="labelBlack" for="vatNo" id="labelValueAddedTaxNo" style="width: auto;"></label>        
+        <input type="radio" id="vatNo" name="valueAddedTax" value="No" checked style="width: auto;">
+      </div>
+    </div>
+    <br>
+      <label class="labelBlack" style="text-align: center;" id="thisService"></label>
+      <button id="buttonGen" disabled onclick="generateQR()">Generate QR Code</button>
+      <button onclick="deleteFields()">Delete</button>
+      <br>
+      <label class="labelBlack" id="labelQRService" style="text-align: center;"></label><br>
+      <div id="qrCard" class="qr-card">
+        <img src="drawable/nylogo.png" class="logo">
+        <p id="regQR" class="regqr"></p>
+      <div id="qrcode"></div>
+      <label style="font-size: 17px; font-weight: normal;">www.mobiletag-auto.com</label>
+      </div>
+    <button onclick="downloadCard()">Download QR Code as image</button>
+  </div>
+  </div>
+      <ins class="adsbygoogle side-ad"
+        
+        data-ad-client="ca-pub-3940256099942544"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+      </ins>
+  </div>
+      <ins class="adsbygoogle"
+      style="display:block; width: 100%; height:auto; max-height: 10vw; border-radius: 0px;"
+      data-ad-client="ca-pub-3940256099942544"
+      data-ad-slot="1234567890"
+      data-ad-format="auto"
+      data-full-width-responsive="true">
+    </ins>
+<script 
+  async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5663370246187799"
+  crossorigin="anonymous">
+</script>
+  <!-- QRCode.js bibliotek -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  
+<script>
+    function checkForm() {
+  const requiredIds = [
+    "ownersName",
+    "ownersTel",
+    "ownersMail",
+    "vehicleMake",
+    "regnr",
+    "regCountry",
+    "insuranceCompanyName"
+  ];
+
+  const anyEmpty = requiredIds.some(id => {
+    return document.getElementById(id).value.trim() === "";
+  });
+  document.getElementById("buttonGen").disabled = anyEmpty;
+}
+  async function loadCountries() {
+    try {
+      const response = await fetch("en.json");
+      const data = await response.json();
+
+      const picker = document.getElementById("countryPicker");
+      document.getElementById("thisService").textContent = data.thisQrService;
+      document.getElementById("qrTextInfo").textContent = data.qrText;
+      document.getElementById("qrMessageInfo").textContent = data.qrMessage;
+      document.getElementById("qrPassTip").textContent = data.qrMessageTip;
+      picker.innerHTML = "";
+
+      data.countries.forEach(country => {
+        const div = document.createElement("div");
+        div.textContent = country;
+        div.addEventListener("click", () => {
+          document.getElementById("regCountry").value = country;
+        });
+        picker.appendChild(div);
+      });
+    } catch (err) {
+      console.error("could not load countries:", err);
+    }
+  }
+  loadCountries();
+async function generateQR() {
+  const fields = [
+    "ownersName", "ownersAddress", "ownersIdNo", "ownersTel", "ownersMail",
+    "vehicleMake", "vehicleModel", "vehicleType", "regnr", "cityReg", "regCountry",
+    "insuranceCompanyName", "insuranceTel", "insuranceMail", "policyNo", "agentInfo"
+  ];
+
+  let qrData = {};
+  let values = [];
+
+  fields.forEach(id => {
+    let val = document.getElementById(id).value.trim();
+
+    if (id === "regnr" || id === "vehicleMake") {
+      val = val.toUpperCase();
+    } else {
+      val = val.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+    }
+
+    if (val === "") val = " ";
+    qrData[id] = val;
+    values.push(val);
+  });
+
+  const radioGroups = [
+    { name: "comprehensiveInsurance", key: "comprehensiveInsurance" },
+    { name: "valueAddedTax", key: "valueAddedTax" }
+  ];
+
+  radioGroups.forEach(group => {
+    const selected = document.querySelector(`input[name="${group.name}"]:checked`);
+    const val = selected ? selected.value : "No"; 
+    qrData[group.key] = val;
+    values.push(val);
+  });
+
+  document.getElementById("regQR").textContent = document.getElementById("regnr").value.toUpperCase();
+
+  let vehicleInfo = values.join("#");
+  console.log(vehicleInfo);
+
+  try {
+    const response = await fetch("https://apiemco.mobiletag-auto.com/api/encrypt", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ data: vehicleInfo })
+    });
+
+    if (!response.ok) {
+      throw new Error("Encryption error server side: " + response.status);
+    }
+
+    const json = await response.json();
+    const encrypted = json.encrypted;
+
+    // 🔹 Skapa QR-koden lokalt i webben
+    document.getElementById("qrcode").innerHTML = "";
+    new QRCode(document.getElementById("qrcode"), {
+      text: encrypted,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.L
+    });
+
+  } catch (err) {
+    alert("Sometthing went wrong when generating QR code.");
+  }
+}
+
+  function downloadQR() {
+    const canvas = document.querySelector("#qrcode canvas");
+    if (!canvas) {
+      alert("Generate a QR code first!");
+      return;
+    }
+    const link = document.createElement("a");
+    link.href = canvas.toDataURL("image/png");
+    link.download = "qrcode.png";
+    link.click();
+  }
+  function deleteFields() {
+      const fields = [
+    "ownersName", "ownersAddress", "ownersIdNo", "ownersTel", "ownersMail",
+    "vehicleMake", "vehicleModel", "vehicleType", "regnr", "cityReg", "regCountry",
+    "insuranceCompanyName", "insuranceTel", "insuranceMail", "policyNo", "agentInfo"
+  ];
+    let qrData = {};
+    let values = [];
+    fields.forEach(id => {
+    let val = document.getElementById(id).value;
+    if (val !== "") val = ""; 
+    //qrData[id] = val;
+    document.getElementById(id).value = val;
+    checkForm();
+    document.getElementById("qrcode").innerHTML = "";
+    document.getElementById("regQR").textContent = "";
+  });
+}
+</script>
+<!--
+<script>
+  function downloadCard() {
+    const canvas = document.querySelector("#qrcode canvas");
+    if (!canvas) {
+      showAlert("Generate a QR code first!");
+      return;
+    }
+    const card = document.getElementById("qrCard");
+    html2canvas(card).then(canvas => {
+      const link = document.createElement("a");
+      link.href = canvas.toDataURL("image/png");
+      link.download = document.getElementById("regnr").value + ".png";
+      link.click();
+    });
+  }
+</script>
+-->
+<script>
+function downloadCard() {
+  const card = document.getElementById("qrCard");
+  const regnr = document.getElementById("regnr").value || "qr_code";
+
+  if (!document.querySelector("#qrcode canvas")) {
+    alert("Generate a QR code first!");
+    return;
+  }
+
+  // ⚙️ Justera exportstorleken (t.ex. ID-kort: 8.5 × 5.4 cm ≈ 320×205 px)
+  const targetWidth = 320;  // px
+  const targetHeight = 400; // px
+
+  html2canvas(card, { scale: 4 }).then(canvas => {
+    // Skapa en tillfällig "scaled" canvas i rätt storlek
+    const scaledCanvas = document.createElement("canvas");
+    scaledCanvas.width = targetWidth;
+    scaledCanvas.height = targetHeight;
+
+    const ctx = scaledCanvas.getContext("2d");
+    ctx.drawImage(canvas, 0, 0, targetWidth, targetHeight);
+
+    // 🖼️ Ladda ner
+    const link = document.createElement("a");
+    link.href = scaledCanvas.toDataURL("image/png");
+    link.download = `${regnr}.png`;
+    link.click();
+  });
+}
+</script>
+
+<div id="adblockOverlay" style="
+  display:none;
+  position:fixed;
+  top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(6px);
+  z-index:99999;
+  align-items:center;justify-content:center;
+  text-align:center;color:#FFBF00;
+  font-family:serif;
+  animation:fadeIn 0.6s ease forwards;
+">
+  <div id="adblockBox" style="
+    background:rgba(17,17,17,0.9);
+    border:2px solid #FFBF00;
+    border-radius:15px;
+    padding:25px;
+    max-width:420px;
+    width:90%;
+    box-shadow:0 0 25px rgba(255,191,0,0.4);
+    margin:auto;
+    opacity:0;
+    transform:scale(0.95);
+    animation:zoomIn 0.5s ease forwards;
+  ">
+    <h2 id="adblockTitle" style="margin-top:0;"></h2>
+    <p id="adblockDescription" style="font-size:15px;color:#FFD84D;line-height:1.5;"></p>
+    <p id="adblockNote" style="font-size:13px;color:#EEDC82;"></p>
+
+    <div style="margin-top:10px;">
+      <button id="adblockButton1" onclick="location.reload()" style="
+        background:#FFBF00;
+        color:#000;
+        font-weight:bold;
+        border:none;
+        border-radius:8px;
+        padding:6px 14px;
+        cursor:pointer;
+        box-shadow:0 0 10px rgba(255,191,0,0.3);
+        margin:4px;
+      "></button>
+
+      <button id="adblockButton2" onclick="location.reload()" style="
+        background:#FFBF00;
+        color:#000;
+        font-weight:bold;
+        border:none;
+        border-radius:8px;
+        padding:6px 14px;
+        cursor:pointer;
+        box-shadow:0 0 10px rgba(255,191,0,0.3);
+        margin:4px;
+      "></button>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
+  @keyframes zoomIn {from{opacity:0;transform:scale(0.95);}to{opacity:1;transform:scale(1);}}
+</style>
+
+<script>
+  const currentLang = 'en'; // byt till 'sv', 'de' osv. senare
+
+  // --- Ladda språktext ---
+  fetch(`${currentLang}.json`)
+    .then(res => res.json())
+    .then(data => {
+      //const t = data.adblock;
+      document.getElementById('adblockTitle').innerHTML = data.title;
+      document.getElementById('adblockDescription').innerHTML = data.description;
+      document.getElementById('adblockNote').innerHTML = data.note;
+      // två knappar, samma text kan användas eller olika om du vill
+      document.getElementById('adblockButton1').innerHTML = data.button;
+      document.getElementById('adblockButton2').innerHTML = 'I’ve disabled it';
+    })
+    .catch(err => console.error('Failed to load language file:', err));
+
+  // --- Visa overlay ---
+  function showAdblockOverlay() {
+    const overlay = document.getElementById('adblockOverlay');
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  // --- Detektera adblock ---
+  function detectAdblock() {
+    return new Promise(resolve => {
+      const bait = document.createElement('div');
+      bait.className = 'ad ads ad-banner ad-container sponsor';
+      bait.style.cssText = 'height:1px;position:absolute;left:-9999px;';
+      document.body.appendChild(bait);
+
+      const testScript = document.createElement('script');
+      testScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?v=' + Date.now();
+      testScript.async = true;
+      testScript.onerror = () => resolve(true);
+      testScript.onload  = () => resolve(false);
+
+      setTimeout(() => {
+        const hidden = window.getComputedStyle(bait).display === 'none' || bait.offsetParent === null;
+        bait.remove();
+        resolve(hidden);
+      }, 800);
+
+      document.body.appendChild(testScript);
+    });
+  }
+
+  window.addEventListener('load', async () => {
+    const blocked = await detectAdblock();
+    if (blocked) {
+      sessionStorage.setItem('adblockDetected', '1');
+      showAdblockOverlay();
+    } else {
+      sessionStorage.removeItem('adblockDetected');
+    }
+  });
+</script>
+
+<div id="customAlert" class="alert-overlay" style="display:none;">
+  <div class="alert-box">
+    <h3 id="alertTitle">Notice</h3>
+    <p id="alertMessage"></p>
+    <button id="alertOk">OK</button>
+  </div>
+</div>
+
+<style>
+  .alert-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .alert-box {
+    background: #000;
+    border: 2px solid #FFBF00;
+    border-radius: 15px;
+    padding: 2em;
+    max-width: 400px;
+    color: #FFBF00;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255,191,0,0.6);
+    font-family: serif;
+    animation: glowIn 0.4s ease;
+  }
+
+  .alert-box h3 {
+    color: #FFBF00;
+    font-size: 1.6em;
+    text-shadow: 0 0 10px #FFBF00;
+    margin-bottom: 10px;
+  }
+
+  .alert-box p {
+    color: antiquewhite;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+
+  .alert-box button {
+    background-color: #FFBF00;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .alert-box button:hover {
+    background-color: #ffcc33;
+    box-shadow: 0 0 10px #FFBF00;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+  }
+
+  @keyframes glowIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+</style>
+
+<script>
+  function showAlert(title, message) {
+    document.getElementById('alertTitle').innerText = title;
+    //document.getElementById('alertMessage').innerText = message;
+    document.getElementById('customAlert').style.display = 'flex';
+  }
+
+  document.getElementById('alertOk').addEventListener('click', () => {
+    document.getElementById('customAlert').style.display = 'none';
+  });
+</script>
+
+</body>
+
+</html>

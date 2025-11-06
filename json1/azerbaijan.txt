@@ -1,0 +1,5 @@
+"QuestionYes": "Bəli",
+"QuestionNo": "yox",
+"PropertyDamageYes": "Bəli",
+"PropertyDamageNo": "yox",
+"VBownertax": "Sığortalı avtomobilin əlavə dəyər vergisini geri ala bilərmi?",

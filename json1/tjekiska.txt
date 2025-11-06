@@ -1,0 +1,5 @@
+"QuestionYes": "Ano",
+"QuestionNo": "Ne",
+"PropertyDamageYes": "Ano",
+"PropertyDamageNo": "Ne",
+"VBownertax": "Může pojištěný získat zpět DPH z vozidla?",

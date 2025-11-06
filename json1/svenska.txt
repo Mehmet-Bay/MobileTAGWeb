@@ -1,0 +1,5 @@
+"QuestionYes": "Ja",
+"QuestionNo": "Nej",
+"PropertyDamageYes": "Ja",
+"PropertyDamageNo": "Nej",
+"VBownertax": "Kan den försäkrade få tillbaka mervärdesskatten på fordonet?",

@@ -1,0 +1,5 @@
+"QuestionYes": "예",
+"QuestionNo": "아니요",
+"PropertyDamageYes": "예",
+"PropertyDamageNo": "아니요",
+"VBownertax": "피보험자가 차량에 부과된 부가가치세(VAT)를 환급받을 수 있나요?",

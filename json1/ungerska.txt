@@ -1,0 +1,5 @@
+"QuestionYes": "Igen",
+"QuestionNo": "Nem",
+"PropertyDamageYes": "Igen",
+"PropertyDamageNo": "Nem",
+"VBownertax": "Visszakaphatja a biztosított a gépjármű áfáját?",

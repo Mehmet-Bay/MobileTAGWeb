@@ -1,0 +1,5 @@
+"QuestionYes": "Haa",
+"QuestionNo": "Maya",
+"PropertyDamageYes": "Haa",
+"PropertyDamageNo": "Maya",
+"VBownertax": "Caymiska ma ku soo celin karaa VAT-ka baabuurka?",

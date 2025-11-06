@@ -1,0 +1,5 @@
+"QuestionYes": "Այո՛",
+"QuestionNo": "Ոչ",
+"PropertyDamageYes": "Այո՛",
+"PropertyDamageNo": "Ոչ",
+"VBownertax": "Կարո՞ղ է ապահովագրվածը հետ ստանալ մեքենայի ավելացված արժեքի հարկը",

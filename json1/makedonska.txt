@@ -1,0 +1,5 @@
+"QuestionYes": "Да",
+"QuestionNo": "бр",
+"PropertyDamageYes": "Да",
+"PropertyDamageNo": "бр",
+"VBownertax": "Дали осигуреникот може да си го врати данокот на додадена вредност на возилото",

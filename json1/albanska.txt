@@ -1,0 +1,5 @@
+"QuestionYes": "po",
+"QuestionNo": "Nr",
+"PropertyDamageYes": "po",
+"PropertyDamageNo": "Nr",
+"VBownertax": "A mund të marrë i siguruari tatimin mbi vlerën e shtuar të automjetit",

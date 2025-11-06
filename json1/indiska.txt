@@ -1,0 +1,5 @@
+"QuestionYes": "हाँ",
+"QuestionNo": "नहीं",
+"PropertyDamageYes": "हाँ",
+"PropertyDamageNo": "नहीं",
+"VBownertax": "क्या बीमाधारक वाहन पर वैट वापस पा सकता है?",

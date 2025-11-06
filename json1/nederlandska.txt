@@ -1,0 +1,5 @@
+"QuestionYes": "Ja",
+"QuestionNo": "Nee",
+"PropertyDamageYes": "Ja",
+"PropertyDamageNo": "Nee",
+"VBownertax": "Kan de verzekerde de BTW op het voertuig terugkrijgen?",

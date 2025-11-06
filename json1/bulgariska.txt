@@ -1,0 +1,5 @@
+"QuestionYes": "да",
+"QuestionNo": "НЕ",
+"PropertyDamageYes": "да",
+"PropertyDamageNo": "НЕ",
+"VBownertax": "Може ли застрахованият да получи обратно ДДС върху автомобила?",

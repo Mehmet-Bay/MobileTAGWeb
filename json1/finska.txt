@@ -1,0 +1,5 @@
+"QuestionYes": "Joo",
+"QuestionNo": "Ei",
+"PropertyDamageYes": "Joo",
+"PropertyDamageNo": "Ei",
+"VBownertax": "Voiko vakuutettu saada takaisin ajoneuvon arvonlisäveron?",

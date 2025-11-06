@@ -1,0 +1,5 @@
+"QuestionYes": "是",
+"QuestionNo": "否",
+"PropertyDamageYes": "是",
+"PropertyDamageNo": "否",
+"VBownertax": "投保人能否退还车辆增值税",

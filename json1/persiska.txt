@@ -1,0 +1,5 @@
+"QuestionYes": "آره",
+"QuestionNo": "نه",
+"PropertyDamageYes": "آره",
+"PropertyDamageNo": "نه",
+"VBownertax": "آیا بیمه شده می تواند مالیات بر ارزش افزوده خودرو را پس بگیرد؟",
