@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5663370246187799"
-     crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" href="drawable/mobile_tag_logo.png">
   <title>Mobile-TAG</title>
   <style>   
@@ -78,18 +76,18 @@
       background-color: transparent;
       color: #fff;
     }
-    
+    /* Visa dropdown när man hovrar */
     .dropdown:hover .dropdown-content {
       display: block;
     }
     .scroll-container {
-      display: flex;                 
-      overflow-x: auto;              
-      scroll-snap-type: x mandatory; 
+      display: flex;                 /* horisontell layout */
+      overflow-x: auto;              /* scroll åt sidan */
+      scroll-snap-type: x mandatory; /* snap-effekt vid scroll */
       gap: 2vw;
       padding: 2vw;
       background-color: transparent;
-      
+      /*background-color: #111;*/
     }
       
     .scroll-container::-webkit-scrollbar {
@@ -102,20 +100,20 @@
     }
     
     .scroll-container section {
-      flex: 0 0 80%;                 
+      flex: 0 0 80%;                 /* varje slide tar ~80% av viewport */
       display: flex;
       align-items: center;
       gap: 20px;
-      
+      /*background-color: #222;*/
       background-color: transparent;
       border-radius: 10px;
-      
-      scroll-snap-align: center;     
+      /*padding: 20px;*/
+      scroll-snap-align: center;     /* snappar varje slide */
       color: #FFBF00;
     }
     .scroll-container img {
       width: 250px;
-      height: 300px;                
+      height: 300px;                  /* mindre bild */
       border-radius: 10px;
       flex-shrink: 0;
     }
@@ -316,6 +314,9 @@
   🌍 The site is currently available only in English.
     </div>
   </header>
+  
+  <!--<img src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" alt="centered image" class="center-image">-->
+
   <nav>
     <a id="nav-mainPage" href="#" onclick="showPage('main')"></a>
     <a id="nav-information" href="#" onclick="showPage('information')"></a>
@@ -332,6 +333,8 @@
     <a id="nav-contactInfo" href="#" onclick="showPage('contactInfo')"></a>
   </nav>
   <div id="content" style="padding:10px; max-width:100%; margin:0 auto; text-align:center;">
+    
+    <!--<img src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" style="max-width: 400px;">-->
     <img id="logoMain" src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" style="max-width: 400px;">
 <style>
   #slideshow { transition: opacity .3s ease-in-out }  
@@ -350,6 +353,11 @@
   <a href="https://policies.google.com/technologies/ads" style="color:#ffaa00;">Google’s policy</a>.
 </footer>
     </div>
+    <p style="text-align:center;font-size:14px;color:#bfbfbf;">
+  <a href="#" onclick="openCookieSettings()" style="color:#FFBF00;">
+    Manage cookie preferences
+  </a>
+</p>
     <ins class="adsbygoogle"
      style="display:block; height: 5vw; border-radius: 0px;"
      data-ad-client="ca-pub-3940256099942544"
@@ -360,12 +368,294 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+  </div>
+<!-- 🍪 Advanced Cookie Consent Dialog -->
+<div id="cookieOverlay" style="
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.75);display:flex;
+  justify-content:center;align-items:center;z-index:9999;">
+
+  <!-- Huvuddialog -->
+  <div id="cookieMain" style="
+    background:#111;border:2px solid #FFBF00;border-radius:15px;
+    padding:25px;max-width:420px;width:90%;color:#FFBF00;
+    text-align:center;font-family:serif;box-shadow:0 0 25px rgba(255,191,0,0.4);">
+    <h2 style="margin-top:0;">We value your privacy</h2>
+    <p style="font-size:15px;line-height:1.5;color:#FFD84D;">
+      We use cookies for Google Analytics and Google AdSense to keep this service free.  
+      You can allow personalized or non-personalized ads.  
+      Without cookies, some features (like QR generation) may not work properly.  
+    <br><br>
+      <span style="color:#FFBF00;">
+        Support Mobile-TAG’s mission to provide a free and secure accident-reporting service by allowing cookies.
+      </span>
+    </p>
+
+    <div style="margin-top:15px;">
+      <button id="acceptAll" style="
+        background:#FFBF00;color:#000;font-weight:bold;
+        border:none;border-radius:8px;padding:6px 12px;cursor:pointer;margin:4px;">
+        Accept all
+      </button>
+      <button id="customizeBtn" style="
+        background:transparent;color:#FFBF00;border:1px solid #FFBF00;
+        border-radius:8px;padding:6px 12px;cursor:pointer;margin:4px;">
+        Customize
+      </button>
+    </div>
+    <p style="margin-top:10px;font-size:13px;color:#bfbfbf;">
+      See our <a href="privacy.html" style="color:#ffaa00;">Privacy Policy</a>.
+    </p>
+  </div>
+
+  <!-- Anpassningsfönster -->
+  <div id="cookieCustomize" style="
+    display:none;
+    background:#111;border:2px solid #FFBF00;border-radius:15px;
+    padding:25px;max-width:420px;width:90%;color:#FFBF00;
+    text-align:center;font-family:serif;box-shadow:0 0 25px rgba(255,191,0,0.4);">
+    <h2 style="margin-top:0;">Customize preferences</h2>
+    <p style="font-size:15px;color:#FFD84D;">
+      Choose how cookies are used:
+    </p>
+    <div style="text-align:left;margin-left:15%;">
+      <label><input type="radio" name="cookieChoice" value="personalized" checked>
+        Allow personalized ads</label><br><br>
+      <label><input type="radio" name="cookieChoice" value="nonPersonalized">
+        Allow non-personalized ads</label><br><br>
+      <label><input type="radio" name="cookieChoice" value="decline">
+        Decline all cookies (service limited)</label>
+    </div>
+    <div style="margin-top:20px;">
+      <button id="saveCookieChoice" style="
+        background:#FFBF00;color:#000;font-weight:bold;
+        border:none;border-radius:8px;padding:6px 12px;cursor:pointer;margin:4px;" onclick="location.reload()">
+        Save and continue
+      </button>
+      <button id="backToMain" style="
+        background:transparent;color:#FFBF00;border:1px solid #FFBF00;
+        border-radius:8px;padding:6px 12px;cursor:pointer;margin:4px;">
+        Back
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>  
+  const overlay = document.getElementById('cookieOverlay');
+  const mainBox = document.getElementById('cookieMain');
+  const customBox = document.getElementById('cookieCustomize');
+  const consent = localStorage.getItem('cookieConsent');
+
+  if (consent) {
+    overlay.remove();
+    startAnalytics(consent === 'personalized');
+    enableQrGen();
+  }
+
+  document.getElementById('acceptAll').onclick = () => {
+    localStorage.setItem('cookieConsent', 'personalized');
+    overlay.remove();
+    enableQrGen();
+    startAnalytics(true);
+    location.reload();
+    console.log("borde ladda om sidan");
+  };
+
+  document.getElementById('customizeBtn').onclick = () => {
+    mainBox.style.display = 'none';
+    customBox.style.display = 'block';
+  };
+
+  document.getElementById('backToMain').onclick = () => {
+    customBox.style.display = 'none';
+    mainBox.style.display = 'block';
+  };
+
+  document.getElementById('saveCookieChoice').onclick = () => {
+    const selected = document.querySelector('input[name="cookieChoice"]:checked').value;
+    localStorage.setItem('cookieConsent', selected);
+    overlay.remove();
+
+    if (selected === 'decline') {
+      alert("Cookies declined. Some features, such as QR generation, may be unavailable.");
+      disableQrGen();
+      location.reload(true);
+    } else {
+      startAnalytics(selected === 'personalized');
+      enableQrGen();
+      location.reload(true);
+    }
+  };
+  function disableQrGen() {
+    const qrLink = document.getElementById('nav-qrGen');
+    qrLink.classList.add('disabled-link');
+    qrLink.title = "Please accept cookies to use this feature.";
+  }
+
+  function enableQrGen() {
+    const qrLink = document.getElementById('nav-qrGen');
+    qrLink.classList.remove('disabled-link');
+    qrLink.title = "";
+  }
+  window.addEventListener("DOMContentLoaded", () => {
+    const consent = localStorage.getItem("cookieConsent");
+    if (consent === "decline" || !consent) {
+      disableQrGen();
+    } else {
+      enableQrGen();
+    }
+  });
+  function startAnalytics(personalized) {
+    // Google Consent Mode
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'update', {
+      ad_storage: personalized ? 'granted' : 'denied',
+      analytics_storage: 'granted'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-1MWDYKZ1W7', { 'anonymize_ip': true });
+
+    loadAds(!personalized);
+  }
+  function loadAds(nonPersonalized) {
+    window.adsbygoogle = window.adsbygoogle || [];
+    window.adsbygoogle.requestNonPersonalizedAds = nonPersonalized ? 1 : 0;
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+    script.setAttribute("data-ad-client", "ca-pub-5663370246187799"); // din ID
+    document.head.appendChild(script);
+  }
+  function openCookieSettings() {
+  // Rensa tidigare val och visa dialogen igen
+  localStorage.removeItem('cookieConsent');
+  location.reload();
+}
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div id="adblockOverlay" style="
+  display:none;
+  position:fixed;
+  top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(6px);
+  z-index:99999;
+  align-items:center;justify-content:center;
+  text-align:center;color:#FFBF00;
+  font-family:serif;
+  animation:fadeIn 0.6s ease forwards;
+">
+  <div id="adblockBox" style="
+    background:rgba(17,17,17,0.9);
+    border:2px solid #FFBF00;
+    border-radius:15px;
+    padding:25px;
+    max-width:420px;
+    width:90%;
+    box-shadow:0 0 25px rgba(255,191,0,0.4);
+    margin:auto;
+    opacity:0;
+    transform:scale(0.95);
+    animation:zoomIn 0.5s ease forwards;
+  ">
+    <h2 id="adblockTitle" style="margin-top:0;"></h2>
+    <p id="adblockDescription" style="font-size:15px;color:#FFD84D;line-height:1.5;"></p>
+    <p id="adblockNote" style="font-size:13px;color:#EEDC82;"></p>
+
+    <div style="margin-top:10px;">
+      <button id="adblockButton1" onclick="location.reload()" style="
+        background:#FFBF00;
+        color:#000;
+        font-weight:bold;
+        border:none;
+        border-radius:8px;
+        padding:6px 14px;
+        cursor:pointer;
+        box-shadow:0 0 10px rgba(255,191,0,0.3);
+        margin:4px;
+      "></button>
+
+      <button id="adblockButton2" onclick="location.reload()" style="
+        background:#FFBF00;
+        color:#000;
+        font-weight:bold;
+        border:none;
+        border-radius:8px;
+        padding:6px 14px;
+        cursor:pointer;
+        box-shadow:0 0 10px rgba(255,191,0,0.3);
+        margin:4px;
+      "></button>
+    </div>
+  </div>
 </div>
 
 <style>
   @keyframes fadeIn {from{opacity:0;}to{opacity:1;}}
   @keyframes zoomIn {from{opacity:0;transform:scale(0.95);}to{opacity:1;transform:scale(1);}}
 </style>
+
+<script>
+  const currentLang = 'en'; // byt till 'sv', 'de' osv. senare
+
+  // --- Ladda språktext ---
+  fetch(`${currentLang}.json`)
+    .then(res => res.json())
+    .then(data => {
+      //const t = data.adblock;
+      document.getElementById('adblockTitle').innerHTML = data.title;
+      document.getElementById('adblockDescription').innerHTML = data.description;
+      document.getElementById('adblockNote').innerHTML = data.note;
+      // två knappar, samma text kan användas eller olika om du vill
+      document.getElementById('adblockButton1').innerHTML = data.button;
+      document.getElementById('adblockButton2').innerHTML = 'I’ve disabled it';
+    })
+    .catch(err => console.error('Failed to load language file:', err));
+
+  // --- Visa overlay ---
+  function showAdblockOverlay() {
+    const overlay = document.getElementById('adblockOverlay');
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  // --- Detektera adblock ---
+  function detectAdblock() {
+    return new Promise(resolve => {
+      const bait = document.createElement('div');
+      bait.className = 'ad ads ad-banner ad-container sponsor';
+      bait.style.cssText = 'height:1px;position:absolute;left:-9999px;';
+      document.body.appendChild(bait);
+
+      const testScript = document.createElement('script');
+      testScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?v=' + Date.now();
+      testScript.async = true;
+      testScript.onerror = () => resolve(true);
+      testScript.onload  = () => resolve(false);
+
+      setTimeout(() => {
+        const hidden = window.getComputedStyle(bait).display === 'none' || bait.offsetParent === null;
+        bait.remove();
+        resolve(hidden);
+      }, 800);
+
+      document.body.appendChild(testScript);
+    });
+  }
+
+  window.addEventListener('load', async () => {
+    const blocked = await detectAdblock();
+    if (blocked) {
+      sessionStorage.setItem('adblockDetected', '1');
+      showAdblockOverlay();
+    } else {
+      sessionStorage.removeItem('adblockDetected');
+    }
+  });
+</script>
 
 <div id="customAlert" class="alert-overlay" style="display:none;">
   <div class="alert-box">
@@ -457,14 +747,14 @@ function detectSupportedBrowser() {
   const ua = navigator.userAgent.toLowerCase();
   let supported = false;
 
-  
+  // Kolla efter de webbläsare du vill tillåta
   if (ua.includes("chrome") && !ua.includes("edg") && !ua.includes("opr")) supported = true; // Chrome (inte Edge/Opera)
   if (ua.includes("edg")) supported = true;     // Edge
   if (ua.includes("firefox")) supported = true; // Firefox
   if (ua.includes("safari") && !ua.includes("chrome")) supported = true; // Safari (inte Chrome-baserad)
 
   if (!supported) {
-    
+    // Skapa overlay
     const overlay = document.createElement("div");
     overlay.style = `
       position: fixed;
@@ -497,33 +787,9 @@ function detectSupportedBrowser() {
 }
 detectSupportedBrowser();
 </script>
-  
-  <script>
-const imagesToPreload = [
-  "drawable/multilang.png",
-  "drawable/drivernotunderstand.png",
-  "drawable/notconfesion.png",
-  "drawable/documentguillt.png",
-  "drawable/reporting.png",
-  "drawable/frustated.png",
-  "drawable/standardservice.png",
-  "drawable/solvestraffic.png",
-  "drawable/documentenglish.png",
-  "drawable/safedocument.png",
-  "drawable/testpic.png"
-];
-
-window.addEventListener('load', () => {
-  imagesToPreload.forEach(src => {
-    const img = new Image();
-    img.src = src;
-  });
-});
-</script>
-
 </body>
 <script>
-  setTimeout(() => startLogoLoopMain(), 1000);
+  setTimeout(() => startLogoLoopMain(1));
 </script>
 <script>
 function showPage(page) {
@@ -566,6 +832,7 @@ if (page === "contactInfo") {
             <textarea class="textArea" id="contactDescribeId" rows="6" placeholder="${data.contactInfoDescribe}"></textarea>
             <br>
 
+            <!-- 🔹 Viktigt: id på knappen -->
             <button id="sendContactBtn" style="width: 20%; height: 30%; justify-content: center; border-radius: 10px;">${data.buttonSend}</button>
           </div>
 
@@ -596,7 +863,7 @@ if (page === "contactInfo") {
       if (consent === "accept" || consent === "personalized" || consent === "nonPersonalized") {
         gtag('event', 'page_view', { page_title: 'Contact us', page_path: '/contactInfo' });
       }
-      
+      // 🔹 Event listener fungerar nu
       document.getElementById("sendContactBtn").addEventListener("click", async () => {
         const name = document.getElementById("contactorsNameId").value.trim();
         const email = document.getElementById("contactorsMailId").value.trim();
@@ -1002,4 +1269,66 @@ function startLogoLoopMain() {
   }, 10000);
 }
 </script>
+<!-- 🧩 Cookie reminder popup -->
+<div id="cookieReminder" style="
+  display:none;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#111;
+  color:#FFBF00;
+  border:2px solid #FFBF00;
+  border-radius:15px;
+  box-shadow:0 0 25px rgba(255,191,0,0.4);
+  padding:25px;
+  text-align:center;
+  font-family:serif;
+  z-index:10000;">
+  <h3 style="margin-top:0;">Cookies Required</h3>
+  <p style="font-size:15px;line-height:1.5;color:#FFD84D;">
+    You must accept cookies to use the QR generator service.
+  </p>
+  <button id="openSettings" style="
+    background:#FFBF00;color:#000;font-weight:bold;
+    border:none;border-radius:8px;padding:6px 12px;cursor:pointer;margin-top:8px;">
+    Open cookie settings
+  </button>
+</div>
+
+<script>
+  // Elementreferenser
+  const qrLink = document.getElementById('nav-qrGen');
+  const cookieReminder = document.getElementById('cookieReminder');
+  const openSettingsBtn = document.getElementById('openSettings');
+
+  // Hantera hover/click på QR-länk när cookies inte är tillåtna
+  function attachQrGenEvents() {
+    qrLink.addEventListener('click', showReminder);
+    qrLink.addEventListener('mouseenter', showReminder);
+  }
+
+  function showReminder(event) {
+    if (localStorage.getItem('cookieConsent') === 'decline' || !localStorage.getItem('cookieConsent')) {
+      event.preventDefault();
+      cookieReminder.style.display = 'block';
+      setTimeout(() => cookieReminder.style.display = 'none', 5000); // auto-göm efter 4 sek
+    }
+  }
+
+  openSettingsBtn.addEventListener('click', () => {
+    cookieReminder.style.display = 'none';
+    openCookieSettings(); // öppna huvuddialogen igen
+  });
+
+  // Koppla logiken direkt
+  attachQrGenEvents();
+
+  // Gör openCookieSettings global om den inte finns
+  function openCookieSettings() {
+    localStorage.removeItem('cookieConsent');
+    location.reload(); // visar cookie-dialogen igen
+  }
+</script>
+
 </html>
