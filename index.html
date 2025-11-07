@@ -76,18 +76,18 @@
       background-color: transparent;
       color: #fff;
     }
-    /* Visa dropdown när man hovrar */
+    
     .dropdown:hover .dropdown-content {
       display: block;
     }
     .scroll-container {
-      display: flex;                 /* horisontell layout */
-      overflow-x: auto;              /* scroll åt sidan */
-      scroll-snap-type: x mandatory; /* snap-effekt vid scroll */
+      display: flex;                 
+      overflow-x: auto;              
+      scroll-snap-type: x mandatory; 
       gap: 2vw;
       padding: 2vw;
       background-color: transparent;
-      /*background-color: #111;*/
+      
     }
       
     .scroll-container::-webkit-scrollbar {
@@ -100,20 +100,20 @@
     }
     
     .scroll-container section {
-      flex: 0 0 80%;                 /* varje slide tar ~80% av viewport */
+      flex: 0 0 80%;                 
       display: flex;
       align-items: center;
       gap: 20px;
-      /*background-color: #222;*/
+      
       background-color: transparent;
       border-radius: 10px;
-      /*padding: 20px;*/
-      scroll-snap-align: center;     /* snappar varje slide */
+      
+      scroll-snap-align: center;     
       color: #FFBF00;
     }
     .scroll-container img {
       width: 250px;
-      height: 300px;                  /* mindre bild */
+      height: 300px;                
       border-radius: 10px;
       flex-shrink: 0;
     }
@@ -314,9 +314,6 @@
   🌍 The site is currently available only in English.
     </div>
   </header>
-  
-  <!--<img src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" alt="centered image" class="center-image">-->
-
   <nav>
     <a id="nav-mainPage" href="#" onclick="showPage('main')"></a>
     <a id="nav-information" href="#" onclick="showPage('information')"></a>
@@ -333,8 +330,6 @@
     <a id="nav-contactInfo" href="#" onclick="showPage('contactInfo')"></a>
   </nav>
   <div id="content" style="padding:10px; max-width:100%; margin:0 auto; text-align:center;">
-    
-    <!--<img src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" style="max-width: 400px;">-->
     <img id="logoMain" src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" style="max-width: 400px;">
 <style>
   #slideshow { transition: opacity .3s ease-in-out }  
@@ -369,13 +364,11 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
   </div>
-<!-- 🍪 Advanced Cookie Consent Dialog -->
 <div id="cookieOverlay" style="
   position:fixed;top:0;left:0;width:100%;height:100%;
   background:rgba(0,0,0,0.75);display:flex;
   justify-content:center;align-items:center;z-index:9999;">
 
-  <!-- Huvuddialog -->
   <div id="cookieMain" style="
     background:#111;border:2px solid #FFBF00;border-radius:15px;
     padding:25px;max-width:420px;width:90%;color:#FFBF00;
@@ -408,7 +401,6 @@
     </p>
   </div>
 
-  <!-- Anpassningsfönster -->
   <div id="cookieCustomize" style="
     display:none;
     background:#111;border:2px solid #FFBF00;border-radius:15px;
@@ -507,7 +499,7 @@
     }
   });
   function startAnalytics(personalized) {
-    // Google Consent Mode
+
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'update', {
@@ -530,7 +522,7 @@
     document.head.appendChild(script);
   }
   function openCookieSettings() {
-  // Rensa tidigare val och visa dialogen igen
+
   localStorage.removeItem('cookieConsent');
   location.reload();
 }
@@ -599,30 +591,30 @@
 </style>
 
 <script>
-  const currentLang = 'en'; // byt till 'sv', 'de' osv. senare
+  const currentLang = 'en'; 
 
-  // --- Ladda språktext ---
+  
   fetch(`${currentLang}.json`)
     .then(res => res.json())
     .then(data => {
-      //const t = data.adblock;
+      
       document.getElementById('adblockTitle').innerHTML = data.title;
       document.getElementById('adblockDescription').innerHTML = data.description;
       document.getElementById('adblockNote').innerHTML = data.note;
-      // två knappar, samma text kan användas eller olika om du vill
+      
       document.getElementById('adblockButton1').innerHTML = data.button;
       document.getElementById('adblockButton2').innerHTML = 'I’ve disabled it';
     })
     .catch(err => console.error('Failed to load language file:', err));
 
-  // --- Visa overlay ---
-  function showAdblockOverlay() {
+  
+  function showFail() {
     const overlay = document.getElementById('adblockOverlay');
     overlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
   }
 
-  // --- Detektera adblock ---
+  
   function detectAdblock() {
     return new Promise(resolve => {
       const bait = document.createElement('div');
@@ -650,7 +642,7 @@
     const blocked = await detectAdblock();
     if (blocked) {
       sessionStorage.setItem('adblockDetected', '1');
-      showAdblockOverlay();
+      showFail();
     } else {
       sessionStorage.removeItem('adblockDetected');
     }
@@ -747,14 +739,14 @@ function detectSupportedBrowser() {
   const ua = navigator.userAgent.toLowerCase();
   let supported = false;
 
-  // Kolla efter de webbläsare du vill tillåta
+  
   if (ua.includes("chrome") && !ua.includes("edg") && !ua.includes("opr")) supported = true; // Chrome (inte Edge/Opera)
   if (ua.includes("edg")) supported = true;     // Edge
   if (ua.includes("firefox")) supported = true; // Firefox
   if (ua.includes("safari") && !ua.includes("chrome")) supported = true; // Safari (inte Chrome-baserad)
 
   if (!supported) {
-    // Skapa overlay
+    
     const overlay = document.createElement("div");
     overlay.style = `
       position: fixed;
@@ -832,7 +824,6 @@ if (page === "contactInfo") {
             <textarea class="textArea" id="contactDescribeId" rows="6" placeholder="${data.contactInfoDescribe}"></textarea>
             <br>
 
-            <!-- 🔹 Viktigt: id på knappen -->
             <button id="sendContactBtn" style="width: 20%; height: 30%; justify-content: center; border-radius: 10px;">${data.buttonSend}</button>
           </div>
 
@@ -863,7 +854,7 @@ if (page === "contactInfo") {
       if (consent === "accept" || consent === "personalized" || consent === "nonPersonalized") {
         gtag('event', 'page_view', { page_title: 'Contact us', page_path: '/contactInfo' });
       }
-      // 🔹 Event listener fungerar nu
+      
       document.getElementById("sendContactBtn").addEventListener("click", async () => {
         const name = document.getElementById("contactorsNameId").value.trim();
         const email = document.getElementById("contactorsMailId").value.trim();
@@ -1269,7 +1260,7 @@ function startLogoLoopMain() {
   }, 10000);
 }
 </script>
-<!-- 🧩 Cookie reminder popup -->
+
 <div id="cookieReminder" style="
   display:none;
   position:fixed;
@@ -1297,12 +1288,11 @@ function startLogoLoopMain() {
 </div>
 
 <script>
-  // Elementreferenser
+  
   const qrLink = document.getElementById('nav-qrGen');
   const cookieReminder = document.getElementById('cookieReminder');
   const openSettingsBtn = document.getElementById('openSettings');
 
-  // Hantera hover/click på QR-länk när cookies inte är tillåtna
   function attachQrGenEvents() {
     qrLink.addEventListener('click', showReminder);
     qrLink.addEventListener('mouseenter', showReminder);
@@ -1312,22 +1302,21 @@ function startLogoLoopMain() {
     if (localStorage.getItem('cookieConsent') === 'decline' || !localStorage.getItem('cookieConsent')) {
       event.preventDefault();
       cookieReminder.style.display = 'block';
-      setTimeout(() => cookieReminder.style.display = 'none', 5000); // auto-göm efter 4 sek
+      setTimeout(() => cookieReminder.style.display = 'none', 5000); 
     }
   }
 
   openSettingsBtn.addEventListener('click', () => {
     cookieReminder.style.display = 'none';
-    openCookieSettings(); // öppna huvuddialogen igen
+    openCookieSettings(); 
   });
 
-  // Koppla logiken direkt
+  
   attachQrGenEvents();
 
-  // Gör openCookieSettings global om den inte finns
   function openCookieSettings() {
     localStorage.removeItem('cookieConsent');
-    location.reload(); // visar cookie-dialogen igen
+    location.reload(); 
   }
 </script>
 
