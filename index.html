@@ -978,32 +978,4 @@ function startLogoLoopMain() {
   }, 10000);
 }
 </script>
-
-<script>
-  
-  const qrLink = document.getElementById('nav-qrGen');
-  const cookieReminder = document.getElementById('cookieReminder');
-  const openSettingsBtn = document.getElementById('openSettings');
-
-  function attachQrGenEvents() {
-    qrLink.addEventListener('click', showReminder);
-    qrLink.addEventListener('mouseenter', showReminder);
-  }
-
-  function showReminder(event) {
-    if (localStorage.getItem('cookieConsent') === 'decline' || !localStorage.getItem('cookieConsent')) {
-      event.preventDefault();
-      cookieReminder.style.display = 'block';
-      setTimeout(() => cookieReminder.style.display = 'none', 5000); 
-    }
-  }
-  
-  attachQrGenEvents();
-
-  function openCookieSettings() {
-    localStorage.removeItem('cookieConsent');
-    location.reload(); 
-  }
-</script>
-
 </html>
