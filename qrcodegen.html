@@ -216,8 +216,8 @@
   }
   input[type="checkbox"],
   label {
-  display: inline-block;  /* bredvid varandra */
-  vertical-align: middle; /* linjeras snyggt */
+  display: inline-block;  
+  vertical-align: middle; 
   }
 #langDropdown {
   display: inline-block;
@@ -237,12 +237,12 @@
   padding: 8px;
   cursor: pointer;
   font-size: 1.7vw;
-  color: #FFBF00;          /* gul text */
+  color: #FFBF00;          
 }
 
 #langDropdown li:hover {
-  color: white;            /* text blir vit vid hover */
-  background: black;       /* bakgrunden ändras inte */
+  color: white;            
+  background: black;       
 }
 .ads-layout {
   display: flex;
@@ -466,7 +466,7 @@
   async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5663370246187799"
   crossorigin="anonymous">
 </script>
-  <!-- QRCode.js bibliotek -->
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   
 <script>
@@ -566,7 +566,6 @@ async function generateQR() {
     const json = await response.json();
     const encrypted = json.encrypted;
 
-    // 🔹 Skapa QR-koden lokalt i webben
     document.getElementById("qrcode").innerHTML = "";
     new QRCode(document.getElementById("qrcode"), {
       text: encrypted,
@@ -634,16 +633,16 @@ function downloadCard() {
   const regnr = document.getElementById("regnr").value || "qr_code";
 
   if (!document.querySelector("#qrcode canvas")) {
-    alert("Generate a QR code first!");
+    showAlert("Generate a QR code first!");
     return;
   }
 
-  // ⚙️ Justera exportstorleken (t.ex. ID-kort: 8.5 × 5.4 cm ≈ 320×205 px)
+  
   const targetWidth = 320;  // px
   const targetHeight = 400; // px
 
   html2canvas(card, { scale: 4 }).then(canvas => {
-    // Skapa en tillfällig "scaled" canvas i rätt storlek
+  
     const scaledCanvas = document.createElement("canvas");
     scaledCanvas.width = targetWidth;
     scaledCanvas.height = targetHeight;
@@ -651,7 +650,7 @@ function downloadCard() {
     const ctx = scaledCanvas.getContext("2d");
     ctx.drawImage(canvas, 0, 0, targetWidth, targetHeight);
 
-    // 🖼️ Ladda ner
+  
     const link = document.createElement("a");
     link.href = scaledCanvas.toDataURL("image/png");
     link.download = `${regnr}.png`;
@@ -723,30 +722,29 @@ function downloadCard() {
 </style>
 
 <script>
-  const currentLang = 'en'; // byt till 'sv', 'de' osv. senare
+  const currentLang = 'en'; 
 
-  // --- Ladda språktext ---
+  
   fetch(`${currentLang}.json`)
     .then(res => res.json())
     .then(data => {
-      //const t = data.adblock;
+  
       document.getElementById('adblockTitle').innerHTML = data.title;
       document.getElementById('adblockDescription').innerHTML = data.description;
       document.getElementById('adblockNote').innerHTML = data.note;
-      // två knappar, samma text kan användas eller olika om du vill
+  
       document.getElementById('adblockButton1').innerHTML = data.button;
       document.getElementById('adblockButton2').innerHTML = 'I’ve disabled it';
     })
     .catch(err => console.error('Failed to load language file:', err));
 
-  // --- Visa overlay ---
-  function showAdblockOverlay() {
+  
+  function showFail() {
     const overlay = document.getElementById('adblockOverlay');
     overlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
   }
-
-  // --- Detektera adblock ---
+  
   function detectAdblock() {
     return new Promise(resolve => {
       const bait = document.createElement('div');
@@ -774,7 +772,7 @@ function downloadCard() {
     const blocked = await detectAdblock();
     if (blocked) {
       sessionStorage.setItem('adblockDetected', '1');
-      showAdblockOverlay();
+      showFail();
     } else {
       sessionStorage.removeItem('adblockDetected');
     }
