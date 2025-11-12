@@ -6,7 +6,7 @@
   },
   "ios": {
     "version": "1.0",
-    "required": true,
+    "required": false,
     "message": "A new version of Mobile-TAG is available. Please update to continue."
   }
 }
