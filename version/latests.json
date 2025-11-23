@@ -1,8 +1,8 @@
 {
   "android": {
-    "version": "1.0",
+    "version": "1.2",
     "required": true,
-    "message": "A new version of Mobile-TAG is available. Please update to continue."
+    "message": "En ny version är tillgänglig. Borttagning av körkort och den befintliga körkortet kommer att raderas automatiskt samt förbättrad prestanda."
   },
   "ios": {
     "version": "1.0",
