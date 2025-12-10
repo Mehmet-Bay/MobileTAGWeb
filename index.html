@@ -527,6 +527,7 @@ window.addEventListener('load', () => {
   setTimeout(() => startLogoLoopMain(), 1000);
 </script>
 <script>
+  /*
 function showPage(page) {
   const content = document.getElementById("content");
   if (page === "main") {
@@ -982,10 +983,10 @@ function startAutoScroll() {
 
 }
 function startLogoLoopMain() {
-  /*const container = document.querySelector(".logoMain");
-  if (!container) return;*/
+  const container = document.querySelector(".logoMain");
+  if (!container) return;
 
-  /*const slides = container.querySelectorAll("section");*/
+  const slides = container.querySelectorAll("section");
   const imageLogo = ["drawable/mobile_traffic_accident_logo_scaled_transparent.png", "drawable/logo_glowing.png"]
   let index = 0, timer;
   const logoChanged = document.getElementById("logoMain");
@@ -1003,5 +1004,6 @@ function startLogoLoopMain() {
     }, 100);
   }, 10000);
 }
+  */
 </script>
 </html>
