@@ -7,16 +7,29 @@
   const ua = navigator.userAgent || navigator.vendor || window.opera;
 
   if (/android/i.test(ua)) {
-    window.location.href = "https://play.google.com/store/apps/details?id=APP_ID";
-  } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
-    window.location.href = "https://apps.apple.com/app/idYOUR_APP_ID";
+    setTimeout(() => {
+      window.location.href = "https://play.google.com/store/apps/details?id=YOUR_APP_ID";
+    }, 100);
+  } else if (
+    /iPad|iPhone|iPod/.test(ua) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+  ) {
+    setTimeout(() => {
+      window.location.href = "https://apps.apple.com/app/idYOUR_APP_ID";
+    }, 100);
   }
 </script>
 </head>
+
 <body>
   <h2>Download Mobile-TAG</h2>
   <p>Select your device:</p>
+
   <a href="https://play.google.com/store/apps/details?id=APP_ID">Android</a><br><br>
-  <a href="https://apps.apple.com/app/idYOUR_APP_ID">iPhone</a>
+  <a href="https://apps.apple.com/app/idAPP_ID">iPhone</a>
+
+  <noscript>
+    <p>Please enable JavaScript or select your device above.</p>
+  </noscript>
 </body>
 </html>
