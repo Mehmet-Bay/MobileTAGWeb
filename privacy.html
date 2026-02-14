@@ -3,12 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+    window.googletag = window.googletag || { cmd: [] };
+
+    googletag.cmd.push(function () {
+    googletag.pubads().setRequestNonPersonalizedAds(1);
+  });
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      personalization_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted'
+    });
+
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'restricted_data_processing', true);
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1815513279092674"
+     crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" href="drawable/mobile_tag_logo.png">
   <title>PrivacyCondition</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
+      border-radius: 10px; 
+      border: 1px outset #ffaa00;
+      box-shadow: 0 0 15px;
       background-color: #000;
       color: #FFBF00;
       font-family: Arial, sans-serif;
@@ -25,7 +49,47 @@
       -webkit-text-fill-color: antiquewhite;
       text-shadow: 0 0 10px #FFBF00;
     }
-
+    h3 {
+      font-size: clamp(17px, 2vw, 25px);
+      -webkit-text-fill-color: #000;
+      font-family: serif;
+    }
+    nav {
+      display: flex;
+      justify-content: end;
+      background-color: #000000;
+      font-family: serif;
+      padding-left: 1%;
+      padding-right: 1%;
+    }
+    nav a {
+      color: #000000;
+      text-decoration: none;
+      margin: 0 1vw;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .mobile-menu-btn {
+      align-self: center;
+      background: none;
+      border: none;
+      color: #FFBF00;
+      font-size: clamp(10px, 2vw, 30px);
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav .mobile-menu-btn:hover {
+      color: #ffffff;
+      flex-wrap: wrap;
+    }
+    p {
+      font-size: clamp(15px, 1.8vw, 23px);
+      -webkit-text-fill-color: #000;
+      font-family: serif;
+    }
+    li {
+      font-size: clamp(13px, 1.3vw, 17px);
+    }
     section {
       display: flex;
       justify-content: center;
@@ -34,14 +98,14 @@
 
     .content-box {
       background-color: #cbc8c8;
-      color: #000;
+      -webkit-text-fill-color: #000;
       max-width: 800px;
       padding: 30px;
       border-radius: 10px;
     }
 
     .nav-link {
-      font-size: 2.5vw;
+      font-size: clamp(19px, 2.5vw, 25px);
       font-weight: bold;
       color: #000;
       text-decoration: none;
@@ -56,33 +120,105 @@
     .adsbygoogle {
       background: #eee;
       border: 1px dashed #999;
+    }
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
     }    
   </style>
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MWDYKZ1W7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1MWDYKZ1W7');
-  </script>
+
 </head>
 <body>
   <header>
     <img src="drawable/nylogo.png" style="max-width: 100%;">
-      <ins class="adsbygoogle"
-        style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-        data-ad-client="ca-pub-3940256099942544"
-        data-ad-slot="9626151148"
-        data-ad-format="auto"
-        data-full-width-responsive="true">
-      </ins>
+    <nav>
+      <a class="mobile-menu-btn" href="index.html">Main page</a>
+    </nav>
+    <ins class="adsbygoogle"
+      style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+      data-ad-client="ca-pub-1815513279092674"
+      data-ad-slot="2579305416"
+      data-ad-format="auto"
+      data-full-width-responsive="true">
+    </ins>
   </header>
 
   <section>
-    <div class="content-box">
-      <a id="nav-privacy" class="nav-link" href="#" target="_blank"></a>
-      <div id="nav-privacyInfo" class="info-text"></div>
+    <div class="content-box" style="border: 1px outset #ffaa00; box-shadow: 0 0 15px; border-radius: 10px; padding: 10px;">
+      <h2 id="nav-privacy" class="nav-link" href="#" target="_blank"></h2>
+      <p>Mobile-TAG respects user privacy and is designed to minimize the collection and handling of personal data.<br>
+      <div>
+        <h3>Advertising in the Mobile-TAG App</h3>
+        <p>
+        The Mobile-TAG mobile applications display advertisements using Google AdMob.
+        The apps are configured to display non-personalized ads only (NPA). This means advertisements are shown without using personal identifiers for ad personalization.<br>
+        Google AdMob may process limited device-related information (such as device type, operating system, or approximate location) solely for the purpose of delivering ads, in accordance with Google’s own privacy policies.<br>
+        Mobile-TAG does not collect, store, or process personal data such as names, email addresses, phone numbers, or contact details for advertising purposes.<br>
+        </p>
+      </div>
+      <div>
+        <h3>Consent and Ad Controls (Apps)</h3>
+        <p>
+        In regions where consent is required by law, consent management related to advertising is handled directly by Google through its own mechanisms.<br>
+        Users may manage or reset their device’s advertising preferences at any time through their device or operating system settings.<br>
+        </p>
+      </div>
+      <div>
+        <h3>Advertising on the Website</h3>
+        <p>
+        The official Mobile-TAG website displays advertisements using Google AdSense.<br>
+        Visitors may choose between:<br>
+        Personalized ads (PA), or Non-personalized ads (NPA)<br>
+        This choice is presented through Google’s own consent management platform. The website functions fully regardless of the user’s advertising choice.<br>
+        Users can update or change their advertising preferences at any time through the privacy or consent settings available on the website.<br>
+        Google may use cookies or similar technologies for advertising purposes in accordance with applicable laws and Google’s privacy policies.<br>
+        </p>
+      </div>
+      <div>
+        <h3>Analytics</h3>
+        <p>
+        The Mobile-TAG website uses Cloudflare Web Analytics, a privacy-friendly analytics solution that does not use cookies and does not track users across websites.<br>
+        This analytics is used solely to measure aggregated website traffic and performance.<br>
+        </p>
+      </div>
+      <div>
+        <h3>QR Code Generation</h3>
+        <p>
+          When generating a QR code, certain vehicle-related or contact information entered by the user may be temporarily processed to generate the QR code.
+        </p>
+      </div>
+      <div>
+      <h3>This data:</h3>
+      <ul style="font-size: 1.5vw; color: #000;">
+        <li>is used only for QR code generation</li>
+        <li>is not stored after generation</li>
+        <li>is not shared with third parties</li>
+        <li>is not used for profiling or analytics</li>
+      </ul>
+      <p>The app does not request or allow the entry of personal identification numbers.</p>
+    </div>
+    <div>
+    <h3>Data Sharing</h3>
+    <p>
+      Mobile-TAG does not sell or share user data with third parties for its own purposes.<br>
+      Advertising-related data is processed exclusively by Google as part of its advertising services and in accordance with Google’s privacy policies.
+      </p>
+    </div>
+    <div>
+    <h3>Changes</h3>
+    <p>This Privacy Policy may be updated from time to time. Any changes will be made available within the app or on the official Mobile-TAG website.</p>
+    </div>
+    <div>
+    <h3>Contact</h3>
+    <p>
+      If you have questions about this Privacy Policy, please contact us at:<br>
+      support@mobiletag-auto.com
+    </p>
+    </div>
+      <!--<p id="nav-privacyInfo" class="info-text"></p>-->
     </div>
   </section>
 

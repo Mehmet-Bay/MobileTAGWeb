@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://mobiletag-auto.com/sitemap.xml

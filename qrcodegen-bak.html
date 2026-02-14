@@ -3,27 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Mobile-TAG Vehicle QR Generator",
-      "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "Web",
-      "description": "Generate a vehicle QR code that allows drivers to load vehicle and contact information directly into the Mobile-TAG app, avoiding manual data entry or phone calls. The QR code helps drivers document vehicle information faster and can only be read by the Mobile-TAG application.",
-      "url": "https://mobiletag-auto.com/qrcodegen",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "SEK"
-      },
-      "potentialAction": {
-        "@type": "CreateAction",
-        "name": "Create vehicle QR code for Mobile-TAG",
-        "target": "https://mobiletag-auto.com/qrcodegen"
-      }
-    }
-  </script>
   <script>
     window.googletag = window.googletag || { cmd: [] };
 
@@ -45,7 +24,7 @@
     gtag('set', 'ads_data_redaction', true);
     gtag('set', 'restricted_data_processing', true);
   </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1815513279092674"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5663370246187799"
      crossorigin="anonymous">
   </script>
   <link rel="icon" type="image/png" href="drawable/mobile_tag_logo.png">
@@ -105,7 +84,7 @@
       margin-top: 1%;
       margin-bottom: 1%;
       height: 160px;
-      width: 100%;
+      width: 90%;
       overflow-y: scroll;
       scroll-snap-type: y mandatory;
       background-color: #111;
@@ -120,8 +99,8 @@
       align-items: start;
       justify-content: start;
       scroll-snap-align: start;
-      padding-left: 1%;
-      font-size: clamp(11px, 1.4vw, 25px);
+      padding-left: 5%;
+      font-size: clamp(18px, 1.9vw, 25px);
       cursor: pointer;
     }
     button {
@@ -165,11 +144,11 @@
       justify-items: end;
     }
   .qr-card {
-    max-width: 250px;
+    max-width: 360px;
     width: 100%;
     padding: 1%;
     border: 1px solid #FFBF00;
-    border-radius: 15px;
+    border-radius: 1.5vw;
     background-color: #111;
     color: #FFBF00;
     text-align: center;
@@ -217,11 +196,9 @@
   margin: 0;
   gap: 0em;       
   }
-  /*
   .checkbox-group label {
-    font-size: 5px;
+    font-size: 1.vw;
   }
-  */
   .adsbygoogle {
     /*background: #eee;*/
     background-color: rgba(20,55,55,0.0);
@@ -239,7 +216,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  max-width: 130px;
+  max-width: 200px;
   width: 100%;
   z-index: 9999;
   max-height: 100px;
@@ -273,34 +250,8 @@
   max-width: 300px;
   height: auto;
 }
-nav {
-  display: flex;
-  justify-content: end;
-  background-color: #000000;
-  padding-left: 1%;
-  padding-right: 1%;
-}
-nav a {
-  color: #000000;
-  text-decoration: none;
-  margin: 0 1vw;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-.mobile-menu-btn {
-  align-self: center;
-  background: none;
-  border: none;
-  color: #FFBF00;
-  font-size: clamp(10px, 2vw, 30px);
-  font-weight: bold;
-  cursor: pointer;
-}
-nav .mobile-menu-btn:hover {
-  color: #ffffff;
-  flex-wrap: wrap;
-}
-@media (max-width: 767px) {
+
+@media (max-width: 600px) {
   .side-ad {
     display: none;
   }
@@ -308,19 +259,17 @@ nav .mobile-menu-btn:hover {
     flex-direction: column;
     align-items: center;
   }
-  
 }
 @media (min-width: 768px) {
   .qr-card {
     max-width: 420px;
   }
+
   #qrcode {
     max-width: 300px;
   }
-  #langDropdown {
-    max-width: 200px;
-  }
 }
+
 html, body {
   width: 100%;
   max-width: 100%;
@@ -337,26 +286,19 @@ html, body {
     <div style="width: 100%; text-align: center;">
       <img src="drawable/nylogo.png" alt="" width="50%">
     </div>
-    <nav>
-      <a class="mobile-menu-btn" href="index.html">Main page</a>
-    </nav>
     <div style="align-items: center; padding-left: 3%; padding-right: 3%;">
     <h1 class="centered-title">QR Code Generator</h1>
-    <img src="drawable/qr_code.png" alt="picture describing QR Code Generator about how QR is generated" width="50%">
     <p id="qrTextInfo" href="#" style="font-size: clamp(14px, 2vw, 25px); text-align: start; padding-left: 5%; padding-right: 5%;">
       Here you can generate a unique QR code for each vehicle. By entering basic vehicle-related information, a QR code can be created, downloaded, and printed.
       The QR code can be placed inside the vehicle so that drivers can scan it with the Mobile-TAG app if an incident occurs.
       This helps make it easier to access and record relevant vehicle information without manual entry. 
       This feature is free to use and may be helpful for private vehicle owners, rental companies, leasing fleets, and logistics operators. 
-      Fields marked in red are required. Please ensure that the information entered is accurate.      
-    </p>
-    <p style="font-size: clamp(14px, 2vw, 25px); text-align: start; padding-left: 5%; padding-right: 5%;">
-      If you only want to try the QR code generator, you can enter sample or test information instead of real data. This allows you to explore how the feature works before using it with actual vehicle details.
+      Fields marked in red are required. Please ensure that the information entered is accurate.
     </p>
       <ins class="adsbygoogle"
-        style="display:block; width: 100%; height:auto; max-height: 10vw; border-radius: 0px;"
-        data-ad-client="ca-pub-1815513279092674"
-        data-ad-slot="7640060408"
+        style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
+        data-ad-client="ca-pub-3940256099942544"
+        data-ad-slot="8739077904"
         data-ad-format="auto"
         data-full-width-responsive="true">
       </ins>
@@ -365,9 +307,8 @@ html, body {
       The document generated by Mobile-TAG is protected with a simple password to help reduce the risk of unintended access.
     </h3>
     <h3 id="qrPassTip" href="#">
-      QR codes generated with Mobile-TAG are intended to be scanned directly inside the Mobile-TAG application.
-      Because the code contains structured and protected vehicle information, it may appear unreadable or unclear when scanned with a standard QR scanner.
-      This helps ensure that the information is loaded correctly into the Mobile-TAG incident document.
+      QR codes generated with Mobile-TAG are intended for use within the Mobile-TAG app.
+      The information included is used to simplify vehicle-related details when documenting an incident.
     </h3>
     <div style="padding-left: 5%; padding-right: 5%; -webkit-text-fill-color: antiquewhite;">
       <h3 style="padding: 0%; -webkit-text-fill-color: antiquewhite;">
@@ -382,15 +323,8 @@ html, body {
       <p style="font-size: clamp(12px, 1.7vw, 25px); text-align: start;">
         If these fields are left empty, the driver will need to enter the email addresses manually when sharing the document.
       </p>
-      <ins class="adsbygoogle"
-        style="display:block; width: 100%; height:auto; max-height: 10vw; border-radius: 0px;"
-        data-ad-client="ca-pub-1815513279092674"
-        data-ad-slot="7173156548"
-        data-ad-format="auto"
-        data-full-width-responsive="true">
-      </ins>
     </div>
-    <div style="display: flex; justify-content: center; position: relative; padding-top: 3%;">
+    <div style="display: flex; justify-content: center; position: relative;">
       <h3 id="formLang" style="text-align: left; padding-right: 1%;">Select form language</h3>  
       <h3 id="langSelect" style="text-align: left; cursor: pointer; padding-right: 1%; padding-left: 0.1%;"></h3>
       <ul id="langDropdown"></ul>
@@ -467,8 +401,8 @@ html, body {
   <div style="display: flex; padding-left: 1%; padding-right: 1%; justify-content: center;">
       <ins class="adsbygoogle side-ad"
         
-        data-ad-client="ca-pub-1815513279092674"
-        data-ad-slot="5891864464"
+        data-ad-client="ca-pub-5663370246187799"
+        data-ad-slot="7558235471"
         data-ad-format="auto"
         data-full-width-responsive="true">
       </ins>
@@ -537,21 +471,28 @@ html, body {
         <img src="drawable/nylogo.png" class="logo">
         <p id="regQR" class="regqr"></p>
       <div id="qrcode"></div>
-      <label style="font-size: clamp(13px, 2vw, 20px); font-weight: normal;">www.mobiletag-auto.com</label>
+      <label style="font-size: 17px; font-weight: normal;">www.mobiletag-auto.com</label>
       </div>
     <button onclick="downloadCard()">Download QR Code as image</button>
   </div>
   </div>
       <ins class="adsbygoogle side-ad"
         
-        data-ad-client="ca-pub-1815513279092674"
-        data-ad-slot="9712514381"
+        data-ad-client="ca-pub-3940256099942544"
+        data-ad-slot="7558235471"
         data-ad-format="auto"
         data-full-width-responsive="true">
       </ins>
   </div>
+      <ins class="adsbygoogle"
+      style="display:block; width: 100%; height:auto; max-height: 10vw; border-radius: 0px;"
+      data-ad-client="ca-pub-5663370246187799"
+      data-ad-slot="7558235471"
+      data-ad-format="auto"
+      data-full-width-responsive="true">
+    </ins>
 <script 
-  async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1815513279092674"
+  async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5663370246187799"
   crossorigin="anonymous">
 </script>
   <!-- QRCode.js bibliotek -->

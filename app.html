@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mobile-TAG</title>
+<script>
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+  if (/android/i.test(ua)) {
+    window.location.href = "https://play.google.com/store/apps/details?id=YOUR_APP_ID";
+  } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+    window.location.href = "https://apps.apple.com/app/idYOUR_APP_ID";
+  }
+</script>
+</head>
+<body>
+  <h2>Download Mobile-TAG</h2>
+  <p>Select your device:</p>
+  <a href="https://play.google.com/store/apps/details?id=YOUR_APP_ID">Android</a><br><br>
+  <a href="https://apps.apple.com/app/idYOUR_APP_ID">iPhone</a>
+</body>
+</html>

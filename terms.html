@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script>
+        window.googletag = window.googletag || { cmd: [] };
+
+        googletag.cmd.push(function () {
+        googletag.pubads().setRequestNonPersonalizedAds(1);
+    });
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
+    gtag('consent', 'default', {
+    ad_storage: 'denied',
+    analytics_storage: 'denied',
+    personalization_storage: 'denied',
+    functionality_storage: 'granted',
+    security_storage: 'granted'
+    });
+
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'restricted_data_processing', true);
+    </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1815513279092674"
+     crossorigin="anonymous">
+    </script>
         <link rel="icon" type="image/png" href="drawable/mobile_tag_logo.png">
         <title>termscondition</title>
         <style>
                 body {
-                    margin: 0;
-                    padding: 0;
+                    border-radius: 10px; 
+                    border: 1px outset #ffaa00;
+                    box-shadow: 0 0 15px;
                     background-color: #000000;
                     color: #FFBF00;
                 }
@@ -21,7 +45,27 @@
                     -webkit-text-fill-color: antiquewhite;
                     text-shadow: 0 0 10px #FFBF00;
                 }
-                nav a {
+                nav {
+                    display: flex;
+                    justify-content: end;
+                    background-color: #000000;
+                    padding-left: 1%;
+                    padding-right: 1%;
+                }
+                .mobile-menu-btn {
+                    align-self: center;
+                    background: none;
+                    border: none;
+                    color: #FFBF00;
+                    font-size: clamp(5px, 2vw, 30px);
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+                nav .mobile-menu-btn:hover {
+                    color: #ffffff;
+                    flex-wrap: wrap;
+                }
+                a {
                     color: #000000;
                     text-decoration: none;
                     margin: 0 20px;
@@ -29,7 +73,7 @@
                     font-weight: bold;
                     transition: color 0.3s ease;
                 }
-                nav p {
+                p {
                     color: #000000;
                     text-decoration: none;
                     margin: 0 20px;
@@ -41,15 +85,13 @@
                     background: #eee;
                     border: 1px dashed #999;
                 }
+                html, body {
+                    width: 100%;
+                    max-width: 100%;
+                    overflow-x: hidden;
+                }
         </style>
         <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MWDYKZ1W7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1MWDYKZ1W7');
-  </script>
     </head>
         <script>
             async function loadTermsTexts() {
@@ -69,23 +111,26 @@
         <header>
             <!--<h1 class="centered-title">Mobile-TAG</h1>-->
             <img src="drawable/nylogo.png" style="max-width: 100%;">
+            <nav>
+                <a class="mobile-menu-btn" href="index.html">Main page</a>
+            </nav>
             <ins class="adsbygoogle"
                 style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-                data-ad-client="ca-pub-3940256099942544"
-                data-ad-slot="3252314483"
+                data-ad-client="ca-pub-1815513279092674"
+                data-ad-slot="2303973245"
                 data-ad-format="auto"
                 data-full-width-responsive="true">
             </ins>
         </header>
         <section id="terms" style="padding:40px; display:flex; justify-content:center;">
-            <div style="background-color:#cbc8c8; color:#000; max-width:800px; padding:30px; border-radius:10px;">
-                <nav>
+            <div style="background-color:#cbc8c8; max-width:800px; padding:30px; border-radius:10px; border: 1px outset #ffaa00; box-shadow: 0 0 15px; border-radius: 10px; padding: 10px;">
+                <div>
                     <header class="center">
-                        <a id="nav-terms" href="#"></a>
+                        <h2 id="nav-terms" href="#" style="color: #000000; text-decoration: none; margin: 0 20px; font-size: clamp(20px, 2.5vw, 30px); font-weight: bold; transition: color 0.3s ease;"></h2>
                     </header>
                     <br>
-                <p id="nav-termsInfo" href="#"></p>
-                </nav>
+                <p id="nav-termsInfo" href="#" style="font-size: clamp(15px, 1.6vw, 20px);"></p>
+                </div>
             </div>
         </section>
     </body>   

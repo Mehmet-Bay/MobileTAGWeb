@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5663370246187799"
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--
+  <script>
+    window.googletag = window.googletag || { cmd: [] };
+
+    googletag.cmd.push(function () {
+    googletag.pubads().setRequestNonPersonalizedAds(1);
+  });
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      personalization_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted'
+    });
+
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'restricted_data_processing', true);
+  </script> -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Mobile-TAG",
+      "operatingSystem": ["Android", "iOS"],
+      "applicationCategory": "UtilitiesApplication",
+      "description": "Mobile-TAG helps drivers document minor vehicle incidents and exchange information using QR codes and local-only storage.",
+      "url": "https://mobiletag-auto.com",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "SEK"
+      }
+    }
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1815513279092674"
      crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" href="drawable/mobile_tag_logo.png">
-  <title>Mobile-TAG</title>
+  <title>Mobile-TAG – Digital accident documentation for drivers</title>
+  <meta name="description" content="Mobile-TAG helps drivers document minor traffic incidents quickly, clearly and across language barriers."/>
   <style>   
     body {
-      margin: 0;
-      padding: 0;
+      border-radius: 10px; 
+      border: 1px outset #ffaa00;
+      box-shadow: 0 0 15px;
       background-color: #000000;
       color: #FFBF00;
     }
@@ -26,8 +66,8 @@
     }
     h1 {
       margin: 0;
-      font-size: 9vw;
-      -webkit-text-fill-color: antiquewhite;
+      font-size: 4vw;
+      -webkit-text-fill-color: #FFBF00;
       text-shadow: 0 0 1vw #FFBF00;
     }
     h2 {
@@ -38,16 +78,16 @@
     nav {
       display: flex;
       justify-content: center;
+      
       background-color: #FFBF00;
       padding-left: 1%;
       padding-right: 1%;
-      /*padding: 10px 0;*/
     }
     nav a {
       color: #000000;
       text-decoration: none;
       margin: 0 1vw;
-      font-size: 2vw;
+      font-size: clamp(10px, 2vw, 50px);
       font-weight: bold;
       transition: color 0.3s ease;
     }
@@ -77,8 +117,7 @@
     .dropdown-content a:hover {
       background-color: transparent;
       color: #fff;
-    }
-    
+    }    
     .dropdown:hover .dropdown-content {
       display: block;
     }
@@ -88,10 +127,8 @@
       scroll-snap-type: x mandatory; 
       gap: 2vw;
       padding: 2vw;
-      background-color: transparent;
-      
+      background-color: transparent; 
     }
-      
     .scroll-container::-webkit-scrollbar {
       height: 2px;
       scroll-behavior: smooth;
@@ -100,30 +137,23 @@
       background: #FFBF00;
       border-radius: 4px;
     }
-    
     .scroll-container section {
       flex: 0 0 80%;                 
       display: flex;
       align-items: center;
       gap: 20px;
-      
       background-color: transparent;
       border-radius: 10px;
-      
+      max-height: 29vw;
+      max-width: 100vw;
       scroll-snap-align: center;     
       color: #FFBF00;
     }
-    .scroll-container img {
-      width: 250px;
-      height: 300px;                
-      border-radius: 10px;
-      flex-shrink: 0;
-    }
     .scroll-container p {
       text-align: left;
-      width: 500px;
-      line-height: 1.5;
-      font-size: 20px;
+      width: 100%;
+      line-height: 1.2;
+      font-size: clamp(7px, 1.5vw, 20px);
     }
     .picker {
       margin: 20px auto;
@@ -149,9 +179,23 @@
     .logoMain {
       max-width: 500px;
     }
+    .contactorMain {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      gap:10%;
+    }
+    .contactAds {
+      display:inline-block;
+      height:auto;
+      max-width: 767px;
+      width: 100%;
+      max-height: 50px;
+      height: 100%;
+    }
     .contactor {
-      max-width: 40%;
-      min-width: 40%;
+      max-width: 300px;
+      width: 100%;
       overflow-y: auto;
       display: inline-block;
       background-color: #cbc8c8;
@@ -159,17 +203,18 @@
       max-height: auto;
       -webkit-text-fill-color: #000000;
       font-weight: normal;
-      font-size: 2vw;
+      font-size: clamp(15px, 2vw, 25px);
       border-width: 3%;
       border-radius: 15px;
-      margin-left: 5%;
       text-align: start;
       padding-left: 1%;
       padding-right: 1%;
     }
     .contactorInput {
-      width: 50%;
-      height: 30px;
+      width: 100%;
+      max-width: 150px;
+      max-height: 30px;
+      font-size: inherit;
     }
     .textArea {
       width: 90%;
@@ -194,38 +239,13 @@
       padding-left: 100%;       
       animation: scroll 60s linear infinite;
     }
-
-    @keyframes scroll {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
     .aboutPic {
-      max-width: 100%;
-      height: auto;
-    }
-    @media (max-aspect-ratio: 1/1) {
-      body {
-        width: fit-content;
-        max-width: 640px;
-        height: auto;
-      }
-      .aboutPic {
-        max-width: 150px;
-        max-height: 100px;
-      }
-      .scroll-container {
-        max-width: 400px;
-      }
-      .scroll-container p {
-        max-width: 200px;
-      }
-      .contactorInput{
-        height: 10px;
-        font-size: 1.6vw;
-      }
+      width: 50%;
+      max-height: 100%;
+      object-fit: contain;
+      flex-shrink: 0;
     }
   .adsbygoogle {
-    /*background: #eee;*/
     background-color: rgba(20,55,55,0.0);
     border: 1px dashed #999;
   }
@@ -238,19 +258,19 @@
     border-bottom: 1px solid #FFBF00;
   }
   .disabled-link {
-  pointer-events: none;          
-  opacity: 0.4;                  
-  cursor: not-allowed;
-  text-decoration: none !important;
+    pointer-events: none;          
+    opacity: 0.4;                  
+    cursor: not-allowed;
+    text-decoration: none !important;
   }
   section {
-    border: 3px outset #ffaa00;
+    border: 1px outset #ffaa00;
     box-shadow: 0 0 15px;
     border-radius: 10px;
     padding: 10px;
   }
   .ad-section {
-    border: 3px outset #ffaa00;
+    border: 0.10vw outset #ffaa00;
     width: 100%;
     max-height: 100%;
     min-height: 100%;
@@ -262,23 +282,284 @@
     border-radius: 10px;
     padding: 10px;
   }
+  .picture_section {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+    padding: 1%;
+  }
+  .picture_section h2 {
+    font-size: clamp(20px, 3vw, 40px);
+    text-align: center;
+    -webkit-text-fill-color: #FFBF00;
+  }
+  .picture_section p {
+    font-size: clamp(13px, 2vw, 30px);
+    text-align: left;
+    -webkit-text-fill-color: #FFBF00;
+    line-height: 1.5;
+  }
+  .picture_section ul {
+    font-size: clamp(13px, 2vw, 30px);
+    text-align:left;
+    display:inline-block;
+    line-height:1.5;
+    max-width:85%;
+  }
+  .how-it-works {
+    text-align: left;
+    line-height: 1.6;
+    list-style: none;
+    line-height: 1.6;
+    padding: 0;
+  }
+  .how-it-works h2{
+    font-size: clamp(20px, 2vw, 25px);
+    color: #FFBF00;
+  }
+  .how-it-works ul {
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    max-width: 70%;
+    margin: auto;
+  } 
+  .how-it-works li {
+    font-size: clamp(15px, 1.6vw, 20px);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .how-it-works .icon {
+    color: #FFBF00;
+    line-height: 1.6;
+    margin-top: 2px;
+  }
+  .privacy-design {
+    text-align: left;
+    line-height: 1.6;
+    list-style: none;
+    padding: 0;
+  }
+  .privacy-design h2 {
+    font-size: clamp(20px, 2vw, 25px);
+    color: #FFBF00;
+  }
+  .privacy-design ul {
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    max-width: 70%;
+    margin: auto;
+  }
+  .privacy-design li {
+    display: flex;
+    text-align: left;
+    font-size: clamp(15px, 1.6vw, 20px);
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .privacy-design .icon {
+    color: #FFBF00;
+    opacity: 0.85;
+  }
+  .documentAdvantages {
+    justify-self: center;
+    max-width: 60%;
+    line-height: 1.6;
+    list-style: none;
+    padding: 0;
+  }
+  .documentAdvantages h2 {
+    color: #FFBF00;
+    font-size: clamp(19px, 1.7vw, 25px);
+  }
+  .documentAdvantages ul {
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    max-width: 70%;
+    margin: auto;
+  }
+  .documentAdvantages li {
+    display: flex;
+    text-align: left;
+    font-size: clamp(15px, 1.6vw, 20px);
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .endText {
+    text-align: center;
+  }
+  .endText p {
+    font-size: clamp(13px, 1.7vw, 25px);
+    color:#f8e7b3;
+    max-width: 70%;
+    justify-self: center;
+    margin-top: 1.5vw;
+    line-height: 1.5;
+  }
+  .endReport p {
+    font-size: clamp(13px, 1.7vw, 25px);
+    color:#e0cfa3;
+    justify-self: center;
+    max-width: 75%;
+    margin-top: 1.5vw;
+    line-height: 1.5;
+  }
+  .titleText p {
+    color:#f0d48a;
+    max-width: 80%;
+    text-align: center;
+    font-size: clamp(11px, 2vw, 30px);
+  }
+  .companiesSection {
+    text-align:left;
+    max-width:100%;
+    margin:0 auto;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size:clamp(13px, 2vw, 30px);
+    line-height:1.6;
+  }
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+  }
+  .nav-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  @keyframes scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  @media (max-width: 380px) {
+    /*
+    nav {
+      flex-direction: column;
+    }
+    .mobile-menu-btn {
+      display: block;
+      align-self: flex-end;
+      padding: 10px;
+      font-size: 28px;
+    }
+    .nav-wrapper {
+      flex-direction: column;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease;
+      gap: 1vw;
+    }
+    nav.open .nav-wrapper {
+      max-height: 500px;
+    }
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+    }
+    */
+    .dropdown .dropdown-content {
+      display: none;
+      margin-left: 10px;
+    }
+    .dropdown.open .dropdown-content {
+      display: block;
+    }
+    nav {
+      position: relative;
+      justify-content: flex-end;
+    }
+    .mobile-menu-btn {
+      display: block;
+      padding-right: 3%;
+      font-size: 15px;
+      background: none;
+      border: none;
+    }
+    .nav-wrapper {
+      position: absolute;
+      top: 100%;
+      right: 5px;
+      background: #FFBF00;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.35);
+      flex-direction: column;
+      padding: 10px 15px;
+      min-width: 200px;
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: opacity .25s ease, transform .25s ease;
+    }
+    nav.open .nav-wrapper {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .nav-wrapper a,
+    .nav-wrapper .dropdown {
+      padding: 8px 0;
+    }
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+    }
+  }
+  @media (max-width: 768px){
+    .picture_section {
+      flex-direction: column !important;
+    }
+  }
+  @media (min-width: 768px) {
+    .contactorMain {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .contactor {
+      max-width: 500px;
+      margin-left: 5%;
+    }
+    .contactorInput {
+      max-width: 250px;
+      font-size: 15px;
+      height: 25px;
+    }
+    .picture_section {
+      flex-direction: row;
+    }
+    .scroll-container p {
+      text-align: left;
+      width: 100%;
+      line-height: 1.2;
+      font-size: clamp(11px, 2vw, 30px);
+    }
+    .contactAds {
+      max-width: 600px;
+      width: 100%;
+      max-height: 500px;
+      height: 100%;
+
+    }
+  }
+  @media (min-width: 1024px){}
+  @media (min-width: 1280px){}
+  @media (min-width: 1536px){}
+  html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
   </style>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MWDYKZ1W7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1MWDYKZ1W7', { 'anonymize_ip': true });
-    gtag('config', 'G-1MWDYKZ1W7');
-  </script>
-
 </head>
-
-<script 
-  async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5663370246187799"
-  crossorigin="anonymous">
-</script>
-
   <script>
   async function loadNavTexts() {    
     try {
@@ -294,7 +575,9 @@
       document.getElementById("nav-privacy").textContent = data.privacy;
       document.getElementById("nav-companies").textContent = data.companiesTitle;
       document.getElementById("nav-qrGen").textContent = data.qrGenerator;
-      
+      document.getElementById("nav-faq").textContent = data.faq;
+      document.getElementById("nav-lang").textContent = data.lang;
+      document.getElementById("nav-acc").textContent = data.acci;
     } catch (error) {
       console.error("Fel vid laddning av navtexts.json:", error);
     }
@@ -306,61 +589,246 @@
   <header>
     <img src="drawable/nylogo.png">
     
-    <svg width="500px" height="5"><line x1="0" x2="500" stroke="#FFBF00"/></svg>
-    <h2 class="centered-title">Mobile Traffic Accident Guider</h2>
+    <svg width="100%" height="5"><line x1="0" x2="1536" stroke="#FFBF00"/></svg>
+    <!--<div style="width:100%; height:2px; background:#FFBF00; box-shadow:0 0 10px #FFBF00;"></div>-->
+    <h1 class="centered-title">Mobile Traffic Accident Guider</h1>
     <div class="marquee-container">
       <div class="marquee">
         <span id="important-Info"></span>
       </div>
     </div>
     <div class="lang-notice">
-  🌍 The site is currently available only in English.
+      <p>🌍 The site is currently available only in English.</p>
     </div>
   </header>
   <nav>
-    <a id="nav-mainPage" href="#" onclick="showPage('main')"></a>
-    <a id="nav-information" href="#" onclick="showPage('information')"></a>
-    <a id="nav-about" href="#" onclick="showPage('about')"></a>
-    <a id="nav-companies" href="#" onclick="showPage('companies')"></a>
-    <div class="dropdown">
-      <a id="nav-termsCondition" href="#"></a>
-      <div class="dropdown-content">
-        <a id="nav-terms" href="terms.html"></a>
-        <a id="nav-privacy" href="privacy.html"></a>
+    <button class="mobile-menu-btn" onclick="toggleMobileNav()">☰ Menu</button>
+    <div class="nav-wrapper">
+      <a id="nav-mainPage" href="#" onclick="showPage('main')"></a>
+      <div class="dropdown mobile-dropdown">
+        <div class="dropdown">
+          <a id="infoCondition">Information</a>
+          <div class="dropdown-content">
+            <a id="nav-information" href="#" onclick="showPage('information')"></a>
+            <a id="nav-lang" href="languages.html"></a>
+            <a id="nav-acc" href="accident.html"></a>
+            <a id="nav-faq" href="faq.html"></a>
+          </div>
+        </div>
       </div>
+      <a id="nav-about" href="#" onclick="showPage('about')"></a>
+      <a id="nav-companies" href="#" onclick="showPage('companies')"></a>
+      <a id="nav-qrGen" href="qrcodegen.html"></a>
+      <div class="dropdown">
+        <a id="nav-termsCondition" href="#"></a>
+        <div class="dropdown-content">
+          <a id="nav-terms" href="terms.html"></a>
+          <a id="nav-privacy" href="privacy.html"></a>
+        </div>
+      </div>
+      <a id="nav-contactInfo" href="#" onclick="showPage('contactInfo')"></a>
     </div>
-    <a id="nav-qrGen" href="qrcodegen.html"></a>
-    <a id="nav-contactInfo" href="#" onclick="showPage('contactInfo')"></a>
   </nav>
   <div id="content" style="padding:10px; max-width:100%; margin:0 auto; text-align:center;">
     <img id="logoMain" src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" style="max-width: 400px;">
 <style>
   #slideshow { transition: opacity .3s ease-in-out }  
 </style>
-    <h2>Welcome to Mobile-TAG (Mobile Traffic Accident Guider)</h2>
-    <h2 style="-webkit-text-fill-color: antiquewhite; font-size: 1.7vw;">Available soon in Google Play and App Store</h2>
-  <div style="text-align: center; padding-top: 5px;">
-    <img src="drawable/App_Store.svg.png" style="width:20%; display: inline-block;" alt="">
-    <img src="drawable/Google_Play_Store.svg.png" style="width:20%; display: inline-block;" alt="">
-  </div>
-    <p>Quick digital reporting of traffic accidents – directly on your mobile phone.</p>
-    <footer style="text-align:center; color:#FFBF00; font-size:0.9em; padding:10px;">
-  © 2025 Mobile-TAG | 
-  <a href="privacy.html" style="color:#FFBF00; text-decoration:underline;">Privacy Policy</a> | 
-  This site uses Google AdSense for ads. See 
-  <a href="https://policies.google.com/technologies/ads" style="color:#ffaa00;">Google’s policy</a>.
-</footer>
+    <div class="titleText" style="justify-items: center;">
+      <h2>Welcome to Mobile-TAG<br>(Mobile Traffic Accident Guider)</h2>
+      <p>
+        Designed for minor accidents without injuries where drivers want to document the situation quickly and move on.
+      </p>
+      <p>
+        Mobile-TAG can create identical accident templates in over 50 languages,
+        ensuring that each driver receives the same information in their own language.
+      </p>
+      <p>
+        Mobile-TAG is a note-taking tool created for drivers to quickly document
+        minor traffic accidents.
+      </p>
     </div>
+      <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+  <div class="picture_section">
+    <img src="drawable/mobile_tag_auto_new.png">
+    <div style="margin: auto; padding: 1%; padding-top: 0%;">
+      <h2 class="imageTitles">
+        Multi-language documentation<br>(Mobile-TAG-Auto)
+      </h2>
+      <ul>
+        <li>Automatically translates the driver's language into the official language of the vehicle's country of registration</li>
+        <li>Useful when drivers don’t speak the same language</li>
+        <li>Original text is always included alongside the translated version</li>
+      </ul>
+      <p style="text-align: left; font-size: 1.6vw;">
+        Example: Driver A uses English and drives a Spain-registered vehicle.
+        Driver B uses French and drives an Italy-registered vehicle.
+        Driver A receives a document in Spanish, while Driver B receives a document
+        in Italian. All descriptions are automatically translated and the original
+        text is preserved in the document.
+      </p>
+      <p style="text-align: center;">* Mobile-TAG-Auto is optional and activated only when needed</p>
+      <p style="text-align: center;">* The Mobile-TAG-Auto service requires an internet connection.</p>
+    </div>
+  </div>    
+    <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+    <div class="picture_section">
+      <img src="drawable/document_in_multiple_languages.png">
+      <div style="text-align:center; padding: 1%">
+        <h2>One incident. One document. Multiple languages.</h2>
+          <p>
+            Mobile-TAG helps drivers document a minor vehicle incident together,
+            even when different languages are used.
+            Mobile-TAG lets drivers document a vehicle incident together using real-time translation,
+            secure QR exchange and local-only storage.
+            Mobile-TAG can handle up to 4 different languages in same incident.
+          </p>
+      </div>
+    </div>
+    <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+    <div class="picture_section">
+      <img src="drawable/digital_assistant.png" style="border-radius: 5%;">
+      <div style="text-align: center; padding: 0.5%;">
+        <h2 class="imageTitles">Digital accident documentation – fast, clear and seamless</h2>
+        <p class="imageTexts">
+          <strong>Mobile-TAG</strong> is your intelligent assistant for documenting traffic accidents. 
+          Whether you're traveling abroad or handling language barriers at the scene, Mobile-TAG ensures that all necessary information is recorded — quickly, clearly, and efficiently, often within just a few minutes, directly on the mobile phone.
+        </p>
+      </div>
+    </div>
+    <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+
+    <div class="picture_section">
+      <img src="drawable/document_minor.png">
+      <div style="margin: auto; padding: 1%; padding-top: 0%;">
+        <h2>
+          Document a minor traffic accident quickly and clearly
+        </h2>
+          <p>
+          After a minor traffic accident without any injuries, drivers often need to document what happened on the spot.
+          This can be challenging when no accident form is available,
+          time is limited, or the drivers do not speak the same language.
+        </p>
+      
+      </div>
+    </div>
+  <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+  <div class="picture_section">
+    <img src="drawable/document_guiding.png" style="border-radius: 5%;"> 
+    <div style="margin: auto; padding: 1%; padding-top: 0%;">
+      <h2>Guided documentation – without stress</h2>
+      <p>
+      Mobile-TAG guides drivers step by step through the documentation process.
+      Each step is completed before moving on, ensuring nothing important is missed.
+      Drivers can choose to add photos, sketches, or both.
+      Once completed, all information is automatically placed into a structured document — no manual sorting required.
+      </p>
+    </div>
+  </div>
+  <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+  <!--<div style="display: flex; gap: 3%; align-items: flex-start;">-->
+  <div class="picture_section" style="align-items: center;">
+    <div class="how-it-works" style="padding-top: 0.5%; flex: 1;">
+      <!--H3 skall ändras till H2 kontrollera dom delarna-->
+      <h2 style="text-align: center;">How it works</h2>
+        <ul>
+          <li><span class="icon">🚗</span> Record vehicle, driver, location, and time details directly in the app</li>
+          <li><span class="icon">📸</span> Add photos and draw sketch illustrations of the incident</li>
+          <li><span class="icon">📄</span> Mobile-TAG automatically creates a PDF document</li>
+          <li><span class="icon">✉️</span> Share the PDF document easily via e-mail</li>
+          <li><span class="icon">🔗</span> Drivers can exchange all information easily using QR codes</li>
+          <li><span class="icon">🌍</span> Each driver receives the document in their own official language</li>
+          <li><span class="icon">🗣️</span> Mobile-TAG supports over 50 languages</li>
+        </ul>
+    </div>
+    <div style="width:1px; background:#FFBF00; opacity:0.6; height:auto; align-self:stretch; box-shadow:0 0 12px #FFBF00;"></div>
+    <div class="privacy-design" style="padding-top: 0.5%; flex: 1;">
+      <h2 style="text-align: center;">Privacy design</h2>
+        <ul>
+          <li><span class="icon">🔒</span> All information is stored locally on the user's own device.</li>
+          <li><span class="icon">🚫</span> No information about witnesses, pedestrians, cyclists, or people in the user's own vehicle is shared via QR exchange.</li>
+          <li><span class="icon">🗑️</span> Users can easily delete their information permanently within the app.</li>
+        </ul>
+    </div>
+  </div>
+  <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+  <div class="documentAdvantages">
+    <h2 style="text-align: center;">About document</h2>
+    <ul>
+      <li>The document cannot be used for claims or as evidence of liability.</li>
+      <li>Its sole purpose is to help drivers summarize the incident into a clear and structured document.</li>
+    </ul>
+  </div>
+  <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+  <div class="documentAdvantages" style="text-align:center; max-width: 60%; margin: auto; padding: 5px;">
+    <h2 style="text-align: center;">More advantages</h2>
+      <ul style="font-size:1.5vw; text-align:left; display:inline-block; line-height:1.5; max-width:85%;">
+        <li><span class="icon">🔒</span> Secure, device-only storage – no accounts or sign-ups required</li>
+        <li><span class="icon">📱</span> Only a locale profile on own device</li>
+        <li><span class="icon">♾️</span> Free and unlimited use for all vehicle owners and drivers</li>
+        <li><span class="icon">🔳</span> Companies can create QR codes for each vehicle free of charge for their drivers , allowing quick scanning in the event of an incident.</li>
+        <li><span class="icon">✅</span> No subscriptions or hidden fees – full access without payments (except optional Mobile-TAG-Auto)</li>
+      </ul>
+      <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+  </div>
+  <div style="padding-top: 5px;">
     <ins class="adsbygoogle"
-     style="display:block; height: 5vw; border-radius: 0px;"
-     data-ad-client="ca-pub-3940256099942544"
-     data-ad-slot="8819679398"
+      style="display:block; height: 10vw; border-radius:0px;"
+        data-ad-client="ca-pub-1815513279092674"
+        data-ad-slot="6493557745"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+    </ins>
+  </div>
+  <div class="endText">
+    <p>
+      Reports created with Mobile-TAG are structured to include the essential details typically requested when describing an incident.
+      You can share the document as-is or use it as a personal reference when contacting your insurance company — the document is yours to use freely.
+    </p>
+  </div>
+  <div class="endReport">
+    <p>
+      Mobile-TAG does not replace police reports and the generated document is not legally binding.
+      For serious accidents or injuries, emergency services and authorities must always be contacted.
+    </p>
+  <div>
+    <p style="font-size: clamp(11px, 1.5vw, 20px); margin-top:1vw; color:#FFBF00;">
+      Learn more in the <strong>About</strong>, <strong>Information</strong>, and <strong>For Companies</strong> sections.
+    </p>
+    <p style="font-size: clamp(11px, 1.5vw, 20px); margin-top:1vw; color: #FFBF00;">* Translation requires Mobile-TAG-Auto (optional)</p>
+  </div>
+</div>
+
+    <h2 style="-webkit-text-fill-color: antiquewhite; font-size: clamp(15px, 1.7vw, 23px); text-align: center;">Available soon in Google Play and App Store</h2>
+  <div style="text-align: center; padding-top: 5px;">
+    <a href="https://apple.com">
+    <img src="drawable/App_Store.svg.png" style="width:20%; display: inline-block; padding-right: 1%;" alt="Go to App store for download">
+    </a>
+    <a href="https://google.com">
+    <img src="drawable/Google_Play_Store.svg.png" style="width:20%; display: inline-block; padding-left: 1%;" alt="Go to Google play for download">
+    </a>
+  </div>
+    <p style="font-size: clamp(11px, 1.5vw, 20px); text-align: center;">Quick digital reporting of traffic accidents – directly on your mobile phone.</p>
+    <footer style="text-align:center; color:#FFBF00; font-size:0.9em; padding:10px;">
+      © 2025 Mobile-TAG |
+      <a href="privacy.html" style="color:#FFBF00; text-decoration:underline;">Privacy Policy</a> |
+      <a href="#" style="color:#FFBF00;" onclick="__tcfapi('displayConsentUi', 2, function() {}); return false;">
+        Privacy settings
+      </a>
+      <br>
+      <p>Mobile-TAG is operated by Memo Systems AB Sweden</p>
+    </footer>
+  </div>
+    <ins class="adsbygoogle"
+     style="display:block; min-height: clamp(90px, 100px); border-radius: 0px;"
+     data-ad-client="ca-pub-1815513279092674"
+     data-ad-slot="6740969753"
      data-ad-format="auto"
      data-full-width-responsive="true">
     </ins>
-<script>
+    <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    </script>
 </div>
 
 <style>
@@ -441,7 +909,6 @@
     to { transform: scale(1); opacity: 1; }
   }
 </style>
-
 <script>
   function showAlert(title, message) {
     document.getElementById('alertTitle').innerText = title;
@@ -521,7 +988,26 @@ window.addEventListener('load', () => {
   });
 });
 </script>
-
+<script>
+function toggleMobileNav() {
+  document.querySelector("nav").classList.toggle("open");
+}
+document.querySelectorAll(".dropdown > a").forEach(trigger=>{
+  trigger.addEventListener("click", function(e){
+    if(window.innerWidth <= 768){
+      e.preventDefault();
+      this.parentElement.classList.toggle("open");
+    }
+  });
+});
+document.querySelectorAll(".nav-wrapper a").forEach(a=>{
+  a.addEventListener("click",()=>{
+    if(!a.parentElement.classList.contains("dropdown")){
+      document.querySelector("nav").classList.remove("open");
+    }
+  });
+});
+</script>
 </body>
 <script>
   setTimeout(() => startLogoLoopMain(), 1000);
@@ -530,75 +1016,233 @@ window.addEventListener('load', () => {
 function showPage(page) {
   const content = document.getElementById("content");
   if (page === "main") {
+  setTimeout(() => startLogoLoopMain(), 1000);
     content.innerHTML = `
       <!--<img id="logo" src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" style="max-width: 400px;">-->
       <img id="logoMain" src="drawable/mobile_traffic_accident_logo_scaled_transparent.png" style="max-width: 400px;">
-      <h2>Welcome to Mobile-TAG (Mobile Traffic Accident Guider)</h2>
-      <h2 style="-webkit-text-fill-color: antiquewhite; font-size: 1.7vw;">Available soon in Google Play and App Store</h2>
-      <div style="text-align: center; padding-top: 5px;">
-        <img src="drawable/App_Store.svg.png" style="width:20%; display: inline-block;" alt="">
-        <img src="drawable/Google_Play_Store.svg.png" style="width:20%; display: inline-block;" alt="">
+<div class="titleText" style="justify-items: center;">
+      <h2>Welcome to Mobile-TAG<br>(Mobile Traffic Accident Guider)</h2>
+      <p>
+        Designed for minor accidents without injuries where drivers want to document the situation quickly and move on.
+      </p>
+      <p>
+        Mobile-TAG can create identical accident templates in over 50 languages,
+        ensuring that each driver receives the same information in their own language.
+      </p>
+      <p>
+        Mobile-TAG is a note-taking tool created for drivers to quickly document
+        minor traffic accidents.
+      </p>
+    </div>
+      <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+  <div class="picture_section">
+    <img src="drawable/mobile_tag_auto_new.png">
+    <div style="margin: auto; padding: 1%; padding-top: 0%;">
+    <h2 class="imageTitles">
+      Multi-language documentation<br>(Mobile-TAG-Auto)
+    </h3>
+      <ul>
+        <li>Automatically translates the driver's language into the official language of the vehicle's country of registration</li>
+        <li>Useful when drivers don’t speak the same language</li>
+        <li>Original text is always included alongside the translated version</li>
+      </ul>
+      <p style="text-align: left; font-size: 1.6vw;">
+        Example: Driver A uses English and drives a Spain-registered vehicle.
+        Driver B uses French and drives an Italy-registered vehicle.
+        Driver A receives a document in Spanish, while Driver B receives a document
+        in Italian. All descriptions are automatically translated and the original
+        text is preserved in the document.
+      </p>
+    <p style="text-align: center;">* Mobile-TAG-Auto is optional and activated only when needed</p>
+    <p style="text-align: center;">* The Mobile-TAG-Auto service requires an internet connection.</p>
+    </div>
+  </div>    
+    <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+    <div class="picture_section">
+      <img src="drawable/document_in_multiple_languages.png">
+      <div style="text-align:center; padding: 1%">
+        <h2>One incident. One document. Multiple languages.</h2>
+          <p>
+            Mobile-TAG helps drivers document a minor vehicle incident together,
+            even when different languages are used.
+            Mobile-TAG lets drivers document a vehicle incident together using real-time translation,
+            secure QR exchange and local-only storage.
+            Mobile-TAG can handle up to 4 different languages in same incident.
+          </p>
       </div>
-      <p>Quick digital reporting of traffic accidents – directly on your mobile phone.</p>
+    </div>
+    <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+    <div class="picture_section">
+      <img src="drawable/digital_assistant.png" style="border-radius: 5%;">
+      <div style="text-align: center; padding: 0.5%;">
+        <h2 class="imageTitles">Digital accident documentation – fast, clear and seamless</h2>
+        <p class="imageTexts">
+          <strong>Mobile-TAG</strong> is your intelligent assistant for documenting traffic accidents. 
+          Whether you're traveling abroad or handling language barriers at the scene, Mobile-TAG ensures that all necessary information is recorded — quickly, clearly, and efficiently, often within just a few minutes, directly on the mobile phone.
+        </p>
+      </div>
+    </div>
+    <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
 
+    <div class="picture_section">
+      <img src="drawable/document_minor.png">
+      <div style="margin: auto; padding: 1%; padding-top: 0%;">
+        <h2>
+          Document a minor traffic accident quickly and clearly
+        </h2>
+          <p>
+          After a minor traffic accident without any injuries, drivers often need to document what happened on the spot.
+          This can be challenging when no accident form is available,
+          time is limited, or the drivers do not speak the same language.
+        </p>
+      
+      </div>
+    </div>
+  <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+  <div class="picture_section">
+    <img src="drawable/document_guiding.png" style="border-radius: 5%;"> 
+    <div style="margin: auto; padding: 1%; padding-top: 0%;">
+      <h2>Guided documentation – without stress</h2>
+      <p>
+      Mobile-TAG guides drivers step by step through the documentation process.
+      Each step is completed before moving on, ensuring nothing important is missed.
+      Drivers can choose to add photos, sketches, or both.
+      Once completed, all information is automatically placed into a structured document — no manual sorting required.
+      </p>
+    </div>
+  </div>
+  <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+  <!--<div style="display: flex; gap: 3%; align-items: flex-start;">-->
+  <div class="picture_section" style="align-items: center;">
+    <div class="how-it-works" style="padding-top: 0.5%; flex: 1;">
+      <!--H3 skall ändras till H2 kontrollera dom delarna-->
+      <h2 style="text-align: center;">How it works</h2>
+        <ul>
+          <li><span class="icon">🚗</span> Record vehicle, driver, location, and time details directly in the app</li>
+          <li><span class="icon">📸</span> Add photos and draw sketch illustrations of the incident</li>
+          <li><span class="icon">📄</span> Mobile-TAG automatically creates a PDF document</li>
+          <li><span class="icon">✉️</span> Share the PDF document easily via e-mail</li>
+          <li><span class="icon">🔗</span> Drivers can exchange all information easily using QR codes</li>
+          <li><span class="icon">🌍</span> Each driver receives the document in their own official language</li>
+          <li><span class="icon">🗣️</span> Mobile-TAG supports over 50 languages</li>
+        </ul>
+    </div>
+    <div style="width:1px; background:#FFBF00; opacity:0.6; height:auto; align-self:stretch; box-shadow:0 0 12px #FFBF00;"></div>
+    <div class="privacy-design" style="padding-top: 0.5%; flex: 1;">
+      <h2 style="text-align: center;">Privacy design</h2>
+        <ul>
+          <li><span class="icon">🔒</span> All information is stored locally on the user's own device.</li>
+          <li><span class="icon">🚫</span> No information about witnesses, pedestrians, cyclists, or people in the user's own vehicle is shared via QR exchange.</li>
+          <li><span class="icon">🗑️</span> Users can easily delete their information permanently within the app.</li>
+        </ul>
+    </div>
+  </div>
+  <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+  <div class="documentAdvantages">
+    <h2 style="text-align: center;">About document</h2>
+    <ul>
+      <li>The document cannot be used for claims or as evidence of liability.</li>
+      <li>Its sole purpose is to help drivers summarize the incident into a clear and structured document.</li>
+    </ul>
+  </div>
+  <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+  <div class="documentAdvantages" style="text-align:center; max-width: 60%; margin: auto; padding: 5px;">
+    <h2 style="text-align: center;">More advantages</h2>
+      <ul style="font-size:1.5vw; text-align:left; display:inline-block; line-height:1.5; max-width:85%;">
+        <li><span class="icon">🔒</span> Secure, device-only storage – no accounts or sign-ups required</li>
+        <li><span class="icon">📱</span> Only a locale profile on own device</li>
+        <li><span class="icon">♾️</span> Free and unlimited use for all vehicle owners and drivers</li>
+        <li><span class="icon">🔳</span> Companies can create QR codes for each vehicle free of charge for their drivers , allowing quick scanning in the event of an incident.</li>
+        <li><span class="icon">✅</span> No subscriptions or hidden fees – full access without payments (except optional Mobile-TAG-Auto)</li>
+      </ul>
+      <svg width="100%" height="5"><line x1="0" x2="1500" stroke="#FFBF00"/></svg>
+  </div>
+  <div style="padding-top: 5px;">
+    <ins class="adsbygoogle"
+      style="display:block; height: 5vw; border-radius:0px;"
+        data-ad-client="ca-pub-1815513279092674"
+        data-ad-slot="9367133094"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+    </ins>
+  </div>
+  <div class="endText">
+    <p>
+      Reports created with Mobile-TAG are structured to include the essential details typically requested when describing an incident.
+      You can share the document as-is or use it as a personal reference when contacting your insurance company — the document is yours to use freely.
+    </p>
+  </div>
+  <div class="endReport">
+    <p>
+      Mobile-TAG does not replace police reports and the generated document is not legally binding.
+      For serious accidents or injuries, emergency services and authorities must always be contacted.
+    </p>
+  <div>
+    <p style="font-size: clamp(11px, 1.5vw, 20px); margin-top:1vw; color:#FFBF00;">
+      Learn more in the <strong>About</strong>, <strong>Information</strong>, and <strong>For Companies</strong> sections.
+    </p>
+    <p style="font-size: clamp(11px, 1.5vw, 20px); margin-top:1vw; color: #FFBF00;">* Translation requires Mobile-TAG-Auto (optional)</p>
+  </div>
+</div>
+
+  <h2 style="-webkit-text-fill-color: antiquewhite; font-size: clamp(15px, 1.7vw, 23px); text-align: center;">Available soon in Google Play and App Store</h2>
+  <div style="text-align: center; padding-top: 5px;">
+    <a href="https://apple.com">
+    <img src="drawable/App_Store.svg.png" style="width:20%; display: inline-block; padding-right: 1%;" alt="Go to App store for download">
+    </a>
+    <a href="https://google.com">
+    <img src="drawable/Google_Play_Store.svg.png" style="width:20%; display: inline-block; padding-left: 1%;" alt="Go to Google play for download">
+    </a>
+  </div>
+    <p style="font-size: clamp(11px, 1.5vw, 20px); text-align: center;">Quick digital reporting of traffic accidents – directly on your mobile phone.</p>
+    <footer style="text-align:center; color:#FFBF00; font-size:0.9em; padding:10px;">
+      © 2026 Mobile-TAG |
+      <a href="privacy.html" style="color:#FFBF00; text-decoration:underline;">Privacy Policy</a> |
+      <a href="#" style="color:#FFBF00;" onclick="__tcfapi('displayConsentUi', 2, function() {}); return false;">
+        Privacy settings
+      </a>
+      <br>
+      <p>Mobile-TAG is operated by Memo Systems AB Sweden</p>
+    </footer>
+  </div>
     `;
+    
     (adsbygoogle = window.adsbygoogle || []).push({});
-    setTimeout(() => startLogoLoopMain(100));
-    const consent = localStorage.getItem("cookieConsent");
-    if (consent === "accept" || consent === "personalized" || consent === "nonPersonalized") {
-      gtag('event', 'page_view', { page_title: 'Main page', page_path: '/main' });
-    }
   }
 if (page === "contactInfo") {
   fetch("en.json")
     .then(resp => resp.json())
     .then(data => {
       content.innerHTML = `
-        <div style="display:flex; align-items:flex-start; gap:10%;">
-          <div class="contactor">
-            <h3>${data.contactText}</h3>
+        <div class="contactorMain">
+          <div class="contactor" style="border: 1px outset #ffaa00; box-shadow: 0 0 15px; border-radius: 10px; padding: 10px;">
+            <p style="font-size: clamp(13px, 1.5vw, 22px)">${data.contactText}</p>
 
-            <label style="color: black; font-size: 1.8vw; font-weight: bold">${data.contactYourName}</label><br>
+            <label style="color: black; font-size: clamp(15px, 1.8vw, 25px); font-weight: bold">${data.contactYourName}</label><br>
             <input class="contactorInput" id="contactorsNameId" type="text"><br>
 
-            <label style="color: black; font-size: 1.7vw; font-weight: bold">${data.contactYourMail}</label><br>
+            <label style="color: black; font-size: clamp(15px, 1.8vw, 25px); font-weight: bold">${data.contactYourMail}</label><br>
             <input class="contactorInput" id="contactorsMailId" type="email"><br>
 
-            <label style="color: black; font-size: 1.7vw; font-weight: bold">${data.contactInfoDescribe}</label><br>
+            <label style="color: black; font-size: clamp(15px, 1.8vw, 25px); font-weight: bold">${data.contactInfoDescribe}</label><br>
             <textarea class="textArea" id="contactDescribeId" rows="6" placeholder="${data.contactInfoDescribe}"></textarea>
             <br>
 
-            <button id="sendContactBtn" style="width: 20%; height: 30%; justify-content: center; border-radius: 10px;">${data.buttonSend}</button>
+            <button id="sendContactBtn" style="max-width: 70px; width: 100%; max-height: 30%; justify-content: center; border-radius: 10px;">${data.buttonSend}</button>
           </div>
 
-          <div style="display:inline-block; min-width: 40%; height:auto; max-width: 40%;">
+          <div class="contactAds">
             <ins class="adsbygoogle"
-              style="display:block; height: 50vw;"
-              data-ad-client="ca-pub-5663370246187799"
-              data-ad-slot="4565396152"
+              style="display:block; height: 35vw;"
+              data-ad-client="ca-pub-1815513279092674"
+              data-ad-slot="1872728409"
               data-ad-format="auto"
               data-full-width-responsive="true">
             </ins>
           </div>
         </div>
-
-        <div style="padding-top: 5px;">
-          <ins class="adsbygoogle"
-            style="display:block; height: 5vw; border-radius:0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="2580847751"
-            data-ad-format="auto"
-            data-full-width-responsive="true">
-          </ins>
-        </div>
       `;
 
-      (adsbygoogle = window.adsbygoogle || []).push({});
-      const consent = localStorage.getItem("cookieConsent");
-      if (consent === "accept" || consent === "personalized" || consent === "nonPersonalized") {
-        gtag('event', 'page_view', { page_title: 'Contact us', page_path: '/contactInfo' });
-      }
-      
       document.getElementById("sendContactBtn").addEventListener("click", async () => {
         const name = document.getElementById("contactorsNameId").value.trim();
         const email = document.getElementById("contactorsMailId").value.trim();
@@ -633,14 +1277,14 @@ if (page === "companies") {
     .then(resp => resp.json())
     .then(data => {
       content.innerHTML = `
-        <section style="text-align:left; max-width:800px; margin:0 auto; font-size:2vw; line-height:1.6;">
+        <section class="companiesSection">
           <h3 style="color:antiquewhite;">${data.MobileTAGTest}</h3>
           <h3>${data.companiesTitle}</h3>
           <p>${data.companiesIntro}</p>
           <ins class="adsbygoogle"
             style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="9103406966"
+            data-ad-client="ca-pub-1815513279092674"
+            data-ad-slot="9559646731"
             data-ad-format="auto"
             data-full-width-responsive="true"></ins>
           <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
@@ -652,8 +1296,8 @@ if (page === "companies") {
           <p>${data.howWorksInfo}</p> 
           <ins class="adsbygoogle"
             style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="7833174438"
+            data-ad-client="ca-pub-1815513279092674"
+            data-ad-slot="4104964485"
             data-ad-format="auto"
             data-full-width-responsive="true"></ins>
           <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
@@ -661,8 +1305,8 @@ if (page === "companies") {
           <p>${data.autoTranslateDescription}</p>
           <ins class="adsbygoogle"
             style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="1106207888"
+            data-ad-client="ca-pub-1815513279092674"
+            data-ad-slot="2994238383"
             data-ad-format="auto"
             data-full-width-responsive="true"></ins>
           <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
@@ -673,8 +1317,8 @@ if (page === "companies") {
           <p>${data.smartSuncDescription}</p>
           <ins class="adsbygoogle"
             style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="7191559499"
+            data-ad-client="ca-pub-1815513279092674"
+            data-ad-slot="7670908044"
             data-ad-format="auto"
             data-full-width-responsive="true"></ins>
           <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
@@ -686,19 +1330,15 @@ if (page === "companies") {
           <ul>
             ${data.benefitsList.map(item => `<li>${item}</li>`).join("")}
           </ul>
-          <ins class="adsbygoogle"
+          <!--acciden_page<ins class="adsbygoogle"
             style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="5164161950"
+            data-ad-client="ca-pub-1815513279092674"
+            data-ad-slot="4658673841"
             data-ad-format="auto"
-            data-full-width-responsive="true"></ins>          
+            data-full-width-responsive="true"></ins>-->
         </section>
       `;
       (adsbygoogle = window.adsbygoogle || []).push({});
-      const consent = localStorage.getItem("cookieConsent");
-      if (consent === "accept" || consent === "personalized" || consent === "nonPersonalized") {
-        gtag('event', 'page_view', { page_title: 'Companies', page_path: '/companies' });
-      }
       const qrLinker = document.getElementById("qrLink");
       qrLinker.textContent = data.goToQR;
       qrLinker.href = "qrcodegen.html";
@@ -727,14 +1367,15 @@ if (page === "companies") {
     .then(data => {
       content.innerHTML = `
         <h2>${data.informationTitle}</h2>
-        <section style="text-align:left; max-width:800px; margin:0 auto; line-height:1.6; font-size: 2vw">
+        <!--<section style="text-align:left; max-width:100%; margin:0 auto; line-height:1.6; font-size: 2vw">-->
+        <section class="companiesSection">
           <p style="-webkit-text-fill-color: antiquewhite;">${data.restrictionText}</p>
           <h3>${data.priceTitle}</h3>
           <p>${data.priceText}</p>
           <ins class="adsbygoogle"
             style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="8173468679"
+            data-ad-client="ca-pub-1815513279092674"
+            data-ad-slot="3840416195"
             data-ad-format="auto"
             data-full-width-responsive="true">
           </ins>
@@ -749,8 +1390,8 @@ if (page === "companies") {
 
           <ins class="adsbygoogle"
             style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="7128690751"
+            data-ad-client="ca-pub-1815513279092674"
+            data-ad-slot="3623851826"
             data-ad-format="auto"
             data-full-width-responsive="true">
           </ins>
@@ -763,8 +1404,8 @@ if (page === "companies") {
           <p>${data.securityText}</p>
           <ins class="adsbygoogle"
             style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-            data-ad-client="ca-pub-3940256099942544"
-            data-ad-slot="3635457864"
+            data-ad-client="ca-pub-1815513279092674"
+            data-ad-slot="3154020483"
             data-ad-format="auto"
             data-full-width-responsive="true">
           </ins>
@@ -776,8 +1417,8 @@ if (page === "companies") {
           <p>${data.truthText}</p>
           <ins class="adsbygoogle"
             style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="9294978659"
+            data-ad-client="ca-pub-1815513279092674"
+            data-ad-slot="5428830031"
             data-ad-format="auto"
             data-full-width-responsive="true">
           </ins>
@@ -791,155 +1432,139 @@ if (page === "companies") {
           <p>${data.mobiAuto}</h3>
           <br>
           <p>${data.mobiAutoVersionUpdates}</h3>
-          <ins class="adsbygoogle"
+          <!--moved to faq<ins class="adsbygoogle"
             style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="9514470507"
+            data-ad-client="ca-pub-1815513279092674"
+            data-ad-slot="7588089515"
             data-ad-format="auto"
             data-full-width-responsive="true">
-          </ins>
+          </ins>-->
           <svg width="auto" height="5"><line x1="0" x2="100%" stroke="#FFBF00"/></svg>
         </section>
       `;
         (adsbygoogle = window.adsbygoogle || []).push({});
     })
     .catch(err => console.error("Something went wrong to load information site:", err));
-        const consent = localStorage.getItem("cookieConsent");
-    if (consent === "accept" || consent === "personalized" || consent === "nonPersonalized") {
-      gtag('event', 'page_view', { page_title: 'Information', page_path: '/information'});
-    }
   }
   if (page === "about") {
     content.innerHTML = `
     <div class="scroll-container">
       <section class="sectionFrame">
-        <img class="aboutPic" src="drawable/multilang.png" alt="">
+        <img class="aboutPic" src="drawable/multi_lang_new.png" alt="">
         <div>
-          <p id="shortInfo" style="font-size: 1.8vw;"></p>
+          <p id="shortInfo"></p>
         </div>
       </section>
-
       <section>
-        <img class="aboutPic" src="drawable/drivernotunderstand.png" alt="">
+        <img class="aboutPic" src="drawable/driver_not_understand_new.png" alt="">
         <div>
-          <p id="incidentScenario" style="font-size: 1.8vw;"></p>
+          <p id="incidentScenario"></p>
         </div>
       </section>
       <section class="ad-section">
         <ins class="adsbygoogle"
-           style="display:block; height: 100%; width: 100%; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="4042651978"
-           data-ad-format="auto"
+          style="display:block; height: 100%; width: 100%; border-radius: 0px;"
+          data-ad-client="ca-pub-1815513279092674"
+          data-ad-slot="6901693802"
+          data-ad-format="auto"
           data-full-width-responsive="true">
         </ins>
       </section>
       <section>
         <img class="aboutPic" src="drawable/notconfesion.png" alt="">
         <div>
-          <p id="notConfesion" style="font-size: 1.8vw;"></p>
+          <p id="notConfesion"></p>
         </div>
       </section>
       <section>
         <img class="aboutPic" src="drawable/documentguillt.png" alt="">
         <div>
-          <p id="documentConfesion" style="font-size: 1.8vw;"></p>
+          <p id="documentConfesion"></p>
         </div>
       </section>
       <section class="ad-section">
         <ins class="adsbygoogle"
-           style="display:block; height: 100%; width: 100%; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="5575225493"
-           data-ad-format="auto"
+          style="display:block; height: 100%; width: 100%; border-radius: 0px;"
+          data-ad-client="ca-pub-1815513279092674"
+          data-ad-slot="4275530466"
+          data-ad-format="auto"
           data-full-width-responsive="true">
         </ins>
       </section>
       <section>
         <img class="aboutPic" src="drawable/reporting.png" alt="">
         <div>
-          <p id="fastSolution" style="font-size: 1.8vw;"></p>
+          <p id="fastSolution"></p>
         </div>
       </section>
       <section>
         <img class="aboutPic" src="drawable/frustated.png" alt="">
         <div>
-          <p id="appDev" style="font-size: 1.8vw;"></p>
+          <p id="appDev"></p>
         </div>
       </section>
       <section class="ad-section">
         <ins class="adsbygoogle"
-           style="display:block; height: 100%; width: 100%; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="7671616239"
-           data-ad-format="auto"
+          style="display:block; height: 100%; width: 100%; border-radius: 0px;"
+          data-ad-client="ca-pub-1815513279092674"
+          data-ad-slot="6166254689"
+          data-ad-format="auto"
           data-full-width-responsive="true">
         </ins>
       </section>
       <section>
         <img class="aboutPic" src="drawable/standardservice.png" alt="">
         <div>
-          <p id="standardService" style="font-size: 1.8vw;"></p>
+          <p id="standardService"></p>
         </div>
       </section>
       <section>
         <img class="aboutPic" src="drawable/solvestraffic.png" alt="">
         <div>
-          <p id="benefit" style="font-size: 1.8vw;"></p>
+          <p id="benefit"></p>
         </div>
       </section>
       <section class="ad-section">
         <ins class="adsbygoogle"
-           style="display:block; height: 100%; width: 100%; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="9371710718"
-           data-ad-format="auto"
+          style="display:block; height: 100%; width: 100%; border-radius: 0px;"
+          data-ad-client="ca-pub-1815513279092674"
+          data-ad-slot="7661066117"
+          data-ad-format="auto"
           data-full-width-responsive="true">
         </ins>
       </section>
       <section>
         <img class="aboutPic" src="drawable/documentenglish.png" alt="">
         <div>
-          <p id="defaultLang" style="font-size: 1.8vw;"></p>
+          <p id="defaultLang"></p>
         </div>
       </section>
       <section>
         <img class="aboutPic" src="drawable/safedocument.png" alt="">
         <div>
-          <p id="safeDocumentId" style="font-size: 1.8vw;"></p>
+          <p id="safeDocumentId"></p>
         </div>
       </section>
       <section class="ad-section">
         <ins class="adsbygoogle"
-           style="display:block; height: 100%; width: 100%; border-radius: 0px;"
-            data-ad-client="ca-pub-5663370246187799"
-            data-ad-slot="3430910902"
-           data-ad-format="auto"
+          style="display:block; height: 100%; width: 100%; border-radius: 0px;"
+          data-ad-client="ca-pub-1815513279092674"
+          data-ad-slot="4083958779"
+          data-ad-format="auto"
           data-full-width-responsive="true">
         </ins>
       </section>
       <section>
         <img class="aboutPic" src="drawable/testpic.png" alt="">
         <div>
-          <p id="testAppId" style="font-size: 1.8vw;"></p>
+          <p id="testAppId"></p>
         </div>
       </section>
     </div>
-    <h3 id="aboutInfoId" style="text-align: start; font-size: 3vw; padding-left: 2%"></h3>
-    <h3 id="aboutInfoTextId" style="text-align: start; font-size: 1.8vw; font-family: serif; width: 60%; padding-left: 2%"></h3>
-    <ins class="adsbygoogle"
-      style="display:block; width: 100%; height:auto; max-height: 5vw; border-radius: 0px;"
-        data-ad-client="ca-pub-5663370246187799"
-        data-ad-slot="1459337777"
-      data-ad-format="auto"
-      data-full-width-responsive="true">
-    </ins>
+    <h3 id="aboutInfoId" style="text-align: start; font-size: clamp(20px, 3vw, 30px); padding-left: 2%"></h3>
+    <p id="aboutInfoTextId" style="text-align: start; font-size: clamp(17px, 1.8vw, 25px); font-family: serif; width: 70%; padding-left: 2%"></p>
     `;
     (adsbygoogle = window.adsbygoogle || []).push({});
-    const consent = localStorage.getItem("cookieConsent");
-    if (consent === "accept" || consent === "personalized" || consent === "nonPersonalized") {
-      gtag('event', 'page_view', { page_title: 'About', page_path: '/about' });
-    }
     fetch("en.json")
       .then(resp => resp.json())
       .then(data => {
