@@ -1,6 +1,6 @@
 {
   "android": {
-    "version": "1.7",
+    "version": "1.8",
     "required": true,
     "message": "A new version of Mobile-TAG is available. Please update to continue."
   },
