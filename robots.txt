@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /
-
+Allow: /app-ads.txt
+Disallow: /api/
 Sitemap: https://mobiletag-auto.com/sitemap.xml
