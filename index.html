@@ -640,15 +640,15 @@
         <div class="dropdown">
           <a id="infoCondition">Information</a>
           <div class="dropdown-content">
-            <a id="nav-information" href="#" onclick="showPage('information')"></a>
+            <a id="nav-information" href="information.html"></a>
             <a id="nav-lang" href="languages.html"></a>
             <a id="nav-acc" href="accident.html"></a>
             <a id="nav-faq" href="faq.html"></a>
           </div>
         </div>
       </div>
-      <a id="nav-about" href="#" onclick="showPage('about')"></a>
-      <a id="nav-companies" href="#" onclick="showPage('companies')"></a>
+      <a id="nav-about" href="about.html"></a>
+      <a id="nav-companies" href="companies.html"></a>
       <a id="nav-qrGen" href="qrcodegen.html"></a>
       <div class="dropdown">
         <a id="nav-termsCondition" href="#"></a>
@@ -1315,6 +1315,7 @@ if (page === "contactInfo") {
       });
     });
 }
+/*
 if (page === "companies") {
   fetch("en.json")
     .then(resp => resp.json())
@@ -1630,7 +1631,7 @@ if (page === "companies") {
     })
     .catch(err => console.error("Fel vid laddning av en.json:", err));
     setTimeout(() => startAutoScroll(), 100);
-  }
+  }*/
 }
 function startAutoScroll() {
   const container = document.querySelector(".scroll-container");

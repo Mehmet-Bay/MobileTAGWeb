@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Mobile-TAG| Traffic Accident App</title>
+  <title>About Mobile-TAG | Traffic Accident App</title>
   <meta name="description" content="Mobile-TAG is a mobile application for documenting minor vehicle incidents. This official website provides app information and QR code creation for faster accident documentation inside the Mobile-TAG app.">
   
   <meta property="og:title" content="Mobile-TAG – Official Website">
@@ -83,52 +83,6 @@
       font-size: 3vw;
       -webkit-text-fill-color: #FFBF00;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      
-      background-color: #FFBF00;
-      padding-left: 1%;
-      padding-right: 1%;
-    }
-    nav a {
-      color: #000000;
-      text-decoration: none;
-      margin: 0 1vw;
-      font-size: clamp(10px, 2vw, 50px);
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ffffff;
-      flex-wrap: wrap;
-    }
-    .dropdown {
-      position: relative;
-      display: flex;
-      
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #FFBF00;
-      box-shadow: 0vw 0.8vw 1.6vw rgba(0,0,0,0.3);
-      z-index: 1;
-    }
-    .dropdown-content a {
-      color: #000000;
-      padding: 1vw 1.6vw;
-      text-decoration: none;
-      display: flex;
-      font-size: 2vw;
-    }
-    .dropdown-content a:hover {
-      background-color: transparent;
-      color: #fff;
-    }    
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
     .scroll-container {
       display: flex;                 
       overflow-x: auto;              
@@ -187,66 +141,6 @@
     .logoMain {
       max-width: 500px;
     }
-    .contactorMain {
-      flex-direction: column;
-      display: flex;
-      align-items: center;
-      gap:10%;
-    }
-    .contactAds {
-      display:inline-block;
-      height:auto;
-      max-width: 767px;
-      width: 100%;
-      max-height: 50px;
-      height: 100%;
-    }
-    .contactor {
-      max-width: 300px;
-      width: 100%;
-      overflow-y: auto;
-      display: inline-block;
-      background-color: #cbc8c8;
-      border-color: #FFBF00;
-      max-height: auto;
-      -webkit-text-fill-color: #000000;
-      font-weight: normal;
-      font-size: clamp(15px, 2vw, 25px);
-      border-width: 3%;
-      border-radius: 15px;
-      text-align: start;
-      padding-left: 1%;
-      padding-right: 1%;
-    }
-    .contactorInput {
-      width: 100%;
-      max-width: 150px;
-      max-height: 30px;
-      font-size: inherit;
-    }
-    .textArea {
-      width: 90%;
-      text-align: start;
-      font-size: 1.6vw;
-      font-weight: normal;
-      resize: none;
-    }
-    .marquee-container {
-      justify-content: center;
-      display: flex;
-    }
-    .marquee {
-      width: 60%;
-      overflow: hidden;          
-      white-space: nowrap;       
-      font-size: 2vw;
-      -webkit-text-fill-color: antiquewhite;
-    }
-    .marquee span {
-      display: inline-block;
-      padding-left: 100%;       
-      animation: scroll 60s linear infinite;
-    }
     .aboutPic {
       width: 50%;
       max-height: 100%;
@@ -264,12 +158,6 @@
     font-weight: bold;
     font-family: serif;
     border-bottom: 1px solid #FFBF00;
-  }
-  .disabled-link {
-    pointer-events: none;          
-    opacity: 0.4;                  
-    cursor: not-allowed;
-    text-decoration: none !important;
   }
   section {
     border: 1px outset #ffaa00;
@@ -314,113 +202,6 @@
     line-height:1.5;
     max-width:85%;
   }
-  .how-it-works {
-    text-align: left;
-    line-height: 1.6;
-    list-style: none;
-    line-height: 1.6;
-    padding: 0;
-  }
-  .how-it-works h2{
-    font-size: clamp(20px, 2vw, 25px);
-    color: #FFBF00;
-  }
-  .how-it-works ul {
-    list-style: none;
-    align-items: center;
-    padding: 0;
-    max-width: 70%;
-    margin: auto;
-  } 
-  .how-it-works li {
-    font-size: clamp(15px, 1.6vw, 20px);
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 14px;
-    line-height: 1.6;
-  }
-  .how-it-works .icon {
-    color: #FFBF00;
-    line-height: 1.6;
-    margin-top: 2px;
-  }
-  .privacy-design {
-    text-align: left;
-    line-height: 1.6;
-    list-style: none;
-    padding: 0;
-  }
-  .privacy-design h2 {
-    font-size: clamp(20px, 2vw, 25px);
-    color: #FFBF00;
-  }
-  .privacy-design ul {
-    list-style: none;
-    align-items: center;
-    padding: 0;
-    max-width: 70%;
-    margin: auto;
-  }
-  .privacy-design li {
-    display: flex;
-    text-align: left;
-    font-size: clamp(15px, 1.6vw, 20px);
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-  .privacy-design .icon {
-    color: #FFBF00;
-    opacity: 0.85;
-  }
-  .how-it-works,
-  .privacy-design {
-    align-self: stretch;
-  }
-  .documentAdvantages {
-    justify-self: center;
-    max-width: 60%;
-    line-height: 1.6;
-    list-style: none;
-    padding: 0;
-  }
-  .documentAdvantages h2 {
-    color: #FFBF00;
-    font-size: clamp(19px, 1.7vw, 25px);
-  }
-  .documentAdvantages ul {
-    list-style: none;
-    align-items: center;
-    padding: 0;
-    max-width: 70%;
-    margin: auto;
-  }
-  .documentAdvantages li {
-    display: flex;
-    text-align: left;
-    font-size: clamp(15px, 1.6vw, 20px);
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-  .endText {
-    text-align: center;
-  }
-  .endText p {
-    font-size: clamp(13px, 1.7vw, 25px);
-    color:#f8e7b3;
-    max-width: 70%;
-    justify-self: center;
-    margin-top: 1.5vw;
-    line-height: 1.5;
-  }
-  .endReport p {
-    font-size: clamp(13px, 1.7vw, 25px);
-    color:#e0cfa3;
-    justify-self: center;
-    max-width: 75%;
-    margin-top: 1.5vw;
-    line-height: 1.5;
-  }
   .titleText p {
     color:#f0d48a;
     max-width: 80%;
@@ -437,69 +218,20 @@
     line-height:1.6;
   }
   .mobile-menu-btn {
-    display: none;
+    align-self: center;
     background: none;
     border: none;
-    font-size: 28px;
+    color: #ffbf00;
+    font-size: clamp(5px, 2vw, 30px);
     font-weight: bold;
     cursor: pointer;
-    color: black;
-  }
-  .nav-wrapper {
-    display: flex;
-    justify-content: center;
   }
   @keyframes scroll {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-100%); }
   }
   @media (max-width: 393px) {
-    .dropdown .dropdown-content {
-      display: none;
-      margin-left: 10px;
-    }
-    .dropdown.open .dropdown-content {
-      display: block;
-    }
-    nav {
-      position: relative;
-      justify-content: flex-end;
-    }
-    .mobile-menu-btn {
-      display: block;
-      padding-right: 3%;
-      font-size: 15px;
-      background: none;
-      border: none;
-    }
-    .nav-wrapper {
-      position: absolute;
-      top: 100%;
-      right: 5px;
-      background: #FFBF00;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,.35);
-      flex-direction: column;
-      padding: 10px 15px;
-      min-width: 200px;
-      opacity: 0;
-      transform: translateY(-10px);
-      pointer-events: none;
-      transition: opacity .25s ease, transform .25s ease;
-    }
-    nav.open .nav-wrapper {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-    .nav-wrapper a,
-    .nav-wrapper .dropdown {
-      padding: 8px 0;
-    }
-    .dropdown-content {
-      position: static;
-      box-shadow: none;
-    }
+    
   }
   @media (max-width: 768px){
     .picture_section {
@@ -507,19 +239,6 @@
     }
   }
   @media (min-width: 768px) {
-    .contactorMain {
-      flex-direction: row;
-      align-items: flex-start;
-    }
-    .contactor {
-      max-width: 500px;
-      margin-left: 5%;
-    }
-    .contactorInput {
-      max-width: 250px;
-      font-size: 15px;
-      height: 25px;
-    }
     .picture_section {
       flex-direction: row;
     }
@@ -528,13 +247,6 @@
       width: 100%;
       line-height: 1.2;
       font-size: clamp(11px, 2vw, 30px);
-    }
-    .contactAds {
-      max-width: 600px;
-      width: 100%;
-      max-height: 500px;
-      height: 100%;
-
     }
   }
   @media (min-width: 1024px){}
@@ -551,7 +263,10 @@
 <body onload="startAutoScroll()">
     <header>
         <img src="drawable/nylogo.png">
-        <h1 class="centered-title">About Mobile-TAG</h1>
+        <h1 class="centered-title" style="margin-top: 1%;">About Mobile-TAG</h1>
+            <nav style="justify-self: end; margin-right: 2%;">
+                <a class="mobile-menu-btn" href="index.html">Main page</a>
+            </nav>
         <svg width="100%" height="5"><line x1="0" x2="1536" stroke="#FFBF00"/></svg>
     </header>
     <main>
@@ -668,7 +383,7 @@
         </div>
       </section>
     </div>
-    <h2 style="text-align: start; font-size: clamp(20px, 3vw, 30px); padding-left: 2%">About the application</h3>
+    <h2 style="text-align: start; font-size: clamp(20px, 3vw, 30px); padding-left: 2%; margin-top: 1%;">About the application</h3>
     <p style="text-align: start; font-size: clamp(17px, 1.8vw, 25px); font-family: serif; width: 70%; padding-left: 2%">
         Being involved in a traffic incident is often a stressful experience. Confusion, frustration, and uncertainty are common, and many drivers simply want the situation to be over as quickly as possible. At the same time, important details need to be noted — something that becomes more difficult when no paper is available or when the drivers do not share a common language.<br><br>
         In such situations, contacting an insurance company immediately is not always practical. Phone lines may be busy, online services may require logins, and help may not be available during evenings or weekends. This can add to the stress at an already difficult moment.<br><br>
