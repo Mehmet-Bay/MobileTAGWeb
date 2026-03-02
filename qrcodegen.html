@@ -275,32 +275,120 @@
   max-width: 300px;
   height: auto;
 }
-nav {
-  display: flex;
-  justify-content: end;
-  background-color: #000000;
-  padding-left: 1%;
-  padding-right: 1%;
-}
-nav a {
-  color: #000000;
-  text-decoration: none;
-  margin: 0 1vw;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
 .mobile-menu-btn {
-  align-self: center;
-  background: none;
-  border: none;
-  color: #FFBF00;
-  font-size: clamp(10px, 2vw, 30px);
-  font-weight: bold;
-  cursor: pointer;
+    align-self: center;
+    background: none;
+    border: none;
+    color: #ffbf00;
+    font-size: clamp(5px, 2vw, 30px);
+    font-weight: bold;
+    cursor: pointer;
 }
-nav .mobile-menu-btn:hover {
-  color: #ffffff;
-  flex-wrap: wrap;
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #FFBF00;
+    padding-left: 1%;
+    padding-right: 1%;
+    }
+nav a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 1vw;
+    font-size: clamp(10px, 2vw, 50px);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #ffffff;
+    flex-wrap: wrap;
+}
+    .dropdown {
+    position: relative;
+    display: flex;            
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFBF00;
+    box-shadow: 0vw 0.8vw 1.6vw rgba(0,0,0,0.3);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: #000000;
+    padding: 1vw 1.6vw;
+    text-decoration: none;
+    display: flex;
+    font-size: 2vw;
+}
+.dropdown-content a:hover {
+    background-color: transparent;
+    color: #fff;
+}    
+.dropdown:hover .dropdown-content {
+    display: block;
+} 
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 393px) {
+    .dropdown .dropdown-content {
+        display: none;
+        margin-left: 10px;
+    }
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+    nav {
+        position: relative;
+        justify-content: flex-end;
+    }
+    .mobile-menu-btn {
+        display: block;
+        padding-right: 3%;
+        font-size: 15px;
+        background: none;
+        border: none;
+    }
+    .nav-wrapper {
+        position: absolute;
+        top: 100%;
+        right: 5px;
+        background: #FFBF00;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0,0,0,.35);
+        flex-direction: column;
+        padding: 10px 15px;
+        min-width: 200px;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity .25s ease, transform .25s ease;
+    }
+    nav.open .nav-wrapper {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+    .nav-wrapper a,
+    .nav-wrapper .dropdown {
+        padding: 8px 0;
+    }
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
 }
 @media (max-width: 767px) {
   .side-ad {
@@ -339,11 +427,36 @@ html, body {
     <div style="width: 100%; text-align: center;">
       <img src="drawable/nylogo.png" alt="" width="50%">
     </div>
-    <nav>
-      <a class="mobile-menu-btn" href="index.html">Main page</a>
-    </nav>
     <div style="align-items: center; padding-left: 3%; padding-right: 3%;">
     <h1 class="centered-title">QR Code Generator</h1>
+    <nav>
+      <button class="mobile-menu-btn" onclick="toggleMobileNav()">☰ Menu</button>
+      <div class="nav-wrapper">
+      <a href="index.html">Main Page</a>
+      <div class="dropdown mobile-dropdown">
+          <div class="dropdown">
+          <a id="infoCondition">Information</a>
+          <div class="dropdown-content">
+              <a href="information.html">Information</a>
+              <a href="languages.html">Supported Languages</a>
+              <a href="accident.html">Accidents</a>
+              <a href="faq.html">FAQ</a>
+          </div>
+          </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="companies.html">Companies</a>
+      <a href="qrcodegen.html">QR Code Generator</a>
+      <div class="dropdown">
+          <a href="#">Terms & Privacy</a>
+          <div class="dropdown-content">
+          <a href="terms.html">Terms of Mobile-TAG</a>
+          <a href="privacy.html">Privacy & Integrity policies</a>
+          </div>
+      </div>
+      <a href="contact.html">Contact us</a>
+      </div>
+    </nav>
     <img src="drawable/qr_code.png" alt="picture describing QR Code Generator about how QR is generated" width="50%">
     <p id="qrTextInfo" href="#" style="font-size: clamp(14px, 2vw, 25px); text-align: start; padding-left: 5%; padding-right: 5%;">
       Here you can generate a unique QR code for each vehicle. By entering basic vehicle-related information, a QR code can be created, downloaded, and printed.
