@@ -288,6 +288,8 @@ nav {
     justify-content: center;
     width: 100%;
     background-color: #FFBF00;
+    padding-left: 1%;
+    padding-right: 1%;
     }
 nav a {
     color: #000000;
@@ -341,37 +343,37 @@ nav a:hover {
 }
 @media (max-width: 393px) {
     .dropdown .dropdown-content {
-        display: none;
-        margin-left: 10px;
+      display: none;
+      margin-left: 10px;
     }
     .dropdown.open .dropdown-content {
-        display: block;
+      display: block;
     }
     nav {
-        position: relative;
-        justify-content: flex-end;
+      position: relative;
+      justify-content: flex-end;
     }
     .mobile-menu-btn {
-        display: block;
-        padding-right: 3%;
-        font-size: 15px;
-        background: none;
-        border: none;
+      display: block;
+      padding-right: 3%;
+      font-size: 15px;
+      background: none;
+      border: none;
     }
     .nav-wrapper {
-        position: absolute;
-        top: 100%;
-        right: 5px;
-        background: #FFBF00;
-        border-radius: 10px;
-        box-shadow: 0 8px 20px rgba(0,0,0,.35);
-        flex-direction: column;
-        padding: 10px 15px;
-        min-width: 200px;
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none;
-        transition: opacity .25s ease, transform .25s ease;
+      position: absolute;
+      top: 100%;
+      right: 5px;
+      background: #FFBF00;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.35);
+      flex-direction: column;
+      padding: 10px 15px;
+      min-width: 200px;
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: opacity .25s ease, transform .25s ease;
     }
     nav.open .nav-wrapper {
         opacity: 1;
