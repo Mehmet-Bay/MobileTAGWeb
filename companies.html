@@ -203,6 +203,9 @@
         .nav-wrapper {
             display: flex;
             justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
         }
         @media (max-width: 393px) {
             .dropdown .dropdown-content {
@@ -279,7 +282,7 @@
               <button class="mobile-menu-btn" onclick="toggleMobileNav()">☰ Menu</button>
               <div class="nav-wrapper">
               <a href="index.html">Main Page</a>
-              <div class="dropdown mobile-dropdown">
+              <!--<div class="dropdown mobile-dropdown">-->
                   <div class="dropdown">
                   <a id="infoCondition">Information</a>
                   <div class="dropdown-content">
@@ -289,7 +292,7 @@
                       <a href="faq.html">FAQ</a>
                   </div>
                   </div>
-              </div>
+              <!--</div>-->
               <a href="about.html">About</a>
               <a href="companies.html">Companies</a>
               <a href="qrcodegen.html">QR Code Generator</a>
@@ -379,7 +382,7 @@
     </main>
     <script>
     function toggleMobileNav() {
-      document.querySelector("nav").classList.toggle("open");
+      document.querySelector("header nav").classList.toggle("open");
     }
     document.querySelectorAll(".dropdown > a").forEach(trigger=>{
       trigger.addEventListener("click", function(e){
