@@ -203,9 +203,6 @@
         .nav-wrapper {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 1.2rem;
-            flex-wrap: wrap;
         }
         @media (max-width: 393px) {
             .dropdown .dropdown-content {
@@ -382,7 +379,7 @@
     </main>
     <script>
     function toggleMobileNav() {
-      document.querySelector("header nav").classList.toggle("open");
+      document.querySelector("nav").classList.toggle("open");
     }
     document.querySelectorAll(".dropdown > a").forEach(trigger=>{
       trigger.addEventListener("click", function(e){
