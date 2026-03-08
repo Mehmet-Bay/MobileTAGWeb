@@ -80,7 +80,7 @@
     h2 {
       margin: 0;
       text-align: center;
-      font-size: 50px;
+      font-size: clamp(25px, 2.5vw, 30px);
       -webkit-text-fill-color: antiquewhite;
     }
     h3 {
@@ -341,6 +341,12 @@ nav a:hover {
     display: flex;
     justify-content: center;
 }
+.section {
+  border: 1px outset #ffaa00;
+  box-shadow: 0 0 15px;
+  border-radius: 10px;
+  padding: 10px;
+}
 @media (max-width: 393px) {
     .dropdown .dropdown-content {
       display: none;
@@ -458,6 +464,10 @@ html, body {
     </nav>
     <div style="align-items: center; padding-left: 3%; padding-right: 3%;">
     <img src="drawable/qr_code.png" alt="picture describing QR Code Generator about how QR is generated" width="50%">
+    <div class="section">
+    <h2>
+      About QR-Code generator
+    </h2>
     <p id="qrTextInfo" href="#" style="font-size: clamp(14px, 2vw, 25px); text-align: start; padding-left: 5%; padding-right: 5%;">
       Here you can generate a unique QR code for each vehicle. By entering basic vehicle-related information, a QR code can be created, downloaded, and printed.
       The QR code can be placed inside the vehicle so that drivers can scan it with the Mobile-TAG app if an incident occurs.
@@ -468,6 +478,7 @@ html, body {
     <p style="font-size: clamp(14px, 2vw, 25px); text-align: start; padding-left: 5%; padding-right: 5%;">
       If you only want to try the QR code generator, you can enter sample or test information instead of real data. This allows you to explore how the feature works before using it with actual vehicle details.
     </p>
+    </div>
       <!-- test element14-->
 
     </div>
