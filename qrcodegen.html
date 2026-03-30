@@ -743,7 +743,9 @@ async function generateQR() {
     if (id === "regnr" || id === "vehicleMake") {
       val = val.toUpperCase();
     } else {
-      val = val.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+      if (id !== "regCountry") {
+        val = val.toLowerCase().replace(/(^|\s)\p{L}/gu, char => char.toUpperCase());
+      }
     }
 
     if (val === "") val = " ";
