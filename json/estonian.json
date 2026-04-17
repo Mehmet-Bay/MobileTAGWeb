@@ -1,4 +1,5 @@
 {
+"qrGroup": "Kui teie sõidukid kasutavad erinevaid kindlustusandjaid, kaaluge iga rühma jaoks eraldi QR-koodide loomist.",
 "redFields": "QR-koodi loomiseks tuleb täita punased väljad",
 "qrGenerationTitle": "Kasutage ühte QR-koodi iga sõiduki jaoks — või ühte QR-koodi kogu oma sõidukipargi jaoks.",
 "qrGenerationMessage": "Valige, kuidas soovite oma QR-koodi luua:",

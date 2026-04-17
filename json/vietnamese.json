@@ -1,4 +1,5 @@
 {
+"qrGroup": "Nếu các phương tiện của bạn sử dụng các nhà cung cấp bảo hiểm khác nhau, hãy cân nhắc tạo mã QR riêng cho từng nhóm.",
 "redFields": "Các ô màu đỏ phải được điền đầy đủ để tạo mã QR",
 "qrGenerationTitle": "Sử dụng một mã QR cho mỗi phương tiện — hoặc một mã QR cho toàn bộ đội xe của bạn.",
 "qrGenerationMessage": "Chọn cách bạn muốn tạo mã QR:",

@@ -1,4 +1,5 @@
 {
+"qrGroup": "Jei jūsų transporto priemonės naudojasi skirtingų draudimo teikėjų paslaugomis, apsvarstykite galimybę sukurti atskirus QR kodus kiekvienai grupei.",
 "redFields": "Norint sukurti QR kodą, reikia užpildyti raudonus laukus",
 "qrGenerationTitle": "Naudokite vieną QR kodą kiekvienai transporto priemonei — arba vieną QR kodą visam savo transporto parkui.",
 "qrGenerationMessage": "Pasirinkite, kaip norite sukurti savo QR kodą:",

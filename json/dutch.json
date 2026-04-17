@@ -1,4 +1,5 @@
 {
+"qrGroup": "Als uw voertuigen verschillende verzekeraars hebben, kunt u overwegen om per groep aparte QR-codes aan te maken.",
 "redFields": "Rode velden moeten worden ingevuld om de QR-code te genereren.",
 "qrGenerationTitle": "Gebruik één QR-code per voertuig — of één QR-code voor uw volledige wagenpark.",
 "qrGenerationMessage": "Kies hoe u uw QR-code wilt maken:",

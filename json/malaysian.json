@@ -1,4 +1,5 @@
 {
+"qrGroup": "Jika kenderaan anda menggunakan penyedia insurans yang berbeza, pertimbangkan untuk mencipta kod QR berasingan bagi setiap kumpulan.",
 "redFields": "Medan merah mesti diisi untuk mencipta kod QR",
 "qrGenerationTitle": "Gunakan satu kod QR bagi setiap kenderaan — atau satu kod QR untuk seluruh armada anda.",
 "qrGenerationMessage": "Pilih bagaimana anda ingin mencipta kod QR anda:",

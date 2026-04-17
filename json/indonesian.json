@@ -1,4 +1,5 @@
 {
+"qrGroup": "Jika kendaraan Anda menggunakan penyedia asuransi yang berbeda, pertimbangkan untuk membuat kode QR terpisah untuk setiap grup.",
 "redFields": "Kolom berwarna merah harus diisi untuk membuat kode QR",
 "qrGenerationTitle": "Gunakan satu kode QR per kendaraan — atau satu kode QR untuk seluruh armada Anda.",
 "qrGenerationMessage": "Pilih bagaimana Anda ingin membuat kode QR Anda:",

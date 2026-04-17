@@ -526,8 +526,9 @@ html, body {
       <ul>
         <p style="font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrGenerationInfo">Choose how you want to create your QR code:</p>
         <li style="margin-bottom: 2%; font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrGenOne">Vehicle-specific QR code. Pre-filled with vehicle data — the driver does not need to enter any information.</li>
-        <li style="font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrGenTwo">QR code for fleets. Leave the vehicle fields empty (marked in blue) to create one QR code for all vehicles. The driver enters the vehicle data in the app.</li>
+        <li style="font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrGenTwo">QR code for fleets. Leave the vehicle fields empty (marked in blue) to create one QR code for all vehicles. The driver enters the vehicle data in the app.</li>      
       </ul>
+      <p style="color: antiquewhite; font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrGenGroup">If your vehicles use different insurance providers, consider creating separate QR codes per group.</p>
       <p style="font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrLink">The QR code contains a direct link to download the Mobile-TAG app from Google Play and the App Store. Encourage drivers to pre-install the app so that it is ready for immediate use in the event of an incident.</p>
       <p style="font-size: clamp(14px, 1.7vw, 25px); text-align: center;" id="redFieldsInfo">Fields in red must be filled</p>
     </div>
@@ -539,6 +540,7 @@ html, body {
       fetch(fileName)
         .then(resp => resp.json())
         .then(data => {
+          document.getElementById("qrGenGroup").innerText = data.qrGroup;
           document.getElementById("documentLang").innerText = data.documentLanguage;
           document.getElementById("qrTitleInfo").innerText = data.qrGenerationTitle;        
           document.getElementById("qrGenerationInfo").innerText = data.qrGenerationMessage;

@@ -1,4 +1,5 @@
 {
+"qrGroup": "Pokud vaše vozidla využívají různé pojišťovny, zvažte vytvoření samostatných QR kódů pro každou skupinu.",
 "redFields": "Pro vytvoření QR kódu je nutné vyplnit červená pole",
 "qrGenerationTitle": "Použijte jeden QR kód pro každé vozidlo — nebo jeden QR kód pro celý váš vozový park.",
 "qrGenerationMessage": "Vyberte, jak chcete vytvořit svůj QR kód:",

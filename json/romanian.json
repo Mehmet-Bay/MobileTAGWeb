@@ -1,4 +1,5 @@
 {
+"qrGroup": "Dacă vehiculele dumneavoastră utilizează furnizori de asigurări diferiți, luați în considerare crearea de coduri QR separate pentru fiecare grup.",
 "redFields": "Câmpurile roșii trebuie completate pentru a crea codul QR",
 "qrGenerationTitle": "Folosiți un cod QR pentru fiecare vehicul — sau un singur cod QR pentru întreaga dvs. flotă.",
 "qrGenerationMessage": "Alegeți cum doriți să creați codul QR:",

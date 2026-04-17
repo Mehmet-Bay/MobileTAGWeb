@@ -1,4 +1,5 @@
 {
+"qrGroup": "If your vehicles use different insurance providers, consider creating separate QR codes per group.",
 "redFields": "Red fields must be filled in to create the QR code",
 "qrGenerationTitle": "Use one QR code per vehicle — or one QR code for your entire fleet.",
 "qrGenerationMessage": "Choose how you want to create your QR code:",

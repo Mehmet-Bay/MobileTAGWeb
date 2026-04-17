@@ -1,4 +1,5 @@
 {
+"qrGroup": "Jos ajoneuvosi käyttävät eri vakuutusyhtiöitä, harkitse erillisten QR-koodien luomista ryhmää kohden.",
 "redFields": "Punaiset kentät on täytettävä QR-koodin luomiseksi",
 "qrGenerationTitle": "Käytä yhtä QR-koodia ajoneuvoa kohden — tai yhtä QR-koodia koko ajoneuvokalustollesi.",
 "qrGenerationMessage": "Valitse, miten haluat luoda QR-koodisi:",

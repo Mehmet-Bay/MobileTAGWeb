@@ -1,4 +1,5 @@
 {
+"qrGroup": "Hvis dine køretøjer bruger forskellige forsikringsudbydere, bør du overveje at oprette separate QR-koder pr. gruppe.",
 "redFields": "Røde felter skal udfyldes for at oprette QR-koden",
 "qrGenerationTitle": "Brug én QR-kode pr. køretøj — eller én QR-kode til hele din flåde.",
 "qrGenerationMessage": "Vælg, hvordan du vil oprette din QR-kode:",

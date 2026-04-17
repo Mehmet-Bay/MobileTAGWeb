@@ -1,4 +1,5 @@
 {
+"qrGroup": "Om era fordon använder olika försäkringsbolag, överväg att skapa separata QR-koder per grupp.",
 "redFields": "Röda fält måste vara ifyllda för att för att kunna skapa QR koden",
 "qrGenerationTitle": "Använd en QR-kod per fordon – eller en enda QR-kod för hela din fordonsflotta.",
 "qrGenerationMessage": "Välj hur du vill skapa din QR-kod:",

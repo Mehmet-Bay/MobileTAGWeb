@@ -1,4 +1,5 @@
 {
+"qrGroup": "Ja jūsu transportlīdzekļiem tiek izmantoti dažādi apdrošināšanas pakalpojumu sniedzēji, apsveriet iespēju izveidot atsevišķus QR kodus katrai grupai.",
 "redFields": "Lai izveidotu QR kodu, jāaizpilda sarkanie lauki",
 "qrGenerationTitle": "Izmantojiet vienu QR kodu katram transportlīdzeklim — vai vienu QR kodu visam jūsu autoparkam.",
 "qrGenerationMessage": "Izvēlieties, kā vēlaties izveidot savu QR kodu:",

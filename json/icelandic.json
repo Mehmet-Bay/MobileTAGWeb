@@ -1,4 +1,5 @@
 {
+"qrGroup": "Ef ökutækin þín nota mismunandi tryggingafélög, íhugaðu að búa til aðskilda QR kóða fyrir hvern hóp.",
 "redFields": "Rauðu reiti verða að vera fylltir út til að búa til QR kóðann",
 "qrGenerationTitle": "Notaðu einn QR-kóða fyrir hvert ökutæki — eða einn QR-kóða fyrir allan flotann þinn.",
 "qrGenerationMessage": "Veldu hvernig þú vilt búa til QR-kóðann þinn:",

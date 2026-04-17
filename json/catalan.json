@@ -1,4 +1,5 @@
 {
+"qrGroup": "Si els vostres vehicles utilitzen diferents proveïdors d'assegurances, considereu la possibilitat de crear codis QR separats per a cada grup.",
 "redFields": "Cal omplir els camps vermells per crear el codi QR",
 "qrGenerationTitle": "Utilitza un codi QR per vehicle — o un sol codi QR per a tota la teva flota.",
 "qrGenerationMessage": "Tria com vols crear el teu codi QR:",

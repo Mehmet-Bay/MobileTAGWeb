@@ -1,4 +1,5 @@
 {
+"qrGroup": "Ako vaša vozila koriste usluge različitih osiguravatelja, razmislite o kreiranju zasebnih QR kodova po grupi.",
 "redFields": "Crvena polja moraju biti popunjena da bi se kreirao QR kod",
 "qrGenerationTitle": "Koristite jedan QR kod po vozilu — ili jedan QR kod za cijeli vaš vozni park.",
 "qrGenerationMessage": "Odaberite kako želite kreirati svoj QR kod:",

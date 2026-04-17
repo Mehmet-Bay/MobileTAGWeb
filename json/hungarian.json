@@ -1,4 +1,5 @@
 {
+"qrGroup": "Ha járművei különböző biztosítókat használnak, érdemes csoportonként külön QR-kódokat létrehozni.",
 "redFields": "A QR-kód létrehozásához a piros mezőket ki kell tölteni",
 "qrGenerationTitle": "Használjon egy QR-kódot járművenként — vagy egy QR-kódot az egész flottához.",
 "qrGenerationMessage": "Válassza ki, hogyan szeretné létrehozni a QR-kódot:",

@@ -1,4 +1,5 @@
 {
+"qrGroup": "Agar transport vositalaringiz turli sug'urta provayderlaridan foydalansa, har bir guruh uchun alohida QR kodlarini yaratishni ko'rib chiqing.",
 "redFields": "QR kodini yaratish uchun qizil maydonlar to'ldirilishi kerak",
 "qrGenerationTitle": "Har bir transport vositasi uchun bitta QR koddan foydalaning — yoki butun avtoparkingiz uchun bitta QR koddan foydalaning.",
 "qrGenerationMessage": "QR kodingizni qanday yaratmoqchi ekaningizni tanlang:",

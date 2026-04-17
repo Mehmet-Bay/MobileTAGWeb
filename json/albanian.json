@@ -1,4 +1,5 @@
 {
+"qrGroup": "Nëse automjetet tuaja përdorin ofrues të ndryshëm sigurimi, merrni në konsideratë krijimin e kodeve QR të ndara për grup.",
 "redFields": "Fushat e kuqe duhet të plotësohen për të krijuar kodin QR",
 "qrGenerationTitle": "Përdorni një kod QR për çdo automjet — ose një kod QR për të gjithë flotën tuaj.",
 "qrGenerationMessage": "Zgjidhni si dëshironi të krijoni kodin tuaj QR:",

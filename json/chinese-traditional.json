@@ -1,4 +1,5 @@
 {
+"qrGroup": "如果您的車輛使用不同的保險公司，請考慮為每個組建立單獨的二維碼。",
 "redFields": "必須填寫紅色欄位才能建立二維碼",
 "qrGenerationTitle": "每輛車使用一個 QR 碼，或為整個車隊使用一個 QR 碼。",
 "qrGenerationMessage": "選擇您要建立 QR 碼的方式：",
