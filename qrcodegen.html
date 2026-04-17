@@ -796,7 +796,7 @@ async function generateQR() {
   if (regNo !== "") {
     document.getElementById("regQR").textContent = regNo;
   } else {
-    document.getElementById("regQR").textContent = insuranceCompany;
+    document.getElementById("regQR").textContent = insuranceCompany.toLowerCase().replace(/(^|\s)\p{L}/gu, char => char.toUpperCase());
   }
   //document.getElementById("regQR").textContent = document.getElementById("regnr").value.toUpperCase();
 
