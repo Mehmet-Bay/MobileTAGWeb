@@ -1,4 +1,11 @@
 {
+"redFields": "Fushat e kuqe duhet të plotësohen për të krijuar kodin QR",
+"qrGenerationTitle": "Përdorni një kod QR për çdo automjet — ose një kod QR për të gjithë flotën tuaj.",
+"qrGenerationMessage": "Zgjidhni si dëshironi të krijoni kodin tuaj QR:",
+"qrGenerationOne": "Kod QR specifik për automjet. I plotësuar paraprakisht me të dhënat e automjetit — shoferi nuk ka nevojë të fusë asnjë informacion.",
+"qrGenerationTwo": "Kod QR për flotë. Lini bosh fushat e automjetit (të theksuara me blu) për të krijuar një kod QR për të gjitha automjetet. Shoferi do të fusë të dhënat e automjetit në aplikacion.",
+"documentLanguage": "Ndryshimi i gjuhës në formular nuk ndikon në dokumentin përfundimtar.",
+"qrLink": "Kodi QR përfshin një lidhje të drejtpërdrejtë për të shkarkuar aplikacionin Mobile-TAG nga Google Play dhe App Store. Inkurajoni shoferët ta instalojnë aplikacionin paraprakisht në mënyrë që të jetë gati për përdorim të menjëhershëm nëse ndodh një incident.",
 "QuestionYes": "po",
 "QuestionNo": "Nr",
 "PropertyDamageYes": "po",

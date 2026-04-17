@@ -1,4 +1,11 @@
 {
+"redFields": "Cal omplir els camps vermells per crear el codi QR",
+"qrGenerationTitle": "Utilitza un codi QR per vehicle — o un sol codi QR per a tota la teva flota.",
+"qrGenerationMessage": "Tria com vols crear el teu codi QR:",
+"qrGenerationOne": "Codi QR específic per vehicle. Preomplert amb les dades del vehicle — el conductor no ha d’introduir cap informació.",
+"qrGenerationTwo": "Codi QR per a flotes. Deixa els camps del vehicle buits (ressaltats en blau) per crear un únic codi QR per a tots els vehicles. El conductor introduirà la informació a l’aplicació.",
+"documentLanguage": "Canviar la llengua al formulari no afecta el document final.",
+"qrLink": "El codi QR inclou un enllaç directe per descarregar l'aplicació Mobile-TAG des de Google Play i l'App Store. Animeu els conductors a instal·lar l'aplicació amb antelació perquè estigui a punt per al seu ús immediat si es produeix un incident.",
 "QuestionYes": "Sí",
 "QuestionNo": "No",
 "PropertyDamageYes": "Sí",

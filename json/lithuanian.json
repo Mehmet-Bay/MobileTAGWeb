@@ -1,4 +1,11 @@
 {
+"redFields": "Norint sukurti QR kodą, reikia užpildyti raudonus laukus",
+"qrGenerationTitle": "Naudokite vieną QR kodą kiekvienai transporto priemonei — arba vieną QR kodą visam savo transporto parkui.",
+"qrGenerationMessage": "Pasirinkite, kaip norite sukurti savo QR kodą:",
+"qrGenerationOne": "Konkrečiai transporto priemonei skirtas QR kodas. Iš anksto užpildytas transporto priemonės duomenimis — vairuotojui nereikia įvesti jokios informacijos.",
+"qrGenerationTwo": "Transporto parko QR kodas. Palikite transporto priemonės laukus tuščius (pažymėtus mėlyna spalva), kad sukurtumėte vieną QR kodą visoms transporto priemonėms. Vairuotojas įves informaciją programėlėje.",
+"documentLanguage": "Kalbos pakeitimas formoje neturi įtakos galutiniam dokumentui.",
+"qrLink": "QR kodas apima tiesioginę nuorodą atsisiųsti Mobile-TAG programėlę iš Google Play ir App Store. Skatinkite vairuotojus iš anksto įsidiegti programėlę, kad ji būtų paruošta nedelsiant naudoti įvykio atveju.",
 "QuestionYes": "Taip",
 "QuestionNo": "Nr",
 "PropertyDamageYes": "Taip",

@@ -1,4 +1,11 @@
 {
+"redFields": "Punaiset kentät on täytettävä QR-koodin luomiseksi",
+"qrGenerationTitle": "Käytä yhtä QR-koodia ajoneuvoa kohden — tai yhtä QR-koodia koko ajoneuvokalustollesi.",
+"qrGenerationMessage": "Valitse, miten haluat luoda QR-koodisi:",
+"qrGenerationOne": "Ajoneuvokohtainen QR-koodi. Esitäytetty ajoneuvon tiedoilla — kuljettajan ei tarvitse syöttää mitään tietoja.",
+"qrGenerationTwo": "Kaluston QR-koodi. Jätä ajoneuvon kentät tyhjiksi (merkitty sinisellä) luodaksesi yhden QR-koodin kaikille ajoneuvoille. Kuljettaja syöttää tiedot sovelluksessa.",
+"documentLanguage": "Kielen vaihtaminen lomakkeessa ei vaikuta lopulliseen asiakirjaan.",
+"qrLink": "QR-koodi sisältää suoran linkin Mobile-TAG-sovelluksen lataamiseen Google Playsta ja App Storesta. Kannusta kuljettajia asentamaan sovellus etukäteen, jotta se on heti käyttövalmis onnettomuuden sattuessa.",
 "QuestionYes": "Joo",
 "QuestionNo": "Ei",
 "PropertyDamageYes": "Joo",

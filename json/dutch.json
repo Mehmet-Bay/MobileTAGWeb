@@ -1,4 +1,11 @@
 {
+"redFields": "Rode velden moeten worden ingevuld om de QR-code te genereren.",
+"qrGenerationTitle": "Gebruik één QR-code per voertuig — of één QR-code voor uw volledige wagenpark.",
+"qrGenerationMessage": "Kies hoe u uw QR-code wilt maken:",
+"qrGenerationOne": "Voertuigspecifieke QR-code. Vooraf ingevuld met voertuiggegevens — de bestuurder hoeft geen informatie in te voeren.",
+"qrGenerationTwo": "QR-code voor wagenparken. Laat de voertuigvelden leeg (gemarkeerd in blauw) om één QR-code voor alle voertuigen te maken. De bestuurder voert de voertuiggegevens in de app in.",
+"documentLanguage": "Het wijzigen van de taal in het formulier heeft geen invloed op het uiteindelijke document.",
+"qrLink": "De QR-code bevat een directe link om de Mobile-TAG-app te downloaden vanuit Google Play en de App Store. Moedig bestuurders aan om de app vooraf te installeren, zodat deze direct klaar is voor gebruik bij een incident.",
 "QuestionYes": "Ja",
 "QuestionNo": "Nee",
 "PropertyDamageYes": "Ja",

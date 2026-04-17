@@ -1,4 +1,11 @@
 {
+"redFields": "Câmpurile roșii trebuie completate pentru a crea codul QR",
+"qrGenerationTitle": "Folosiți un cod QR pentru fiecare vehicul — sau un singur cod QR pentru întreaga dvs. flotă.",
+"qrGenerationMessage": "Alegeți cum doriți să creați codul QR:",
+"qrGenerationOne": "Cod QR specific vehiculului. Completat în prealabil cu datele vehiculului — șoferul nu trebuie să introducă nicio informație.",
+"qrGenerationTwo": "Cod QR pentru flotă. Lăsați câmpurile vehiculului goale (marcate cu albastru) pentru a crea un singur cod QR pentru toate vehiculele. Șoferul va introduce informațiile în aplicație.",
+"documentLanguage": "Schimbarea limbii în formular nu afectează documentul final.",
+"qrLink": "Codul QR include un link direct pentru descărcarea aplicației Mobile-TAG din Google Play și App Store. Încurajați șoferii să instaleze aplicația în avans, astfel încât să fie pregătită pentru utilizare imediată în cazul unui incident.",
 "QuestionYes": "da",
 "QuestionNo": "Nu",
 "PropertyDamageYes": "da",

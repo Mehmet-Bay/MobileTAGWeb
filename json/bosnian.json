@@ -1,4 +1,11 @@
 {
+"redFields": "Crvena polja moraju biti popunjena da bi se kreirao QR kod",
+"qrGenerationTitle": "Koristite jedan QR kod po vozilu — ili jedan QR kod za cijeli vaš vozni park.",
+"qrGenerationMessage": "Odaberite kako želite kreirati svoj QR kod:",
+"qrGenerationOne": "QR kod specifičan za vozilo. Unaprijed popunjen podacima o vozilu — vozač ne mora unositi nikakve informacije.",
+"qrGenerationTwo": "QR kod za vozni park. Ostavite polja za vozilo prazna (označena plavom bojom) kako biste kreirali jedan QR kod za sva vozila. Vozač će unijeti podatke o vozilu u aplikaciji.",
+"documentLanguage": "Promjena jezika u formi ne utiče na konačni dokument.",
+"qrLink": "QR kod sadrži direktnu vezu za preuzimanje aplikacije Mobile-TAG sa Google Play i App Store prodavnica. Potaknite vozače da unaprijed instaliraju aplikaciju kako bi bila spremna za trenutnu upotrebu u slučaju incidenta.",
 "QuestionYes": "Da",
 "QuestionNo": "No",
 "PropertyDamageYes": "Da",

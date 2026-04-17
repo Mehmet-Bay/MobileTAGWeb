@@ -1,4 +1,11 @@
 {
+"redFields": "Lai izveidotu QR kodu, jāaizpilda sarkanie lauki",
+"qrGenerationTitle": "Izmantojiet vienu QR kodu katram transportlīdzeklim — vai vienu QR kodu visam jūsu autoparkam.",
+"qrGenerationMessage": "Izvēlieties, kā vēlaties izveidot savu QR kodu:",
+"qrGenerationOne": "Transportlīdzeklim specifisks QR kods. Iepriekš aizpildīts ar transportlīdzekļa datiem — vadītājam nav jāievada nekāda informācija.",
+"qrGenerationTwo": "Autoparka QR kods. Atstājiet transportlīdzekļa laukus tukšus (iezīmēti zilā krāsā), lai izveidotu vienu QR kodu visiem transportlīdzekļiem. Vadītājs ievadīs informāciju lietotnē.",
+"documentLanguage": "Valodas maiņa formā neietekmē galīgo dokumentu.",
+"qrLink": "QR kods ietver tiešu saiti, lai lejupielādētu Mobile-TAG lietotni no Google Play un App Store. Mudiniet vadītājus instalēt lietotni iepriekš, lai tā būtu gatava tūlītējai lietošanai incidenta gadījumā.",
 "QuestionYes": "Jā",
 "QuestionNo": "Nē",
 "PropertyDamageYes": "Jā",

@@ -1,4 +1,11 @@
 {
+"redFields": "QR kodini yaratish uchun qizil maydonlar to'ldirilishi kerak",
+"qrGenerationTitle": "Har bir transport vositasi uchun bitta QR koddan foydalaning — yoki butun avtoparkingiz uchun bitta QR koddan foydalaning.",
+"qrGenerationMessage": "QR kodingizni qanday yaratmoqchi ekaningizni tanlang:",
+"qrGenerationOne": "Transport vositasiga xos QR kod. Transport vositasi ma’lumotlari oldindan to‘ldirilgan — haydovchi hech qanday ma’lumot kiritishi shart emas.",
+"qrGenerationTwo": "Avtopark uchun QR kod. Barcha transport vositalari uchun bitta QR kod yaratish uchun transport vositasi maydonlarini bo‘sh qoldiring (ko‘k rang bilan belgilangan). Haydovchi ma’lumotlarni ilovada kiritadi.",
+"documentLanguage": "Formadagi tilni o‘zgartirish yakuniy hujjatga ta’sir qilmaydi.",
+"qrLink": "QR kod Mobile-TAG ilovasini Google Play va App Store’dan yuklab olish uchun to‘g‘ridan-to‘g‘ri havolani o‘z ichiga oladi. Haydovchilarni ilovani oldindan o‘rnatishga undang, shunda u hodisa yuz berganda darhol foydalanishga tayyor bo‘ladi.",
 "QuestionYes": "Ha",
 "QuestionNo": "Yo'q",
 "PropertyDamageYes": "Ha",

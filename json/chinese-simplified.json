@@ -1,4 +1,11 @@
 {
+"redFields": "必须填写红色字段才能创建二维码",
+"qrGenerationTitle": "每辆车使用一个二维码，或为整个车队使用一个二维码。",
+"qrGenerationMessage": "选择您要创建二维码的方式：",
+"qrGenerationOne": "车辆专用二维码。已预填车辆信息——驾驶员无需输入任何内容。",
+"qrGenerationTwo": "车队二维码。将车辆信息字段留空（以蓝色标示），即可为所有车辆创建一个二维码。驾驶员将在应用中输入车辆信息。",
+"documentLanguage": "在表单中更改语言不会影响最终生成的文档。",
+"qrLink": "该二维码包含一个直接链接，可从 Google Play 和 App Store 下载 Mobile-TAG 应用。建议驾驶员提前安装该应用，以便在发生事故时能够立即使用。",
 "QuestionYes": "是",
 "QuestionNo": "否",
 "PropertyDamageYes": "是",

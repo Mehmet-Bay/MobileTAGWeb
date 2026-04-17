@@ -1,4 +1,11 @@
 {
+"redFields": "QR kodunu yaratmaq üçün qırmızı sahələr doldurulmalıdır",
+"qrGenerationTitle": "Hər bir nəqliyyat vasitəsi üçün bir QR kod istifadə edin — və ya bütün parkınız üçün bir QR kod.",
+"qrGenerationMessage": "QR kodunuzu necə yaratmaq istədiyinizi seçin:",
+"qrGenerationOne": "Nəqliyyat vasitəsinə xüsusi QR kod. Vasitə məlumatları əvvəlcədən doldurulub — sürücünün heç bir məlumat daxil etməsinə ehtiyac yoxdur.",
+"qrGenerationTwo": "Park üçün QR kod. Bütün nəqliyyat vasitələri üçün bir QR kod yaratmaq üçün vasitə sahələrini boş buraxın (mavi ilə işarələnib). Sürücü məlumatları tətbiqdə daxil edəcək.",
+"documentLanguage": "Formada dili dəyişmək yekun sənədə təsir etmir.",
+"qrLink": "QR kodunda Mobile-TAG tətbiqini Google Play və App Store-dan yükləmək üçün birbaşa keçid var. Sürücüləri tətbiqi əvvəlcədən quraşdırmağa təşviq edin ki, hadisə baş verərsə, dərhal istifadəyə hazır olsunlar.",
 "QuestionYes": "Bəli",
 "QuestionNo": "yox",
 "PropertyDamageYes": "Bəli",

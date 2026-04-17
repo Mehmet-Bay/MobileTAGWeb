@@ -1,4 +1,11 @@
 {
+"redFields": "A QR-kód létrehozásához a piros mezőket ki kell tölteni",
+"qrGenerationTitle": "Használjon egy QR-kódot járművenként — vagy egy QR-kódot az egész flottához.",
+"qrGenerationMessage": "Válassza ki, hogyan szeretné létrehozni a QR-kódot:",
+"qrGenerationOne": "Járműspecifikus QR-kód. Előre kitöltve a jármű adataival — a vezetőnek nem kell semmilyen adatot megadnia.",
+"qrGenerationTwo": "Flotta QR-kód. Hagyja üresen a járműmezőket (kékkel kiemelve), hogy egy QR-kódot hozzon létre az összes járműhöz. A vezető az alkalmazásban adja meg az adatokat.",
+"documentLanguage": "Az űrlap nyelvének megváltoztatása nem befolyásolja a végleges dokumentumot.",
+"qrLink": "A QR-kód közvetlen linket tartalmaz a Mobile-TAG alkalmazás letöltéséhez a Google Playből és az App Store-ból. Bátorítsa a vezetőket, hogy előre telepítsék az alkalmazást, hogy az egy esetleges incidensnél azonnal használatra kész legyen.",
 "QuestionYes": "Igen",
 "QuestionNo": "Nem",
 "PropertyDamageYes": "Igen",

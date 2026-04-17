@@ -1,4 +1,11 @@
 {
+"redFields": "Pro vytvoření QR kódu je nutné vyplnit červená pole",
+"qrGenerationTitle": "Použijte jeden QR kód pro každé vozidlo — nebo jeden QR kód pro celý váš vozový park.",
+"qrGenerationMessage": "Vyberte, jak chcete vytvořit svůj QR kód:",
+"qrGenerationOne": "QR kód specifický pro vozidlo. Předvyplněný údaji o vozidle — řidič nemusí zadávat žádné informace.",
+"qrGenerationTwo": "QR kód pro vozový park. Nechte pole pro vozidlo prázdná (označená modře) a vytvořte jeden QR kód pro všechna vozidla. Řidič zadá údaje o vozidle v aplikaci.",
+"documentLanguage": "Změna jazyka ve formuláři nemá vliv na konečný dokument.",
+"qrLink": "QR kód obsahuje přímý odkaz ke stažení aplikace Mobile-TAG z Google Play a App Store. Doporučte řidičům, aby si aplikaci nainstalovali předem, aby byla připravena k okamžitému použití v případě nehody.",
 "QuestionYes": "Ano",
 "QuestionNo": "Ne",
 "PropertyDamageYes": "Ano",

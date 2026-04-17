@@ -1,4 +1,11 @@
 {
+"redFields": "Red fields must be filled in to create the QR code",
+"qrGenerationTitle": "Use one QR code per vehicle — or one QR code for your entire fleet.",
+"qrGenerationMessage": "Choose how you want to create your QR code:",
+"qrGenerationOne": "Vehicle-specific QR code. Pre-filled with vehicle data — the driver does not need to enter any information.",
+"qrGenerationTwo": "QR code for fleets. Leave the vehicle fields empty (marked in blue) to create one QR code for all vehicles. The driver enters the vehicle data in the app.",
+"documentLanguage": "Changing the language in the form does not affect the final document.",
+"qrLink": "The QR code contains a direct link to download the Mobile-TAG app from Google Play and the App Store. Encourage drivers to pre-install the app so that it is ready for immediate use in the event of an incident.",
 "QuestionYes": "Yes",
 "QuestionNo": "No",
 "PropertyDamageYes": "Yes",

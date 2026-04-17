@@ -520,7 +520,17 @@ html, body {
       <h3 id="langSelect" style="text-align: left; cursor: pointer; padding-right: 1%; padding-left: 0.1%;"></h3>
       <ul id="langDropdown"></ul>
     </div>
-    <p style="font-size: clamp(14px, 1.7vw, 25px); text-align: center;">Please note that changing the language in the form does not affect the final document.</p>
+    <div dir="auto" style="width: 90%; max-width: 1000px; justify-self: center;">
+      <p style="color: antiquewhite; font-size: clamp(14px, 1.7vw, 25px); text-align: center;" id="documentLang">Please note that changing the language in the form does not affect the final document.</p>
+      <p style="font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrTitleInfo">Use one QR code per vehicle — or one QR code for your entire fleet.</p>
+      <ul>
+        <p style="font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrGenerationInfo">Choose how you want to create your QR code:</p>
+        <li style="margin-bottom: 2%; font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrGenOne">Vehicle-specific QR code. Pre-filled with vehicle data — the driver does not need to enter any information.</li>
+        <li style="font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrGenTwo">QR code for fleets. Leave the vehicle fields empty (marked in blue) to create one QR code for all vehicles. The driver enters the vehicle data in the app.</li>
+      </ul>
+      <p style="font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrLink">The QR code contains a direct link to download the Mobile-TAG app from Google Play and the App Store. Encourage drivers to pre-install the app so that it is ready for immediate use in the event of an incident.</p>
+      <p style="font-size: clamp(14px, 1.7vw, 25px); text-align: center;" id="redFieldsInfo">Fields in red must be filled</p>
+    </div>
   </header>
 <script>
     function loadLanguage(langName) {
@@ -529,6 +539,13 @@ html, body {
       fetch(fileName)
         .then(resp => resp.json())
         .then(data => {
+          document.getElementById("documentLang").innerText = data.documentLanguage;
+          document.getElementById("qrTitleInfo").innerText = data.qrGenerationTitle;        
+          document.getElementById("qrGenerationInfo").innerText = data.qrGenerationMessage;
+          document.getElementById("qrGenOne").innerText = data.qrGenerationOne;
+          document.getElementById("qrGenTwo").innerText = data.qrGenerationTwo;
+          document.getElementById("qrLink").innerText = data.qrLink;
+          document.getElementById("redFieldsInfo").innerText = data.redFields;
           document.getElementById("labelOwnerName").innerText = data.vehicleOwnerName;
           document.getElementById("labelOwnerAddress").innerText = data.vehicleOwnerAddress;
           document.getElementById("labelOwnerId").innerText = data.vehicleOwnerId;
@@ -595,40 +612,40 @@ html, body {
   <div class="container"> 
     <div class="container-horizonatalLeft" >
       <label class="labelRed" id="labelOwnerName" for="ownersName"></label><br>
-      <input class="userInput" id="ownersName" type="text" oninput="checkForm()"><br>
+      <input class="userInput" id="ownersName" type="text" autocomplete="new-password" oninput="checkForm()"><br>
       <label class="labelBlack" id="labelOwnerAddress" for="ownersAddress"></label><br>
-      <input class="userInput" id="ownersAddress" type="text"><br>
+      <input class="userInput" id="ownersAddress" type="text" autocomplete="new-password"><br>
       <label class="labelBlack" id="labelOwnerId" for="ownersIdNo"></label><br>
       <input class="userInput" id="ownersIdNo" type="text" disabled><br>
       <label class="labelRed" id="labelOwnerTelNo" for="ownersTel"></label><br>
-      <input class="userInput" id="ownersTel" type="tel" oninput="checkForm()"><br>
+      <input class="userInput" id="ownersTel" type="tel" autocomplete="new-password" oninput="checkForm()"><br>
       <label class="labelRed" id="labelOwnerMail" for="ownersMail"></label><br>
-      <input class="userInput" id="ownersMail" type="text"><br>
-      <label class="labelRed" id="labelVehicleBrand" for="vehicleMake"></label><br>
-      <input class="userInput" id="vehicleMake" type="text" oninput="checkForm()"><br>
-      <label class="labelBlack" id="labelVehicleModel" for="vehicleModel"></label><br>
-      <input class="userInput" id="vehicleModel" type="text"><br>
-      <label class="labelBlack" id="labelVehicleType" for="vehicleType"></label><br>
-      <input class="userInput" id="vehicleType" type="text"><br>
-      <label class="labelRed" id="labelRegNo" for="regnr"></label><br>
-      <input class="userInput" id="regnr" type="text"><br>
+      <input class="userInput" id="ownersMail" type="text" autocomplete="new-password"><br>
+      <label class="labelRed" style="color: blue;" id="labelVehicleBrand" for="vehicleMake"></label><br>
+      <input class="userInput" id="vehicleMake" type="text" autocomplete="new-password" oninput="checkForm()"><br>
+      <label class="labelBlack" style="color: blue;" id="labelVehicleModel" for="vehicleModel"></label><br>
+      <input class="userInput" id="vehicleModel" type="text" autocomplete="new-password"><br>
+      <label class="labelBlack" style="color: blue;" id="labelVehicleType" for="vehicleType"></label><br>
+      <input class="userInput" id="vehicleType" type="text" autocomplete="new-password"><br>
+      <label class="labelRed" style="color: blue;" id="labelRegNo" for="regnr"></label><br>
+      <input class="userInput" id="regnr" type="text" autocomplete="new-password"><br>
       <label class="labelBlack" id="labelCityReg" for="cityReg"></label><br>
-      <input class="userInput" id="cityReg" type="text"><br>
+      <input class="userInput" id="cityReg" type="text" autocomplete="new-password"><br>
       <label class="labelRed" id="labelRegCountry" for="regCountry"></label><br>
       <div id="countryPicker" class="picker"></div>
       <input class="userInput" id="regCountry" type="text" placeholder="" readonly><br>
     </div>
     <div class="container-horizonatalRight">
       <label class="labelRed" id="labelInsuranceName" for="insuranceCompanyName"></label><br>
-      <input class="userInput" id="insuranceCompanyName" type="text" oninput="checkForm()"><br>
+      <input class="userInput" id="insuranceCompanyName" type="text" autocomplete="new-password" oninput="checkForm()"><br>
       <label class="labelBlack" id="labelInsuranceTel" for="insuranceTel"></label><br>
-      <input class="userInput" id="insuranceTel" type="tel"><br>
+      <input class="userInput" id="insuranceTel" type="tel" autocomplete="new-password"><br>
       <label class="labelBlack" id="labelInsuranceMail" for="insuranceMail"></label><br>
-      <input class="userInput" id="insuranceMail" type="text"><br>
+      <input class="userInput" id="insuranceMail" type="text" autocomplete="new-password"><br>
       <label class="labelBlack" id="labelInsuranceNo" for="policyNo"></label><br>
-      <input class="userInput" id="policyNo" type="text"><br>
+      <input class="userInput" id="policyNo" type="text" autocomplete="new-password"><br>
       <label class="labelBlack" id="labelInsuranceAgent" for="agentInfo"></label><br>
-      <input class="userInput" id="agentInfo" type="text"><br>
+      <input class="userInput" id="agentInfo" type="text" autocomplete="new-password"><br>
     <div style="background-color: antiquewhite; padding: 1%; text-align: start; border-top-left-radius: 15px; border-top-right-radius: 15px;">
       <label class="labelBlack" id="labelComprehensive"></label>
       <div style="display: flex; gap: 1em; margin-top: 0.5em;">
@@ -699,8 +716,8 @@ html, body {
     "ownersName",
     "ownersTel",
     "ownersMail",
-    "vehicleMake",
-    "regnr",
+    /*"vehicleMake",
+    "regnr",*/
     "regCountry",
     "insuranceCompanyName"
   ];
@@ -772,8 +789,16 @@ async function generateQR() {
     qrData[group.key] = val;
     values.push(val);
   });
+  
+  let regNo = document.getElementById("regnr").value.toUpperCase().trim();
+  let insuranceCompany = document.getElementById("insuranceCompanyName").value;
 
-  document.getElementById("regQR").textContent = document.getElementById("regnr").value.toUpperCase();
+  if (regNo !== "") {
+    document.getElementById("regQR").textContent = regNo;
+  } else {
+    document.getElementById("regQR").textContent = insuranceCompany;
+  }
+  //document.getElementById("regQR").textContent = document.getElementById("regnr").value.toUpperCase();
 
   let vehicleInfo = values.join("#");
   console.log(vehicleInfo);
@@ -790,7 +815,7 @@ async function generateQR() {
     }
 
     const json = await response.json();
-    const encrypted = json.encrypted;
+    const encrypted = "https://mobiletag-auto.com/app?" + json.encrypted;
 
     document.getElementById("qrcode").innerHTML = "";
     new QRCode(document.getElementById("qrcode"), {

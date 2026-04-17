@@ -1,4 +1,11 @@
 {
+"redFields": "Los campos rojos deben rellenarse para crear el código QR",
+"qrGenerationTitle": "Usa un código QR por vehículo — o un solo código QR para toda tu flota.",
+"qrGenerationMessage": "Elige cómo quieres crear tu código QR:",
+"qrGenerationOne": "Código QR específico del vehículo. Prellenado con los datos del vehículo — el conductor no necesita introducir ninguna información.",
+"qrGenerationTwo": "Código QR para flotas. Deja los campos del vehículo vacíos (resaltados en azul) para crear un único código QR para todos los vehículos. El conductor introducirá la información en la aplicación.",
+"documentLanguage": "Cambiar el idioma en el formulario no afecta al documento final.",
+"qrLink": "El código QR incluye un enlace directo para descargar la aplicación Mobile-TAG desde Google Play y la App Store. Anima a los conductores a instalar la aplicación con antelación para que esté lista para su uso inmediato en caso de incidente.",
 "QuestionYes": "Sí",
 "QuestionNo": "No",
 "PropertyDamageYes": "Sí",

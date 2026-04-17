@@ -1,4 +1,11 @@
 {
+"redFields": "QR-koodi loomiseks tuleb täita punased väljad",
+"qrGenerationTitle": "Kasutage ühte QR-koodi iga sõiduki jaoks — või ühte QR-koodi kogu oma sõidukipargi jaoks.",
+"qrGenerationMessage": "Valige, kuidas soovite oma QR-koodi luua:",
+"qrGenerationOne": "Sõidukipõhine QR-kood. Eeltäidetud sõiduki andmetega — juhil ei ole vaja midagi sisestada.",
+"qrGenerationTwo": "Sõidukipargi QR-kood. Jätke sõiduki väljad tühjaks (sinisega esile tõstetud), et luua üks QR-kood kõigi sõidukite jaoks. Juht sisestab andmed rakenduses.",
+"documentLanguage": "Vormi keele muutmine ei mõjuta lõplikku dokumenti.",
+"qrLink": "QR-kood sisaldab otselinki Mobile-TAG rakenduse allalaadimiseks Google Playst ja App Store'ist. Soovitage juhtidel rakendus eelnevalt installida, et see oleks õnnetuse korral kohe kasutusvalmis.",
 "QuestionYes": "Jah",
 "QuestionNo": "Ei",
 "PropertyDamageYes": "Jah",

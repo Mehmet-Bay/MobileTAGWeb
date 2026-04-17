@@ -1,4 +1,11 @@
 {
+"redFields": "Røde felter skal udfyldes for at oprette QR-koden",
+"qrGenerationTitle": "Brug én QR-kode pr. køretøj — eller én QR-kode til hele din flåde.",
+"qrGenerationMessage": "Vælg, hvordan du vil oprette din QR-kode:",
+"qrGenerationOne": "QR-kode specifik for køretøjet. Forudfyldt med køretøjsoplysninger — føreren behøver ikke at indtaste nogen information.",
+"qrGenerationTwo": "QR-kode til flåder. Lad køretøjsfelterne stå tomme (markeret med blåt) for at oprette én QR-kode til alle køretøjer. Føreren indtaster oplysningerne i appen.",
+"documentLanguage": "Ændring af sprog i formularen påvirker ikke det endelige dokument.",
+"qrLink": "QR-koden indeholder et direkte link til at downloade Mobile-TAG-appen fra Google Play og App Store. Opfordr førere til at installere appen på forhånd, så den er klar til øjeblikkelig brug i tilfælde af en hændelse.",
 "QuestionYes": "Ja",
 "QuestionNo": "Nej",
 "PropertyDamageYes": "Ja",

@@ -1,4 +1,11 @@
 {
+"redFields": "빨간색 필드는 QR 코드를 생성하기 위해 반드시 입력해야 합니다.",
+"qrGenerationTitle": "차량마다 하나의 QR 코드를 사용하거나 — 전체 차량에 대해 하나의 QR 코드를 사용할 수 있습니다.",
+"qrGenerationMessage": "QR 코드를 생성하는 방법을 선택하세요:",
+"qrGenerationOne": "차량별 QR 코드. 차량 정보가 미리 입력되어 있어 운전자가 별도의 정보를 입력할 필요가 없습니다.",
+"qrGenerationTwo": "차량군용 QR 코드. 모든 차량에 대해 하나의 QR 코드를 생성하려면 차량 정보를 비워두세요(파란색으로 표시됨). 운전자는 앱에서 차량 정보를 입력합니다.",
+"documentLanguage": "양식에서 언어를 변경해도 최종 문서에는 영향을 미치지 않습니다.",
+"qrLink": "QR 코드에는 Google Play와 App Store에서 Mobile-TAG 앱을 다운로드할 수 있는 직접 링크가 포함되어 있습니다. 사고 발생 시 즉시 사용할 수 있도록 운전자에게 미리 앱을 설치하도록 권장하세요.",
 "QuestionYes": "예",
 "QuestionNo": "아니요",
 "PropertyDamageYes": "예",

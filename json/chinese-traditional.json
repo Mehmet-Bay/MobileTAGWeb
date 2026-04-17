@@ -1,4 +1,11 @@
 {
+"redFields": "必須填寫紅色欄位才能建立二維碼",
+"qrGenerationTitle": "每輛車使用一個 QR 碼，或為整個車隊使用一個 QR 碼。",
+"qrGenerationMessage": "選擇您要建立 QR 碼的方式：",
+"qrGenerationOne": "車輛專用 QR 碼。已預先填入車輛資訊——駕駛無需輸入任何資料。",
+"qrGenerationTwo": "車隊 QR 碼。將車輛欄位留空（以藍色標示），即可為所有車輛建立一個 QR 碼。駕駛將在應用程式中輸入車輛資訊。",
+"documentLanguage": "在表單中變更語言不會影響最終文件。",
+"qrLink": "該二維碼包含一個直接鏈接，可從 Google Play 和 App Store 下載 Mobile-TAG 應用。建議駕駛員提前安裝該應用，以便在發生事故時能夠立即使用。",
 "QuestionYes": "是的",
 "QuestionNo": "不",
 "PropertyDamageYes": "是的",

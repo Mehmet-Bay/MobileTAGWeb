@@ -1,4 +1,11 @@
 {
+"redFields": "Ní mór réimsí dearga a líonadh isteach chun an cód QR a chruthú",
+"qrGenerationTitle": "Úsáid cód QR amháin in aghaidh na feithicle — nó cód QR amháin do do chabhlach ar fad.",
+"qrGenerationMessage": "Roghnaigh conas is mian leat do chód QR a chruthú:",
+"qrGenerationOne": "Cód QR sonrach don fheithicil. Réamh-líonta le sonraí na feithicle — ní gá don tiománaí aon fhaisnéis a iontráil.",
+"qrGenerationTwo": "Cód QR do chabhlach. Fág réimsí na feithicle folamh (aibhsithe i gorm) chun cód QR amháin a chruthú do gach feithicil. Iontrálfaidh an tiománaí na sonraí san aip.",
+"documentLanguage": "Ní chuireann athrú teanga san fhoirm isteach ar an doiciméad deiridh.",
+"qrLink": "Tá nasc díreach sa chód QR chun an aip Mobile-TAG a íoslódáil ó Google Play agus ón App Store. Spreag tiománaithe an aip a shuiteáil roimh ré ionas go mbeidh sí réidh le húsáid láithreach má tharlaíonn eachtra.",
 "QuestionYes": "Tá",
 "QuestionNo": "Nei",
 "PropertyDamageYes": "Tá",

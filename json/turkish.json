@@ -1,4 +1,11 @@
 {
+"kırmızı alanlar": "QR kodunu oluşturmak için kırmızı alanların doldurulması gerekir",
+"qrGenerationTitle": "Her araç için bir QR kod kullanın — veya tüm filonuz için tek bir QR kod kullanın.",
+"qrGenerationMessage": "QR kodunuzu nasıl oluşturmak istediğinizi seçin:",
+"qrGenerationOne": "Araca özel QR kod. Araç bilgileri önceden doldurulmuştur — sürücünün herhangi bir bilgi girmesine gerek yoktur.",
+"qrGenerationTwo": "Filo için QR kod. Tüm araçlar için tek bir QR kod oluşturmak için araç alanlarını boş bırakın (mavi ile vurgulanmıştır). Sürücü bilgileri uygulamada girecektir.",
+"documentLanguage": "Formdaki dili değiştirmek nihai belgeyi etkilemez.",
+"qrLink": "QR kod, Mobile-TAG uygulamasını Google Play ve App Store’dan indirmek için doğrudan bir bağlantı içerir. Sürücüleri uygulamayı önceden yüklemeye teşvik edin, böylece bir olay durumunda hemen kullanıma hazır olur.",
 "QuestionYes": "Evet",
 "QuestionNo": "Hayır",
 "PropertyDamageYes": "Evet",

@@ -1,4 +1,11 @@
 {
+"redFields": "Meelaha cas waa in la buuxiyaa si loo sameeyo koodhka QR",
+"qrGenerationTitle": "Isticmaal hal koodh QR gaadhi kasta — ama hal koodh QR oo loogu talagalay dhammaan gaadiidkaaga.",
+"qrGenerationMessage": "Dooro sida aad u rabto inaad u abuurto koodhkaaga QR:",
+"qrGenerationOne": "Koodh QR oo gaar u ah gaadhiga. Hore ayaa loogu buuxiyey xogta gaadhiga — darawalku uma baahna inuu geliyo wax xog ah.",
+"qrGenerationTwo": "Koodh QR oo loogu talagalay gaadiid badan. Ka tag meelaha gaadhiga madhan (lagu calaamadeeyey buluug) si aad u abuurto hal koodh QR oo loogu talagalay dhammaan gaadiidka. Darawalku wuxuu xogta ku gelin doonaa app-ka.",
+"documentLanguage": "Beddelidda luqadda foomka ma saameyso dukumeentiga kama dambaysta ah.",
+"qrLink": "Koodhka QR wuxuu ka kooban yahay xiriir toos ah oo lagu soo dejin karo app-ka Mobile-TAG ee Google Play iyo App Store. Ku dhiirrigeli darawallada inay horay u rakibaan app-ka si uu diyaar ugu ahaado isticmaal degdeg ah haddii ay dhacdo dhacdo.",
 "QuestionYes": "Haa",
 "QuestionNo": "Maya",
 "PropertyDamageYes": "Haa",

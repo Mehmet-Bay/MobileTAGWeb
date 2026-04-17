@@ -1,4 +1,11 @@
 {
+"redFields": "Röda fält måste vara ifyllda för att för att kunna skapa QR koden",
+"qrGenerationTitle": "Använd en QR-kod per fordon – eller en enda QR-kod för hela din fordonsflotta.",
+"qrGenerationMessage": "Välj hur du vill skapa din QR-kod:",
+"qrGenerationOne": "Fordonsspecifik QR-kod. Förifylld med fordonsdata – föraren behöver inte ange någon information.",
+"qrGenerationTwo": "QR-kod för fordonsflotta. Lämna fordonsfälten tomma (markerade i blått) för att skapa en enda QR-kod för alla fordon. Föraren anger informationen i appen.",
+"documentLanguage": "Att ändra språket i formuläret påverkar inte det slutliga dokumentet.",
+"qrLink": "QR-koden innehåller en direktlänk för att ladda ner Mobile-TAG-appen från Google Play och App Store. Uppmuntra förare att installera appen i förväg så att den är redo för omedelbar användning vid en incident.",
 "QuestionYes": "Ja",
 "QuestionNo": "Nej",
 "PropertyDamageYes": "Ja",

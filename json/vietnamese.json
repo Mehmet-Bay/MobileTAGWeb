@@ -1,4 +1,11 @@
 {
+"redFields": "Các ô màu đỏ phải được điền đầy đủ để tạo mã QR",
+"qrGenerationTitle": "Sử dụng một mã QR cho mỗi phương tiện — hoặc một mã QR cho toàn bộ đội xe của bạn.",
+"qrGenerationMessage": "Chọn cách bạn muốn tạo mã QR:",
+"qrGenerationOne": "Mã QR riêng cho từng phương tiện. Đã được điền sẵn thông tin phương tiện — người lái không cần nhập thêm bất kỳ thông tin nào.",
+"qrGenerationTwo": "Mã QR cho đội xe. Để trống các trường thông tin phương tiện (được đánh dấu màu xanh) để tạo một mã QR cho tất cả các phương tiện. Người lái sẽ nhập thông tin trong ứng dụng.",
+"documentLanguage": "Việc thay đổi ngôn ngữ trong biểu mẫu không ảnh hưởng đến tài liệu cuối cùng.",
+"qrLink": "Mã QR bao gồm liên kết trực tiếp để tải ứng dụng Mobile-TAG từ Google Play và App Store. Khuyến khích người lái cài đặt ứng dụng trước để sẵn sàng sử dụng ngay khi xảy ra sự cố.",
 "QuestionYes": "Đúng",
 "QuestionNo": "không",
 "PropertyDamageYes": "Đúng",

@@ -1,4 +1,11 @@
 {
+"redFields": "Kolom berwarna merah harus diisi untuk membuat kode QR",
+"qrGenerationTitle": "Gunakan satu kode QR per kendaraan — atau satu kode QR untuk seluruh armada Anda.",
+"qrGenerationMessage": "Pilih bagaimana Anda ingin membuat kode QR Anda:",
+"qrGenerationOne": "Kode QR khusus kendaraan. Sudah diisi sebelumnya dengan data kendaraan — pengemudi tidak perlu memasukkan informasi apa pun.",
+"qrGenerationTwo": "Kode QR untuk armada. Biarkan kolom kendaraan kosong (ditandai dengan warna biru) untuk membuat satu kode QR untuk semua kendaraan. Pengemudi akan memasukkan informasi kendaraan di aplikasi.",
+"documentLanguage": "Mengubah bahasa dalam formulir tidak memengaruhi dokumen akhir.",
+"qrLink": "Kode QR ini mencakup tautan langsung untuk mengunduh aplikasi Mobile-TAG dari Google Play dan App Store. Anjurkan pengemudi untuk menginstal aplikasi terlebih dahulu agar siap digunakan segera jika terjadi insiden.",
 "QuestionYes": "Ya",
 "QuestionNo": "Tidak",
 "PropertyDamageYes": "Ya",

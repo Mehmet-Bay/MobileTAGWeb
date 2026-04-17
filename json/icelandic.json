@@ -1,4 +1,11 @@
 {
+"redFields": "Rauðu reiti verða að vera fylltir út til að búa til QR kóðann",
+"qrGenerationTitle": "Notaðu einn QR-kóða fyrir hvert ökutæki — eða einn QR-kóða fyrir allan flotann þinn.",
+"qrGenerationMessage": "Veldu hvernig þú vilt búa til QR-kóðann þinn:",
+"qrGenerationOne": "QR-kóði fyrir tiltekið ökutæki. Forfylltur með upplýsingum um ökutækið — ökumaðurinn þarf ekki að slá inn neinar upplýsingar.",
+"qrGenerationTwo": "QR-kóði fyrir flota. Skildu ökutækisreitina eftir tóma (merkt með bláu) til að búa til einn QR-kóða fyrir öll ökutæki. Ökumaðurinn slær inn upplýsingarnar í appinu.",
+"documentLanguage": "Að breyta tungumáli í eyðublaðinu hefur ekki áhrif á lokaskjalið.",
+"qrLink": "QR-kóðinn inniheldur beinan hlekk til að hlaða niður Mobile-TAG appinu úr Google Play og App Store. Hvetjið ökumenn til að setja upp appið fyrirfram svo það sé tilbúið til notkunar strax ef atvik á sér stað.",
 "QuestionYes": "Já",
 "QuestionNo": "NEI",
 "PropertyDamageYes": "Já",

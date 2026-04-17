@@ -1,4 +1,11 @@
 {
+"redFields": "Rote Felder müssen ausgefüllt werden, um den QR-Code zu erstellen",
+"qrGenerationTitle": "Verwenden Sie einen QR-Code pro Fahrzeug — oder einen QR-Code für Ihre gesamte Flotte.",
+"qrGenerationMessage": "Wählen Sie, wie Sie Ihren QR-Code erstellen möchten:",
+"qrGenerationOne": "Fahrzeugspezifischer QR-Code. Mit Fahrzeugdaten vorausgefüllt — der Fahrer muss keine Informationen eingeben.",
+"qrGenerationTwo": "Flotten-QR-Code. Lassen Sie die Fahrzeugfelder leer (blau markiert), um einen QR-Code für alle Fahrzeuge zu erstellen. Der Fahrer gibt die Fahrzeugdaten in der App ein.",
+"documentLanguage": "Das Ändern der Sprache im Formular beeinflusst das endgültige Dokument nicht.",
+"qrLink": "Der QR-Code enthält einen direkten Link zum Herunterladen der Mobile-TAG-App aus dem Google Play Store und dem App Store. Empfehlen Sie Fahrern, die App im Voraus zu installieren, damit sie im Falle eines Vorfalls sofort einsatzbereit ist.",
 "QuestionYes": "Ja",
 "QuestionNo": "Nein",
 "PropertyDamageYes": "Ja",
