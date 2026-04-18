@@ -1,6 +1,6 @@
 {
 "qrGroup": "Araçlarınız farklı sigorta şirketleri kullanıyorsa, her grup için ayrı QR kodları oluşturmayı düşünün.",
-"kırmızı alanlar": "QR kodunu oluşturmak için kırmızı alanların doldurulması gerekir",
+"redFields": "QR kodunu oluşturmak için kırmızı alanların doldurulması gerekir",
 "qrGenerationTitle": "Her araç için bir QR kod kullanın — veya tüm filonuz için tek bir QR kod kullanın.",
 "qrGenerationMessage": "QR kodunuzu nasıl oluşturmak istediğinizi seçin:",
 "qrGenerationOne": "Araca özel QR kod. Araç bilgileri önceden doldurulmuştur — sürücünün herhangi bir bilgi girmesine gerek yoktur.",
