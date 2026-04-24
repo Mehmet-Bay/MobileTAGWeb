@@ -484,7 +484,7 @@ html, body {
       This feature is free to use and may be helpful for private vehicle owners, rental companies, leasing fleets, and logistics operators. 
       Fields marked in red are required. Please ensure that the information entered is accurate.      
     </p>
-    <img src="drawable/sunvisor_only.png" alt="picture describing where the QR code can be placed for example under sunvisor" width="100%">
+    <img src="drawable/sunvisor_only.png" alt="picture describing where the QR code can be placed for example under sunvisor" width="90%;">
     <p style="font-size: clamp(14px, 2vw, 25px); text-align: start; padding-left: 5%; padding-right: 5%;">
       If you only want to try the QR code generator, you can enter sample or test information instead of real data. This allows you to explore how the feature works before using it with actual vehicle details.
     </p>
@@ -635,8 +635,8 @@ html, body {
       <label class="labelBlack" id="labelCityReg" for="cityReg"></label><br>
       <input class="userInput" id="cityReg" type="text" autocomplete="new-password"><br>
       <label class="labelRed" id="labelRegCountry" for="regCountry"></label><br>
-      <div id="countryPicker" class="picker"></div>
-      <input class="userInput" id="regCountry" type="text" placeholder="" readonly><br>
+      <div id="countryPicker" class="picker" onclick="checkForm()"></div>
+      <input class="userInput" id="regCountry" onchange="checkForm()" type="text" placeholder="" readonly><br>
     </div>
     <div class="container-horizonatalRight">
       <label class="labelRed" id="labelInsuranceName" for="insuranceCompanyName"></label><br>
@@ -716,13 +716,13 @@ html, body {
 <script>
     function checkForm() {
   const requiredIds = [
-    "ownersName",
-    "ownersTel",
+    "insuranceCompanyName",
+    "regCountry",
     "ownersMail",
+    "ownersTel",
+    "ownersName"
     /*"vehicleMake",
     "regnr",*/
-    "regCountry",
-    "insuranceCompanyName"
   ];
 
   const anyEmpty = requiredIds.some(id => {
