@@ -444,6 +444,12 @@ html, body {
       <img src="drawable/nylogo.png" alt="" width="50%">
     </div>
     <h1 class="centered-title">QR Code Generator</h1>
+          <div dir="auto" class="langsection" style="display: flex; justify-content: center; align-items: center; position: relative; padding-top: 3%; width: 100%;">
+        <h3 id="formLang" style="text-align: left; padding-right: 1%;">Select form language</h3>  
+        <h3 id="langSelect" style="text-align: left; cursor: pointer; padding-right: 1%; padding-left: 0.1%;"></h3>
+        <ul id="langDropdown"></ul>
+      </div>
+      <p dir="auto" style="color: antiquewhite; font-size: clamp(14px, 1.7vw, 25px); text-align: center;" id="documentLang">Please note that changing the language in the form does not affect the final document.</p>
     <nav>
       <button class="mobile-menu-btn" onclick="toggleMobileNav()">☰ Menu</button>
       <div class="nav-wrapper">
@@ -474,12 +480,6 @@ html, body {
     </nav>
     <div style="align-items: center; padding-left: 3%; padding-right: 3%;">
       <img src="drawable/qr_code.png" alt="picture describing QR Code Generator about how QR is generated" width="50%" style="padding-bottom: 2%;">
-      <div dir="auto" class="langsection" style="display: flex; justify-content: center; align-items: center; position: relative; padding-top: 3%; width: 100%;">
-        <h3 id="formLang" style="text-align: left; padding-right: 1%;">Select form language</h3>  
-        <h3 id="langSelect" style="text-align: left; cursor: pointer; padding-right: 1%; padding-left: 0.1%;"></h3>
-        <ul id="langDropdown"></ul>
-      </div>
-      <p dir="auto" style="color: antiquewhite; font-size: clamp(14px, 1.7vw, 25px); text-align: center;" id="documentLang">Please note that changing the language in the form does not affect the final document.</p>
       <div dir="auto" class="section">
         <h2 id="qrTitleInfo">
           About QR Code Generator
