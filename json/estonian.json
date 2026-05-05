@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Sisestatud teave krüpteeritakse ja salvestatakse ainult QR-koodi.",
 "QRGeneratorIntro": "QR-koodi generaatori kohta",
 "QRGeneratorIntroMessage": "Siin saate luua iga sõiduki jaoks unikaalse QR-koodi. Sisestades sõiduki põhiandmed, saab QR-koodi luua, alla laadida ja välja printida. QR-koodi saab paigutada sõiduki sisse, et juhid saaksid selle Mobile-TAG rakendusega skannida, kui toimub intsident. See aitab hõlbustada asjakohaste sõidukiandmete kättesaamist ja salvestamist ilma käsitsi sisestamiseta. See funktsioon on tasuta kasutamiseks ning võib olla kasulik eraisikutele, autorendifirmadele, liisinguautoparkidele ja logistikateenuste pakkujatele. Punasega märgitud väljad on kohustuslikud. Palun veenduge, et sisestatud andmed on õiged.",
 "QRGeneratorTest": "Kui soovite QR-koodi generaatorit lihtsalt proovida, võite sisestada näidis- või testandmeid tegelike andmete asemel. See võimaldab teil tutvuda funktsiooni toimimisega enne selle kasutamist päris sõidukiandmetega.",

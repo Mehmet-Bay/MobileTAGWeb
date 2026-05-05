@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Podatki, ki jih vnesete, so šifrirani in shranjeni samo v kodi QR.",
 "QRGeneratorIntro": "O generatorju QR kod",
 "QRGeneratorIntroMessage": "Tukaj lahko ustvarite edinstveno QR kodo za vsako vozilo. Z vnosom osnovnih podatkov o vozilu lahko QR kodo ustvarite, prenesete in natisnete. QR kodo lahko namestite v vozilo, da jo lahko vozniki v primeru incidenta skenirajo z aplikacijo Mobile-TAG. To olajša dostop do ustreznih informacij o vozilu in njihovo beleženje brez ročnega vnosa. Ta funkcija je brezplačna za uporabo in je lahko koristna za zasebne lastnike vozil, podjetja za najem, leasing flote in logistične operaterje. Polja, označena z rdečo barvo, so obvezna. Prosimo, preverite, da so vneseni podatki pravilni.",
 "QRGeneratorTest": "Če želite generator QR kod samo preizkusiti, lahko namesto dejanskih podatkov vnesete vzorčne ali testne podatke. To vam omogoča, da spoznate delovanje funkcije, preden jo uporabite z dejanskimi podatki o vozilu.",

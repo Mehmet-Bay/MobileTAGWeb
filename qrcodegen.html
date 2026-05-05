@@ -244,7 +244,7 @@
   max-width: 130px;
   width: 100%;
   /*z-index: 9999;*/
-  max-height: 100px;
+  max-height: 150px;
   overflow-y: auto;
   border-radius: 5px;
 }
@@ -444,7 +444,7 @@ html, body {
       <img src="drawable/nylogo.png" alt="" width="50%">
     </div>
     <h1 class="centered-title">QR Code Generator</h1>
-          <div dir="auto" class="langsection" style="display: flex; justify-content: center; align-items: center; position: relative; padding-top: 3%; width: 100%;">
+      <div dir="auto" class="langsection" style="display: flex; justify-content: center; align-items: center; position: relative; padding-top: 1%; width: 100%;">
         <h3 id="formLang" style="text-align: left; padding-right: 1%;">Select form language</h3>  
         <h3 id="langSelect" style="text-align: left; cursor: pointer; padding-right: 1%; padding-left: 0.1%;"></h3>
         <ul id="langDropdown"></ul>
@@ -532,6 +532,10 @@ html, body {
       <p style="color: antiquewhite; font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrGenGroup">If your vehicles use different insurance providers, consider creating separate QR codes per group.</p>
       <p style="font-size: clamp(14px, 1.7vw, 25px); text-align: start;" id="qrLink">The QR code contains a direct link to download the Mobile-TAG app from Google Play and the App Store. Encourage drivers to pre-install the app so that it is ready for immediate use in the event of an incident.</p>
       <p style="font-size: clamp(14px, 1.7vw, 25px); text-align: center;" id="redFieldsInfo">Fields in red must be filled</p>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: nowrap;">
+        <p id="qrPrivacyInfo" style="font-size: clamp(14px, 1.7vw, 25px); text-align: center; color: aliceblue;">The information you enter is encrypted and stored only in the QR code.</p>
+        <a href="/privacy.html"  style="font-size: clamp(14px, 1.7vw, 25px);">Privacy policy</a>
+      </div>
     </div>
   </header>
 <script>
@@ -685,6 +689,7 @@ html, body {
       fetch(fileName)
         .then(resp => resp.json())
         .then(data => {
+          document.getElementById("qrPrivacyInfo").innerText = data.qrPrivacy;
           document.getElementById("qrFleetInfo").innerText = data.qrGenerationTitle;
           document.getElementById("qrAvailable").innerText = data.QRGeneratorAvailableText;
           document.getElementById("qrBePrepared").innerText = data.QRGeneratorPrepareText;

@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Thông tin bạn nhập được mã hóa và chỉ được lưu trữ trong mã QR.",
 "QRGeneratorIntro": "Giới thiệu về trình tạo mã QR",
 "QRGeneratorIntroMessage": "Tại đây bạn có thể tạo mã QR duy nhất cho từng phương tiện. Bằng cách nhập thông tin cơ bản của phương tiện, mã QR có thể được tạo, tải xuống và in ra. Mã QR có thể được đặt داخل phương tiện để người lái có thể quét bằng ứng dụng Mobile-TAG khi xảy ra sự cố. Điều này giúp dễ dàng truy cập và ghi lại thông tin liên quan đến phương tiện mà không cần nhập thủ công. Tính năng này miễn phí sử dụng và có thể hữu ích cho chủ phương tiện cá nhân, công ty cho thuê xe, đội xe leasing và các đơn vị vận hành logistics. Các trường được đánh dấu màu đỏ là bắt buộc. Vui lòng đảm bảo thông tin nhập vào là chính xác.",
 "QRGeneratorTest": "Nếu bạn chỉ muốn thử trình tạo mã QR, bạn có thể nhập dữ liệu mẫu hoặc dữ liệu thử nghiệm thay vì dữ liệu thực. Điều này cho phép bạn tìm hiểu cách hoạt động của tính năng trước khi sử dụng với thông tin phương tiện thực tế.",

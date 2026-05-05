@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Upplýsingarnar sem þú slærð inn eru dulkóðaðar og geymdar eingöngu í QR kóðanum.",
 "QRGeneratorIntro": "Um QR-kóða rafalinn",
 "QRGeneratorIntroMessage": "Hér getur þú búið til einstakan QR-kóða fyrir hvert ökutæki. Með því að slá inn grunnupplýsingar um ökutækið er hægt að búa til, hlaða niður og prenta QR-kóða. QR-kóðinn er hægt að setja í ökutækið svo ökumenn geti skannað hann með Mobile-TAG appinu ef atvik á sér stað. Þetta auðveldar aðgang að og skráningu á viðeigandi upplýsingum um ökutækið án handvirkrar innsláttar. Þessi virkni er ókeypis og getur verið gagnleg fyrir einkaeigendur ökutækja, bílaleigur, leiguflotta og flutningsaðila. Reitir merktir með rauðu eru skyldubundnir. Vinsamlegast tryggðu að upplýsingarnar sem slegnar eru inn séu réttar.",
 "QRGeneratorTest": "Ef þú vilt aðeins prófa QR-kóða rafalinn getur þú slegið inn sýnigögn eða prófunargögn í stað raunverulegra upplýsinga. Þetta gerir þér kleift að skoða hvernig virknin virkar áður en þú notar hana með raunverulegum gögnum ökutækis.",

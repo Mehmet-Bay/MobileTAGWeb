@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "La informació que introduïu està xifrada i s'emmagatzema només al codi QR.",
 "QRGeneratorIntro": "Sobre el generador de codis QR",
 "QRGeneratorIntroMessage": "Aquí podeu generar un codi QR únic per a cada vehicle. Introduint informació bàsica del vehicle, es pot crear, descarregar i imprimir un codi QR. El codi QR es pot col·locar dins del vehicle perquè els conductors el puguin escanejar amb l’aplicació Mobile-TAG en cas d’incident. Això facilita l’accés i el registre de la informació rellevant del vehicle sense introducció manual. Aquesta funció és gratuïta i pot ser útil per a propietaris particulars de vehicles, empreses de lloguer, flotes de lísing i operadors logístics. Els camps marcats en vermell són obligatoris. Si us plau, assegureu-vos que la informació introduïda és correcta.",
 "QRGeneratorTest": "Si només voleu provar el generador de codis QR, podeu introduir dades d’exemple o de prova en lloc de dades reals. Això us permet explorar com funciona la funcionalitat abans d’utilitzar-la amb dades reals del vehicle.",

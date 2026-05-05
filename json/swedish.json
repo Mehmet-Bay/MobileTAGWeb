@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Informationen du anger krypteras och lagras endast i QR-koden.",
 "QRGeneratorIntro": "Om QR-kodgeneratorn",
 "QRGeneratorIntroMessage": "Här kan du skapa en unik QR-kod för varje fordon. Genom att ange grundläggande fordonsinformation kan en QR-kod skapas, laddas ner och skrivas ut. QR-koden kan placeras i fordonet så att förare kan skanna den med Mobile-TAG-appen vid en incident. Detta gör det enklare att få tillgång till och registrera relevant fordonsinformation utan manuell inmatning. Funktionen är gratis att använda och kan vara användbar för privata fordonsägare, uthyrningsföretag, leasingflottor och logistikoperatörer. Fält markerade i rött är obligatoriska. Se till att den angivna informationen är korrekt.",
 "QRGeneratorTest": "Om du bara vill testa QR-kodgeneratorn kan du ange exempel- eller testdata istället för verkliga uppgifter. Detta gör att du kan utforska hur funktionen fungerar innan du använder den med riktiga fordonsuppgifter.",

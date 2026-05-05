@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Girdiğiniz bilgiler şifrelenir ve yalnızca QR kodunda saklanır.",
 "QRGeneratorIntro": "QR Kod Oluşturucu Hakkında",
 "QRGeneratorIntroMessage": "Burada her araç için benzersiz bir QR kod oluşturabilirsiniz. Araçla ilgili temel bilgileri girerek QR kod oluşturabilir, indirebilir ve yazdırabilirsiniz. QR kod, araç içine yerleştirilebilir ve bir olay durumunda sürücüler Mobile-TAG uygulamasıyla bu kodu tarayabilir. Bu, ilgili araç bilgilerine manuel giriş yapmadan kolayca erişilmesini ve kaydedilmesini sağlar. Bu özellik ücretsizdir ve bireysel araç sahipleri, araç kiralama şirketleri, leasing filoları ve lojistik operatörleri için faydalı olabilir. Kırmızıyla işaretlenmiş alanlar zorunludur. Lütfen girilen bilgilerin doğru olduğundan emin olun.",
 "QRGeneratorTest": "Sadece QR kod oluşturucuyu denemek istiyorsanız, gerçek veriler yerine örnek veya test verileri girebilirsiniz. Bu, gerçek araç bilgileriyle kullanmadan önce özelliğin nasıl çalıştığını keşfetmenizi sağlar.",

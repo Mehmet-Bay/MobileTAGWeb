@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Maklumat yang anda masukkan disulitkan dan disimpan hanya dalam kod QR.",
 "QRGeneratorIntro": "Mengenai Penjana Kod QR",
 "QRGeneratorIntroMessage": "Di sini anda boleh menjana kod QR unik untuk setiap kenderaan. Dengan memasukkan maklumat asas berkaitan kenderaan, kod QR boleh dicipta, dimuat turun dan dicetak. Kod QR boleh diletakkan di dalam kenderaan supaya pemandu boleh mengimbasnya menggunakan aplikasi Mobile-TAG jika berlaku insiden. Ini memudahkan akses dan perekodan maklumat kenderaan yang berkaitan tanpa kemasukan manual. Ciri ini adalah percuma untuk digunakan dan boleh memberi manfaat kepada pemilik kenderaan persendirian, syarikat sewaan, armada pajakan dan pengendali logistik. Medan yang ditandakan dengan warna merah adalah wajib. Sila pastikan maklumat yang dimasukkan adalah tepat.",
 "QRGeneratorTest": "Jika anda hanya ingin mencuba penjana kod QR, anda boleh memasukkan data contoh atau ujian вместо data sebenar. Ini membolehkan anda memahami bagaimana ciri ini berfungsi sebelum menggunakannya dengan maklumat kenderaan sebenar.",

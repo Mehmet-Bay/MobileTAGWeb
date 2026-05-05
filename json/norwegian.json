@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Informasjonen du skriver inn krypteres og lagres kun i QR-koden.",
 "QRGeneratorIntro": "Om QR-kodegeneratoren",
 "QRGeneratorIntroMessage": "Her kan du generere en unik QR-kode for hvert kjøretøy. Ved å legge inn grunnleggende informasjon om kjøretøyet kan en QR-kode opprettes, lastes ned og skrives ut. QR-koden kan plasseres i kjøretøyet slik at førere kan skanne den med Mobile-TAG-appen hvis en hendelse oppstår. Dette gjør det enklere å få tilgang til og registrere relevant kjøretøyinformasjon uten manuell inntasting. Denne funksjonen er gratis å bruke og kan være nyttig for private kjøretøyeiere, utleiefirmaer, leasingflåter og logistikkoperatører. Felt markert i rødt er obligatoriske. Vennligst sørg for at informasjonen som legges inn er korrekt.",
 "QRGeneratorTest": "Hvis du bare ønsker å prøve QR-kodegeneratoren, kan du legge inn eksempel- eller testdata i stedet for reelle data. Dette lar deg utforske hvordan funksjonen fungerer før du bruker den med faktiske kjøretøydata.",

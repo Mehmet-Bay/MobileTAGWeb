@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Informácie, ktoré zadáte, sú šifrované a uložené iba v QR kóde.",
 "QRGeneratorIntro": "O generátore QR kódov",
 "QRGeneratorIntroMessage": "Tu môžete vytvoriť jedinečný QR kód pre každé vozidlo. Zadaním základných informácií o vozidle je možné QR kód vytvoriť, stiahnuť a vytlačiť. QR kód môže byť umiestnený vo vozidle, aby ho vodiči mohli v prípade incidentu naskenovať pomocou aplikácie Mobile-TAG. To uľahčuje prístup k relevantným informáciám o vozidle a ich zaznamenanie bez manuálneho zadávania. Táto funkcia je bezplatná a môže byť užitočná pre súkromných vlastníkov vozidiel, požičovne, leasingové flotily a logistických operátorov. Polia označené červenou farbou sú povinné. Uistite sa, že zadané informácie sú správne.",
 "QRGeneratorTest": "Ak chcete generátor QR kódov iba vyskúšať, môžete zadať vzorové alebo testovacie údaje namiesto skutočných. To vám umožní preskúmať, ako funkcia funguje pred jej použitím so skutočnými údajmi o vozidle.",

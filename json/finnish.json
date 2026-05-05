@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Annetut tiedot salataan ja tallennetaan vain QR-koodiin.",
 "QRGeneratorIntro": "Tietoa QR-koodigeneraattorista",
 "QRGeneratorIntroMessage": "Täällä voit luoda yksilöllisen QR-koodin jokaiselle ajoneuvolle. Syöttämällä ajoneuvoon liittyvät perustiedot QR-koodi voidaan luoda, ladata ja tulostaa. QR-koodi voidaan sijoittaa ajoneuvon sisälle, jotta kuljettajat voivat skannata sen Mobile-TAG-sovelluksella, jos tapahtuu onnettomuus. Tämä helpottaa ajoneuvoon liittyvien tietojen hakemista ja tallentamista ilman manuaalista syöttöä. Tämä toiminto on maksuton ja voi olla hyödyllinen yksityisille ajoneuvon omistajille, autovuokraamoille, leasing-kalustoille ja logistiikkaoperaattoreille. Punaisella merkityt kentät ovat pakollisia. Varmistathan, että syötetyt tiedot ovat oikein.",
 "QRGeneratorTest": "Jos haluat vain kokeilla QR-koodigeneraattoria, voit syöttää esimerkki- tai testitietoja oikeiden tietojen sijaan. Näin voit tutustua toiminnon käyttöön ennen kuin käytät sitä todellisilla ajoneuvotiedoilla.",

@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Jūsu ievadītā informācija tiek šifrēta un saglabāta tikai QR kodā.",
 "QRGeneratorIntro": "Par QR koda ģeneratoru",
 "QRGeneratorIntroMessage": "Šeit varat izveidot unikālu QR kodu katram transportlīdzeklim. Ievadot pamatinformāciju par transportlīdzekli, var izveidot, lejupielādēt un izdrukāt QR kodu. QR kodu var novietot transportlīdzeklī, lai vadītāji to varētu noskenēt ar Mobile-TAG lietotni incidenta gadījumā. Tas atvieglo piekļuvi attiecīgajai transportlīdzekļa informācijai un tās reģistrēšanu bez manuālas ievades. Šī funkcija ir bezmaksas un var būt noderīga privātiem transportlīdzekļu īpašniekiem, nomas uzņēmumiem, līzinga autoparkiem un loģistikas operatoriem. Lauki, kas atzīmēti sarkanā krāsā, ir obligāti. Lūdzu, pārliecinieties, ka ievadītā informācija ir pareiza.",
 "QRGeneratorTest": "Ja vēlaties tikai izmēģināt QR koda ģeneratoru, varat ievadīt parauga vai testa datus reālo datu vietā. Tas ļauj izpētīt, kā funkcija darbojas, pirms to izmantojat ar reāliem transportlīdzekļa datiem.",

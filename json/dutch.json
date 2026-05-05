@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "De informatie die u invoert, wordt versleuteld en alleen in de QR-code opgeslagen.",
 "QRGeneratorIntro": "Over de QR-codegenerator",
 "QRGeneratorIntroMessage": "Hier kunt u een unieke QR-code genereren voor elk voertuig. Door basisinformatie over het voertuig in te voeren, kan een QR-code worden aangemaakt, gedownload en geprint. De QR-code kan in het voertuig worden geplaatst zodat bestuurders deze met de Mobile-TAG-app kunnen scannen wanneer zich een incident voordoet. Dit maakt het eenvoudiger om relevante voertuiggegevens te raadplegen en vast te leggen zonder handmatige invoer. Deze functie is gratis te gebruiken en kan nuttig zijn voor particuliere voertuigbezitters, verhuurbedrijven, leasevloten en logistieke operators. Velden gemarkeerd in rood zijn verplicht. Zorg ervoor dat de ingevoerde informatie correct is.",
 "QRGeneratorTest": "Als u de QR-codegenerator alleen wilt uitproberen, kunt u voorbeeld- of testgegevens invoeren in plaats van echte gegevens. Dit stelt u in staat om te ontdekken hoe de functie werkt voordat u deze gebruikt met daadwerkelijke voertuiggegevens.",

@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Criptítear an fhaisnéis a chuireann tú isteach agus stóráiltear í sa chód QR amháin.",
 "QRGeneratorIntro": "Maidir leis an ngineadóir cód QR",
 "QRGeneratorIntroMessage": "Anseo is féidir leat cód QR uathúil a chruthú do gach feithicil. Trí fhaisnéis bhunúsach faoin bhfeithicil a iontráil, is féidir cód QR a chruthú, a íoslódáil agus a phriontáil. Is féidir an cód QR a chur laistigh den fheithicil ionas gur féidir le tiománaithe é a scanadh leis an aip Mobile-TAG má tharlaíonn eachtra. Éascaíonn sé seo rochtain ar fhaisnéis ábhartha faoin bhfeithicil agus a thaifeadadh gan iontráil láimhe. Tá an ghné seo saor in aisce le húsáid agus d’fhéadfadh sí a bheith úsáideach do úinéirí príobháideacha feithiclí, cuideachtaí cíosa, flítí léasaithe agus oibreoirí lóistíochta. Tá na réimsí marcáilte i ndath dearg éigeantach. Cinntigh le do thoil go bhfuil an fhaisnéis a iontráladh cruinn.",
 "QRGeneratorTest": "Más mian leat an gineadóir cód QR a thriail amháin, is féidir leat sonraí samplacha nó tástála a iontráil in ionad sonraí fíor. Ligeann sé seo duit a fheiceáil conas a oibríonn an ghné sula n-úsáideann tú í le sonraí fíor faoin bhfeithicil.",

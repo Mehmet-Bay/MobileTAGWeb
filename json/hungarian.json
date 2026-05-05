@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "A megadott információk titkosítva vannak, és csak a QR-kódban tárolódnak.",
 "QRGeneratorIntro": "A QR-kód generátorról",
 "QRGeneratorIntroMessage": "Itt minden járműhöz egyedi QR-kódot hozhat létre. A jármű alapadatainak megadásával a QR-kód létrehozható, letölthető és kinyomtatható. A QR-kód elhelyezhető a járműben, így a vezetők egy esemény esetén a Mobile-TAG alkalmazással beolvashatják. Ez megkönnyíti a releváns járműadatok elérését és rögzítését kézi bevitel nélkül. Ez a funkció ingyenesen használható, és hasznos lehet magán járműtulajdonosok, autókölcsönző cégek, lízingflották és logisztikai szolgáltatók számára. A pirossal jelölt mezők kötelezőek. Kérjük, győződjön meg arról, hogy a megadott adatok pontosak.",
 "QRGeneratorTest": "Ha csak ki szeretné próbálni a QR-kód generátort, megadhat minta- vagy tesztadatokat a valós adatok helyett. Ez lehetővé teszi, hogy megismerje a funkció működését, mielőtt tényleges járműadatokkal használná.",

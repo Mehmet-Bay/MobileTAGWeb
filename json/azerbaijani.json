@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Daxil etdiyiniz məlumatlar şifrələnir və yalnız QR kodunda saxlanılır.",
 "QRGeneratorIntro": "QR Kod Generatoru haqqında",
 "QRGeneratorIntroMessage": "Burada hər bir nəqliyyat vasitəsi üçün unikal QR kod yarada bilərsiniz. Nəqliyyat vasitəsinə aid əsas məlumatları daxil etməklə QR kod yaradıla, yüklənə və çap edilə bilər. QR kod avtomobilin içərisinə yerləşdirilə bilər ki, hadisə baş verdikdə sürücülər onu Mobile-TAG tətbiqi ilə skan etsinlər. Bu, müvafiq nəqliyyat vasitəsi məlumatlarının əl ilə daxil edilmədən əldə edilməsini və qeyd olunmasını asanlaşdırır. Bu funksiya pulsuzdur və fərdi avtomobil sahibləri, icarə şirkətləri, lizinq parkları və logistika operatorları üçün faydalı ola bilər. Qırmızı ilə işarələnmiş sahələr məcburidir. Zəhmət olmasa daxil etdiyiniz məlumatların düzgün olduğuna əmin olun.",
 "QRGeneratorTest": "Əgər sadəcə QR kod generatorunu sınaqdan keçirmək istəyirsinizsə, real məlumatlar əvəzinə nümunə və ya test məlumatları daxil edə bilərsiniz. Bu, funksiyanın necə işlədiyini real nəqliyyat vasitəsi məlumatlarından istifadə etməzdən əvvəl yoxlamağa imkan verir.",

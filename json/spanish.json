@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "La información que introduzca se cifra y se almacena únicamente en el código QR.",
 "QRGeneratorIntro": "Acerca del generador de códigos QR",
 "QRGeneratorIntroMessage": "Aquí puede generar un código QR único para cada vehículo. Al introducir información básica del vehículo, se puede crear, descargar e imprimir un código QR. El código QR puede colocarse dentro del vehículo para que los conductores puedan escanearlo con la aplicación Mobile-TAG en caso de incidente. Esto facilita el acceso y el registro de la información relevante del vehículo sin necesidad de introducir datos manualmente. Esta función es gratuita y puede ser útil para propietarios de vehículos particulares, empresas de alquiler, flotas de leasing y operadores logísticos. Los campos marcados en rojo son obligatorios. Por favor, asegúrese de que la información introducida es correcta.",
 "QRGeneratorTest": "Si solo desea probar el generador de códigos QR, puede introducir datos de ejemplo o de prueba en lugar de datos reales. Esto le permite explorar cómo funciona la función antes de utilizarla con información real del vehículo.",

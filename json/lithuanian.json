@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Jūsų įvesta informacija yra užšifruota ir saugoma tik QR kode.",
 "QRGeneratorIntro": "Apie QR kodo generatorių",
 "QRGeneratorIntroMessage": "Čia galite sukurti unikalų QR kodą kiekvienai transporto priemonei. Įvedus pagrindinę informaciją apie transporto priemonę, QR kodą galima sukurti, atsisiųsti ir atspausdinti. QR kodą galima patalpinti transporto priemonės viduje, kad įvykio atveju vairuotojai galėtų jį nuskaityti naudodami Mobile-TAG programėlę. Tai palengvina prieigą prie svarbios transporto priemonės informacijos ir jos fiksavimą be rankinio įvedimo. Ši funkcija yra nemokama ir gali būti naudinga privatiems transporto priemonių savininkams, nuomos įmonėms, lizingo parkams ir logistikos operatoriams. Raudonai pažymėti laukai yra privalomi. Prašome įsitikinti, kad įvesta informacija yra tiksli.",
 "QRGeneratorTest": "Jei norite tik išbandyti QR kodo generatorių, galite įvesti pavyzdinius arba bandomuosius duomenis vietoje tikrųjų duomenų. Tai leidžia susipažinti su funkcijos veikimu prieš ją naudojant su tikrais transporto priemonės duomenimis.",

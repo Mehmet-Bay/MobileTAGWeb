@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Informasi yang Anda masukkan dienkripsi dan hanya disimpan dalam kode QR.",
 "QRGeneratorIntro": "Tentang Generator Kode QR",
 "QRGeneratorIntroMessage": "Di sini Anda dapat membuat kode QR unik untuk setiap kendaraan. Dengan memasukkan informasi dasar kendaraan, kode QR dapat dibuat, diunduh, dan dicetak. Kode QR dapat ditempatkan di dalam kendaraan sehingga pengemudi dapat memindainya menggunakan aplikasi Mobile-TAG jika terjadi insiden. Hal ini memudahkan akses dan pencatatan informasi kendaraan yang relevan tanpa perlu memasukkan data secara manual. Fitur ini gratis digunakan dan dapat bermanfaat bagi pemilik kendaraan pribadi, perusahaan rental, armada leasing, dan operator logistik. Kolom yang ditandai dengan warna merah wajib diisi. Pastikan informasi yang dimasukkan sudah benar.",
 "QRGeneratorTest": "Jika Anda hanya ingin mencoba generator kode QR, Anda dapat memasukkan data contoh atau uji coba sebagai pengganti data nyata. Hal ini memungkinkan Anda memahami cara kerja fitur sebelum menggunakannya dengan data kendaraan yang sebenarnya.",

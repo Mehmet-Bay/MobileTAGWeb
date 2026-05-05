@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "D'Informatiounen, déi Dir aginn, ginn verschlësselt a ginn nëmmen am QR-Code gespäichert.",
 "QRGeneratorIntro": "Iwwer de QR Code Generator",
 "QRGeneratorIntroMessage": "Hei kënnt Dir fir all Gefier en eenzegaartege QR Code erstellen. Andeems Dir Basisinformatiounen iwwer d’Gefier agitt, kann e QR Code erstallt, erofgeluede an ausgedréckt ginn. De QR Code kann am Gefier placéiert ginn, sou datt Chaufferen en am Fall vun engem Incident mat der Mobile-TAG App scanne kënnen. Dëst mécht et méi einfach, relevant Gefierinformatiounen zougräifbar ze maachen an ze dokumentéieren ouni manuell Agab. Dës Funktioun ass gratis ze benotzen a kann nëtzlech sinn fir privat Gefierbesëtzer, Locatiounsfirmen, Leasingflotten a Logistikoperateuren. Felder, déi rout markéiert sinn, sinn obligatoresch. Gitt w.e.g. sécher, datt déi aginn Informatiounen korrekt sinn.",
 "QRGeneratorTest": "Wann Dir nëmmen de QR Code Generator teste wëllt, kënnt Dir Beispill- oder Testdaten amplaz vu richtegen Donnéeën aginn. Dëst erlaabt Iech ze kucken, wéi d’Funktioun funktionéiert, ier Dir se mat richtegen Gefierdaten benotzt.",

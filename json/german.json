@@ -1,4 +1,5 @@
 {
+"qrPrivacy": "Die von Ihnen eingegebenen Informationen werden verschlüsselt und ausschließlich im QR-Code gespeichert.",
 "QRGeneratorIntro": "Über den QR-Code-Generator",
 "QRGeneratorIntroMessage": "Hier können Sie für jedes Fahrzeug einen eindeutigen QR-Code erstellen. Durch die Eingabe grundlegender Fahrzeuginformationen kann ein QR-Code erstellt, heruntergeladen und ausgedruckt werden. Der QR-Code kann im Fahrzeug platziert werden, damit Fahrer ihn im Falle eines Vorfalls mit der Mobile-TAG-App scannen können. Dies erleichtert den Zugriff auf relevante Fahrzeuginformationen und deren Erfassung ohne manuelle Eingabe. Diese Funktion ist kostenlos nutzbar und kann für private Fahrzeughalter, Autovermietungen, Leasingflotten und Logistikunternehmen hilfreich sein. Die rot markierten Felder sind Pflichtfelder. Bitte stellen Sie sicher, dass die eingegebenen Informationen korrekt sind.",
 "QRGeneratorTest": "Wenn Sie den QR-Code-Generator nur ausprobieren möchten, können Sie Beispiel- oder Testdaten anstelle echter Daten eingeben. So können Sie die Funktion erkunden, bevor Sie sie mit realen Fahrzeugdaten verwenden.",
