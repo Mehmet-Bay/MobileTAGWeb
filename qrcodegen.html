@@ -534,23 +534,23 @@ html, body {
       <p style="font-size: clamp(14px, 1.7vw, 25px); text-align: center;" id="redFieldsInfo">Fields in red must be filled</p>
       <div style="display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: nowrap;">
         <p id="qrPrivacyInfo" style="font-size: clamp(14px, 1.7vw, 25px); text-align: center; color: aliceblue;">The information you enter is encrypted and stored only in the QR code.</p>
-        <a href="/privacy.html"  style="font-size: clamp(14px, 1.7vw, 25px);">Privacy policy</a>
+        <a href="/privacy.html"  style="font-size: clamp(14px, 1.7vw, 25px); color: blue;">Privacy policy</a>
       </div>
     </div>
   </header>
 <script>
     const supportedLangMap = {
-      "en": "English", 
+      "en": "english", "kk": "Kazakh",
       "sv": "Swedish", "no": "Norwegian", "da": "Danish", "fi": "Finnish", "is": "Icelandic", 
       "de": "German", "nl": "Dutch", "fr": "French", "es": "Spanish", "it": "Italian",
-      "pt": "Portuguese",  "pt-PT": "Portuguese", "pt-BR": "PortugueseBrazil", "pl": "Polish",
-      "cs": "Czech", "sk": "Slovak", "sl": "Slovenian", "hr": "Croatian", "sr": "SerbianCyrillic",
+      "pt": "Portuguese-Portugal", "pt-PT": "Portuguese-Portugal", "pt-BR": "Portuguese-Brazil", "pl": "Polish",
+      "cs": "Czech", "sk": "Slovak", "sl": "Slovenian", "hr": "Croatian", "sr": "Serbian",
       "bs": "Bosnian", "bg": "Bulgarian", "mk": "Macedonian", "ro": "Romanian", "hu": "Hungarian",
       "et": "Estonian", "lv": "Latvian", "lt": "Lithuanian", "el": "Greek", "tr": "Turkish",
       "ru": "Russian", "uk": "Ukrainian", "ka": "Georgian", "hy": "Armenian", "az": "Azerbaijani",
-      "ar": "Arabic", "fa": "Persian", "ur": "Urdu", "hi": "Hindi", "zh": "SimplifiedChinese",
-      "zh-CN": "SimplifiedChinese", "zh-TW": "TraditionalChinese", "ja": "Japanese", "ko": "Korean",
-      "vi": "Vietnamese", "id": "Indonesian", "ms": "Malay", "mn": "Mongolian", "uz": "Uzbek",
+      "ar": "Arabic", "fa": "Persian", "ur": "Urdu", "hi": "Hindi", "zh": "Chinese-Simplified",
+      "zh-CN": "Chinese-Simplified", "zh-TW": "Chinese-Traditional", "ja": "Japanese", "ko": "Korean",
+      "vi": "Vietnamese", "id": "Indonesian", "ms": "Malaysian", "mn": "Mongolian", "uz": "Uzbek",
       "sq": "Albanian", "ca": "Catalan", "ga": "Irish", "lb": "Luxembourgish", "so": "Somali"
     };
     function getDefaultLanguage() {
@@ -579,7 +579,7 @@ html, body {
       el.innerText = value;
     }
   }
-  /*
+  
   function loadLanguage(langName) {
     const fileName = "json/" + langName.toLowerCase() + ".json";
 
@@ -593,6 +593,7 @@ html, body {
         return resp.json();
       })
       .then(data => {
+        setText("qrPrivacyInfo", data.qrPrivacy);
         setText("qrFleetInfo", data.qrGenerationTitle);
         setText("qrAvailable", data.QRGeneratorAvailableText);
         setText("qrBePrepared", data.QRGeneratorPrepareText);
@@ -653,7 +654,7 @@ html, body {
     const defaultLang = getDefaultLanguage();
     loadLanguage(defaultLang);
 
-    fetch("json/english.json")
+    fetch("en.json")
       .then(resp => resp.json())
       .then(data => {
         const dropdown = document.getElementById("langDropdown");
@@ -682,7 +683,7 @@ html, body {
       })
       .catch(err => console.error("Could not load language list:", err));
   });
-    */
+    /*
     function loadLanguage(langName) {
       const fileName = "json/" + langName.toLowerCase() + ".json"; 
       console.log("språk: ") + fileName;
@@ -770,7 +771,7 @@ html, body {
           dropdown.style.top = rect.bottom + "px";
         });
       });
-      
+     */
   </script>
   <div style="display: flex; padding-left: 1%; padding-right: 1%; justify-content: center;">
     <!-- test element16-->  
@@ -840,7 +841,7 @@ html, body {
         <img src="drawable/nylogo.png" class="logo">
         <p id="regQR" class="regqr"></p>
       <div id="qrcode"></div>
-      <label style="font-size: clamp(13px, 2vw, 20px); font-weight: normal;">www.mobiletag-auto.com</label>
+      <label style="font-size: clamp(13px, 2vw, 20px); font-weight: normal;">www.mobiletag-auto.com</label>    
       </div>
     <button onclick="downloadCard()">Download QR Code as image</button>
   </div>
