@@ -1,12 +1,12 @@
 {
   "android": {
-    "version": "2.0",
+    "version": "2.1",
     "required": true,
     "message": "A new version of Mobile-TAG is available. Please update to continue."
   },
   "ios": {
-    "version": "2.0",
-    "required": false,
+    "version": "2.1",
+    "required": true,
     "message": "A new version of Mobile-TAG is available. Please update to continue."
   }
 }
