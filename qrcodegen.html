@@ -968,7 +968,7 @@ async function generateQR() {
   console.log(vehicleInfo);
 
   try {
-    const response = await fetch("https://apiemco1.mobiletag-auto.com/api/encrypt", {
+    const response = await fetch("https://apiemco.mobiletag-auto.com/api/encrypt", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ data: vehicleInfo })
