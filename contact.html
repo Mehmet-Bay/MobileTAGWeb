@@ -554,7 +554,7 @@
       const response = await fetch("en.json");
       const data = await response.json();
       document.getElementById("important-Info").textContent = data.importantInfo;
-      document.getElementById("nav-contactInfo").textContent = data.contact;
+      /*document.getElementById("nav-contactInfo").textContent = data.contact;*/
       document.getElementById("nav-mainPage").textContent = data.mainPage;
       document.getElementById("nav-termsCondition").textContent = data.termsPrivacy;
       document.getElementById("nav-about").textContent = data.about;
