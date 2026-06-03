@@ -876,8 +876,192 @@ html, body {
 </script>
   <!-- QRCode.js bibliotek -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  
 <script>
+const servers = [
+  "https://apiemco.mobiletag-auto.com",
+  "https://apiemco1.mobiletag-auto.com",
+  "https://apiemco2.mobiletag-auto.com",
+  "https://apiemco3.mobiletag-auto.com"
+];
+
+async function encryptWithFallback(vehicleInfo) {
+  let lastError = null;
+
+  for (const base of servers) {
+    try {
+      const response = await fetch(base + "/api/encrypt", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ data: vehicleInfo })
+      });
+
+      if (!response.ok) {
+        throw new Error("Server returned " + response.status);
+      }
+
+      console.log("Encryption server used:", base);
+      return await response.json();
+
+    } catch (err) {
+      //console.warn("Encryption failed on:", base, err);
+      lastError = err;
+    }
+  }
+
+  throw lastError || new Error("No encryption server available");
+}
+
+function checkForm() {
+  const requiredIds = [
+    "insuranceCompanyName",
+    "regCountry",
+    "ownersMail",
+    "ownersTel",
+    "ownersName"
+  ];
+
+  const anyEmpty = requiredIds.some(id => {
+    return document.getElementById(id).value.trim() === "";
+  });
+
+  document.getElementById("buttonGen").disabled = anyEmpty;
+}
+
+async function loadCountries() {
+  try {
+    const response = await fetch("en.json");
+    const data = await response.json();
+
+    const picker = document.getElementById("countryPicker");
+    document.getElementById("thisService").textContent = data.thisQrService;
+    picker.innerHTML = "";
+
+    data.countries.forEach(country => {
+      const div = document.createElement("div");
+      div.textContent = country;
+      div.addEventListener("click", () => {
+        document.getElementById("regCountry").value = country;
+        checkForm();
+      });
+      picker.appendChild(div);
+    });
+  } catch (err) {
+    console.error("could not load countries:", err);
+  }
+}
+
+loadCountries();
+
+async function generateQR() {
+  const fields = [
+    "ownersName", "ownersAddress", "ownersIdNo", "ownersTel", "ownersMail",
+    "vehicleMake", "vehicleModel", "vehicleType", "regnr", "cityReg", "regCountry",
+    "insuranceCompanyName", "insuranceTel", "insuranceMail", "policyNo", "agentInfo"
+  ];
+
+  let qrData = {};
+  let values = [];
+
+  fields.forEach(id => {
+    let val = document.getElementById(id).value.trim();
+
+    if (id === "regnr" || id === "vehicleMake") {
+      val = val.toUpperCase();
+    } else {
+      if (id !== "regCountry") {
+        val = val.toLowerCase().replace(/(^|\s)\p{L}/gu, char => char.toUpperCase());
+      }
+    }
+
+    if (val === "") val = " ";
+
+    qrData[id] = val;
+    values.push(val);
+  });
+
+  const radioGroups = [
+    { name: "comprehensiveInsurance", key: "comprehensiveInsurance" },
+    { name: "valueAddedTax", key: "valueAddedTax" }
+  ];
+
+  radioGroups.forEach(group => {
+    const selected = document.querySelector(`input[name="${group.name}"]:checked`);
+    const val = selected ? selected.value : "No";
+    qrData[group.key] = val;
+    values.push(val);
+  });
+
+  let regNo = document.getElementById("regnr").value.toUpperCase().trim();
+  let insuranceCompany = document.getElementById("insuranceCompanyName").value;
+
+  if (regNo !== "") {
+    document.getElementById("regQR").textContent = regNo;
+  } else {
+    document.getElementById("regQR").textContent =
+      insuranceCompany.toLowerCase().replace(/(^|\s)\p{L}/gu, char => char.toUpperCase());
+  }
+
+  let vehicleInfo = values.join("#");
+  console.log(vehicleInfo);
+
+  try {
+    const json = await encryptWithFallback(vehicleInfo);
+
+    const encrypted = "https://mobiletag-auto.com/app?" + json.encrypted;
+
+    document.getElementById("qrcode").innerHTML = "";
+
+    new QRCode(document.getElementById("qrcode"), {
+      text: encrypted,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.L
+    });
+
+  } catch (err) {
+    console.error("QR generation failed:", err);
+    alert("Something went wrong when generating QR code.");
+  }
+}
+
+function downloadQR() {
+  const canvas = document.querySelector("#qrcode canvas");
+
+  if (!canvas) {
+    alert("Generate a QR code first!");
+    return;
+  }
+
+  const link = document.createElement("a");
+  link.href = canvas.toDataURL("image/png");
+  link.download = "qrcode.png";
+  link.click();
+}
+
+function deleteFields() {
+  const fields = [
+    "ownersName", "ownersAddress", "ownersIdNo", "ownersTel", "ownersMail",
+    "vehicleMake", "vehicleModel", "vehicleType", "regnr", "cityReg", "regCountry",
+    "insuranceCompanyName", "insuranceTel", "insuranceMail", "policyNo", "agentInfo"
+  ];
+
+  fields.forEach(id => {
+    document.getElementById(id).value = "";
+  });
+
+  checkForm();
+  document.getElementById("qrcode").innerHTML = "";
+  document.getElementById("regQR").textContent = "";
+}
+</script>
+<!--
+<script>
+    const servers = [
+    "https://apiemco.mobiletag-auto.com",
+    "https://apiemco1.mobiletag-auto.com",
+    "https://apiemco2.mobiletag-auto.com",
+    "https://apiemco3.mobiletag-auto.com"
+  ];
     function checkForm() {
   const requiredIds = [
     "insuranceCompanyName",
@@ -1024,6 +1208,7 @@ async function generateQR() {
   });
 }
 </script>
+-->
 <script>
 function downloadCard() {
   const card = document.getElementById("qrCard");
