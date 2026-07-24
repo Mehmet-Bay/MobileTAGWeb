@@ -1,15 +1,13 @@
-[
-  {
-    "relation": [
-      "delegate_permission/common.handle_all_urls",
-      "delegate_permission/common.get_login_creds"
-    ],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "mobile.tag.v1",
-      "sha256_cert_fingerprints": [
-        "9A:36:BB:93:4D:BC:18:9F:D5:C8:7E:BE:78:39:AD:C6:97:E9:19:DA:4B:2F:A8:A0:EC:81:96:6C:20:35:49:61"
-      ]
-    }
+{
+  "relation": [
+    "delegate_permission/common.handle_all_urls",
+    "delegate_permission/common.get_login_creds"
+  ],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "mobile.tag.v1",
+    "sha256_cert_fingerprints": [
+      "9A:36:BB:93:4D:BC:18:9F:D5:C8:7E:BE:78:39:AD:C6:97:E9:19:DA:4B:2F:A8:A0:EC:81:96:6C:20:35:49:61"
+    ]
   }
-]
+}
